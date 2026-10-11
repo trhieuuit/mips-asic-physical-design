@@ -1,0 +1,3 @@
+../../tb/tb_mips.v
+../../icc/output/mips_cpu_top_layout.v // The netlist output from ICC
+/path/to/your/lab/library/saed90nm.v   // The standard cell simulation model

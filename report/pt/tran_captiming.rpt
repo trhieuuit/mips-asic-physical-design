@@ -1,0 +1,332 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-input_pins
+	-nets
+	-max_paths 1
+	-transition_time
+	-capacitance
+Design : mips_cpu_top
+Version: D-2010.06-SP2
+Date   : Fri Jan  2 12:36:53 2015
+****************************************
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[7][3]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: dat_path_inst/pc_internal_reg[0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                       Fanout    Cap      Trans       Incr       Path
+  -----------------------------------------------------------------------------
+  clock clock (rise edge)                         1.00       0.00       0.00
+  clock network delay (ideal)                                1.00       1.00
+  dat_path_inst/u1_reg_file/reg_blk_reg[7][3]/CLK (DFFARX1)
+                                                  1.00       0.00       1.00 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[7][3]/Q (DFFARX1)
+                                                  0.02       0.14 +     1.14 f
+  dat_path_inst/u1_reg_file/reg_blk[7][3] (net)
+                                 1     2.30 
+  dat_path_inst/u1_reg_file/U13690/INP (NBUFFX32)
+                                                  0.02       0.00 +     1.14 f
+  dat_path_inst/u1_reg_file/U13690/Z (NBUFFX32)
+                                                  0.02       0.08       1.22 f
+  dat_path_inst/u1_reg_file/net11373 (net)
+                                 3     6.51 
+  dat_path_inst/u1_reg_file/U2007/IN4 (MUX41X1)
+                                                  0.02       0.01       1.23 f
+  dat_path_inst/u1_reg_file/U2007/Q (MUX41X1)     0.03       0.05       1.28 f
+  dat_path_inst/u1_reg_file/n2500 (net)
+                                 1     1.97 
+  dat_path_inst/u1_reg_file/U2009/IN2 (MUX41X1)
+                                                  0.03       0.00       1.28 f
+  dat_path_inst/u1_reg_file/U2009/Q (MUX41X1)     0.03       0.06       1.34 f
+  dat_path_inst/u1_reg_file/n2502 (net)
+                                 1     2.32 
+  dat_path_inst/u1_reg_file/U2010/IN1 (MUX21X1)
+                                                  0.03       0.00       1.34 f
+  dat_path_inst/u1_reg_file/U2010/Q (MUX21X1)     0.05       0.06       1.40 f
+  dat_path_inst/u1_reg_file/rd_data2[3] (net)
+                                10    17.55 
+  dat_path_inst/u1_reg_file/rd_data2[3] (reg_file)
+                                                  0.00       0.00       1.40 f
+  dat_path_inst/sw_data[3] (net) 
+  dat_path_inst/U129/IN1 (AO22X1)                 0.05       0.12       1.52 f
+  dat_path_inst/U129/Q (AO22X1)                   0.06       0.07       1.59 f
+  dat_path_inst/alu_in2[3] (net)
+                                 6    21.54 
+  dat_path_inst/u2_alu/in2[3] (mips_alu)          0.00       0.00       1.59 f
+  dat_path_inst/u2_alu/in2[3] (net) 
+  dat_path_inst/u2_alu/sub_38/B[3] (mips_alu_DW01_sub_0)
+                                                  0.00       0.00       1.59 f
+  dat_path_inst/u2_alu/sub_38/B[3] (net) 
+  dat_path_inst/u2_alu/sub_38/U9/INP (INVX0)      0.06       0.06       1.65 f
+  dat_path_inst/u2_alu/sub_38/U9/ZN (INVX0)       0.05       0.03       1.68 r
+  dat_path_inst/u2_alu/sub_38/n30 (net)
+                                 1    11.74 
+  dat_path_inst/u2_alu/sub_38/U2_3/B (FADDX1)     0.05       0.00       1.68 r
+  dat_path_inst/u2_alu/sub_38/U2_3/CO (FADDX1)
+                                                  0.03       0.07       1.75 r
+  dat_path_inst/u2_alu/sub_38/carry[4] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_4/CI (FADDX1)
+                                                  0.03       0.00       1.75 r
+  dat_path_inst/u2_alu/sub_38/U2_4/CO (FADDX1)
+                                                  0.03       0.06       1.81 r
+  dat_path_inst/u2_alu/sub_38/carry[5] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_5/CI (FADDX1)
+                                                  0.03       0.00       1.81 r
+  dat_path_inst/u2_alu/sub_38/U2_5/CO (FADDX1)
+                                                  0.03       0.06       1.88 r
+  dat_path_inst/u2_alu/sub_38/carry[6] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_6/CI (FADDX1)
+                                                  0.03       0.00       1.88 r
+  dat_path_inst/u2_alu/sub_38/U2_6/CO (FADDX1)
+                                                  0.03       0.06       1.94 r
+  dat_path_inst/u2_alu/sub_38/carry[7] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_7/CI (FADDX1)
+                                                  0.03       0.00       1.94 r
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX1)
+                                                  0.03       0.06       2.00 r
+  dat_path_inst/u2_alu/sub_38/carry[8] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_8/CI (FADDX1)
+                                                  0.03       0.00       2.00 r
+  dat_path_inst/u2_alu/sub_38/U2_8/CO (FADDX1)
+                                                  0.03       0.06       2.07 r
+  dat_path_inst/u2_alu/sub_38/carry[9] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_9/CI (FADDX1)
+                                                  0.03       0.00       2.07 r
+  dat_path_inst/u2_alu/sub_38/U2_9/CO (FADDX1)
+                                                  0.03       0.06       2.13 r
+  dat_path_inst/u2_alu/sub_38/carry[10] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_10/CI (FADDX1)
+                                                  0.03       0.00       2.13 r
+  dat_path_inst/u2_alu/sub_38/U2_10/CO (FADDX1)
+                                                  0.03       0.06       2.19 r
+  dat_path_inst/u2_alu/sub_38/carry[11] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_11/CI (FADDX1)
+                                                  0.03       0.00       2.19 r
+  dat_path_inst/u2_alu/sub_38/U2_11/CO (FADDX1)
+                                                  0.03       0.06       2.26 r
+  dat_path_inst/u2_alu/sub_38/carry[12] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_12/CI (FADDX1)
+                                                  0.03       0.00       2.26 r
+  dat_path_inst/u2_alu/sub_38/U2_12/CO (FADDX1)
+                                                  0.03       0.06       2.32 r
+  dat_path_inst/u2_alu/sub_38/carry[13] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_13/CI (FADDX1)
+                                                  0.03       0.00       2.32 r
+  dat_path_inst/u2_alu/sub_38/U2_13/CO (FADDX1)
+                                                  0.03       0.06       2.38 r
+  dat_path_inst/u2_alu/sub_38/carry[14] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_14/CI (FADDX1)
+                                                  0.03       0.00       2.38 r
+  dat_path_inst/u2_alu/sub_38/U2_14/CO (FADDX1)
+                                                  0.03       0.06       2.45 r
+  dat_path_inst/u2_alu/sub_38/carry[15] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_15/CI (FADDX1)
+                                                  0.03       0.00       2.45 r
+  dat_path_inst/u2_alu/sub_38/U2_15/CO (FADDX1)
+                                                  0.03       0.06       2.51 r
+  dat_path_inst/u2_alu/sub_38/carry[16] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_16/CI (FADDX1)
+                                                  0.03       0.00       2.51 r
+  dat_path_inst/u2_alu/sub_38/U2_16/CO (FADDX1)
+                                                  0.03       0.06       2.57 r
+  dat_path_inst/u2_alu/sub_38/carry[17] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_17/CI (FADDX1)
+                                                  0.03       0.00       2.57 r
+  dat_path_inst/u2_alu/sub_38/U2_17/CO (FADDX1)
+                                                  0.03       0.06       2.64 r
+  dat_path_inst/u2_alu/sub_38/carry[18] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_18/CI (FADDX1)
+                                                  0.03       0.00       2.64 r
+  dat_path_inst/u2_alu/sub_38/U2_18/CO (FADDX1)
+                                                  0.03       0.06       2.70 r
+  dat_path_inst/u2_alu/sub_38/carry[19] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_19/CI (FADDX1)
+                                                  0.03       0.00       2.70 r
+  dat_path_inst/u2_alu/sub_38/U2_19/CO (FADDX1)
+                                                  0.03       0.06       2.76 r
+  dat_path_inst/u2_alu/sub_38/carry[20] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_20/CI (FADDX1)
+                                                  0.03       0.00       2.76 r
+  dat_path_inst/u2_alu/sub_38/U2_20/CO (FADDX1)
+                                                  0.03       0.06       2.83 r
+  dat_path_inst/u2_alu/sub_38/carry[21] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_21/CI (FADDX1)
+                                                  0.03       0.00       2.83 r
+  dat_path_inst/u2_alu/sub_38/U2_21/CO (FADDX1)
+                                                  0.03       0.06       2.89 r
+  dat_path_inst/u2_alu/sub_38/carry[22] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_22/CI (FADDX1)
+                                                  0.03       0.00       2.89 r
+  dat_path_inst/u2_alu/sub_38/U2_22/CO (FADDX1)
+                                                  0.03       0.06       2.96 r
+  dat_path_inst/u2_alu/sub_38/carry[23] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_23/CI (FADDX1)
+                                                  0.03       0.00       2.96 r
+  dat_path_inst/u2_alu/sub_38/U2_23/CO (FADDX1)
+                                                  0.03       0.06       3.02 r
+  dat_path_inst/u2_alu/sub_38/carry[24] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_24/CI (FADDX1)
+                                                  0.03       0.00       3.02 r
+  dat_path_inst/u2_alu/sub_38/U2_24/CO (FADDX1)
+                                                  0.03       0.06       3.08 r
+  dat_path_inst/u2_alu/sub_38/carry[25] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_25/CI (FADDX1)
+                                                  0.03       0.00       3.08 r
+  dat_path_inst/u2_alu/sub_38/U2_25/CO (FADDX1)
+                                                  0.03       0.06       3.15 r
+  dat_path_inst/u2_alu/sub_38/carry[26] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_26/CI (FADDX1)
+                                                  0.03       0.00       3.15 r
+  dat_path_inst/u2_alu/sub_38/U2_26/CO (FADDX1)
+                                                  0.03       0.06       3.21 r
+  dat_path_inst/u2_alu/sub_38/carry[27] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_27/CI (FADDX1)
+                                                  0.03       0.00       3.21 r
+  dat_path_inst/u2_alu/sub_38/U2_27/CO (FADDX1)
+                                                  0.03       0.06       3.27 r
+  dat_path_inst/u2_alu/sub_38/carry[28] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_28/CI (FADDX1)
+                                                  0.03       0.00       3.27 r
+  dat_path_inst/u2_alu/sub_38/U2_28/CO (FADDX1)
+                                                  0.03       0.06       3.34 r
+  dat_path_inst/u2_alu/sub_38/carry[29] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_29/CI (FADDX1)
+                                                  0.03       0.00       3.34 r
+  dat_path_inst/u2_alu/sub_38/U2_29/CO (FADDX1)
+                                                  0.03       0.06       3.40 r
+  dat_path_inst/u2_alu/sub_38/carry[30] (net)
+                                 1     8.09 
+  dat_path_inst/u2_alu/sub_38/U2_30/CI (FADDX1)
+                                                  0.03       0.00       3.40 r
+  dat_path_inst/u2_alu/sub_38/U2_30/CO (FADDX1)
+                                                  0.03       0.06       3.46 r
+  dat_path_inst/u2_alu/sub_38/carry[31] (net)
+                                 1     3.65 
+  dat_path_inst/u2_alu/sub_38/U2_31/IN3 (XOR3X1)
+                                                  0.03       0.00       3.46 r
+  dat_path_inst/u2_alu/sub_38/U2_31/Q (XOR3X1)
+                                                  0.02       0.04       3.49 f
+  dat_path_inst/u2_alu/sub_38/DIFF[31] (net)
+                                 1     2.23 
+  dat_path_inst/u2_alu/sub_38/DIFF[31] (mips_alu_DW01_sub_0)
+                                                  0.00       0.00       3.49 f
+  dat_path_inst/u2_alu/N171 (net) 
+  dat_path_inst/u2_alu/U81/IN5 (AO222X1)          0.02       0.00       3.49 f
+  dat_path_inst/u2_alu/U81/Q (AO222X1)            0.02       0.03       3.53 f
+  dat_path_inst/u2_alu/n51 (net)
+                                 1     2.62 
+  dat_path_inst/u2_alu/U80/IN5 (AO221X1)          0.02       0.00       3.53 f
+  dat_path_inst/u2_alu/U80/Q (AO221X1)            0.03       0.04       3.57 f
+  dat_path_inst/u2_alu/alu_out[31] (net)
+                                 3     5.25 
+  dat_path_inst/u2_alu/U51/IN1 (OR4X1)            0.03       0.01       3.57 f
+  dat_path_inst/u2_alu/U51/Q (OR4X1)              0.02       0.03       3.61 f
+  dat_path_inst/u2_alu/n19 (net)
+                                 1     2.96 
+  dat_path_inst/u2_alu/U48/IN2 (NOR4X0)           0.02       0.00       3.61 f
+  dat_path_inst/u2_alu/U48/QN (NOR4X0)            0.04       0.02       3.63 r
+  dat_path_inst/u2_alu/n17 (net)
+                                 1     1.86 
+  dat_path_inst/u2_alu/U47/IN2 (AND2X1)           0.04       0.00       3.63 r
+  dat_path_inst/u2_alu/U47/Q (AND2X1)             0.02       0.04 +     3.67 r
+  dat_path_inst/u2_alu/zero (net)
+                                 1     2.17 
+  dat_path_inst/u2_alu/U15075/INP (NBUFFX4)       0.02       0.00 +     3.67 r
+  dat_path_inst/u2_alu/U15075/Z (NBUFFX4)         0.03       0.05       3.72 r
+  dat_path_inst/u2_alu/net12758 (net)
+                                 2     5.06 
+  dat_path_inst/u2_alu/zero (mips_alu)            0.00       0.00       3.72 r
+  dat_path_inst/alu_zero (net) 
+  dat_path_inst/U184/INP (INVX0)                  0.03       0.00       3.72 r
+  dat_path_inst/U184/ZN (INVX0)                   0.02       0.02       3.74 f
+  dat_path_inst/n127 (net)       1     2.94 
+  dat_path_inst/U183/IN2 (NAND2X1)                0.02       0.00       3.74 f
+  dat_path_inst/U183/QN (NAND2X1)                 0.03       0.02       3.76 r
+  dat_path_inst/n62 (net)        4     8.92 
+  dat_path_inst/U120/IN2 (AND2X1)                 0.03       0.01       3.77 r
+  dat_path_inst/U120/Q (AND2X1)                   0.02       0.04       3.81 r
+  dat_path_inst/n52 (net)        3     6.63 
+  dat_path_inst/U162/INP (NBUFFX2)                0.02       0.01       3.82 r
+  dat_path_inst/U162/Z (NBUFFX2)                  0.03       0.05       3.87 r
+  dat_path_inst/n124 (net)      13    27.41 
+  dat_path_inst/U118/IN4 (AO222X1)                0.03       0.32       4.19 r
+  dat_path_inst/U118/Q (AO222X1)                  0.03       0.06       4.25 r
+  dat_path_inst/pc_nxt[0] (net)
+                                 1     2.32 
+  dat_path_inst/U4165/INP (NBUFFX32)              0.03       0.00       4.25 r
+  dat_path_inst/U4165/Z (NBUFFX32)                0.03       0.08       4.34 r
+  dat_path_inst/net1848 (net)    1     2.32 
+  dat_path_inst/U5332/INP (NBUFFX32)              0.03       0.00       4.34 r
+  dat_path_inst/U5332/Z (NBUFFX32)                0.03       0.08       4.42 r
+  dat_path_inst/net3015 (net)    1     2.32 
+  dat_path_inst/U6117/INP (NBUFFX32)              0.03       0.00       4.42 r
+  dat_path_inst/U6117/Z (NBUFFX32)                0.03       0.08       4.50 r
+  dat_path_inst/net3800 (net)    1     2.32 
+  dat_path_inst/U6890/INP (NBUFFX32)              0.03       0.00       4.50 r
+  dat_path_inst/U6890/Z (NBUFFX32)                0.03       0.08       4.59 r
+  dat_path_inst/net4573 (net)    1     2.32 
+  dat_path_inst/U8412/INP (NBUFFX32)              0.03       0.00       4.59 r
+  dat_path_inst/U8412/Z (NBUFFX32)                0.03       0.08       4.67 r
+  dat_path_inst/net6095 (net)    1     2.32 
+  dat_path_inst/U9453/INP (NBUFFX32)              0.03       0.00       4.67 r
+  dat_path_inst/U9453/Z (NBUFFX32)                0.03       0.08       4.76 r
+  dat_path_inst/net7136 (net)    1     2.32 
+  dat_path_inst/U11416/INP (NBUFFX32)             0.03       0.00       4.76 r
+  dat_path_inst/U11416/Z (NBUFFX32)               0.03       0.08 +     4.84 r
+  dat_path_inst/net9099 (net)    1     2.32 
+  dat_path_inst/U10370/INP (NBUFFX32)             0.03       0.00 +     4.84 r
+  dat_path_inst/U10370/Z (NBUFFX32)               0.03       0.08 +     4.92 r
+  dat_path_inst/net8053 (net)    1     2.32 
+  dat_path_inst/U3115/INP (NBUFFX32)              0.03       0.00 +     4.92 r
+  dat_path_inst/U3115/Z (NBUFFX32)                0.03       0.08 +     5.01 r
+  dat_path_inst/net798 (net)     1     1.54 
+  dat_path_inst/pc_internal_reg[0]/D (DFFARX1)
+                                                  0.03       0.00 +     5.01 r
+  data arrival time                                                     5.01
+
+  clock clock (rise edge)                         1.00      20.00      20.00
+  clock network delay (ideal)                                1.00      21.00
+  clock uncertainty                                         -1.00      20.00
+  dat_path_inst/pc_internal_reg[0]/CLK (DFFARX1)                       20.00 r
+  library setup time                                        -0.07      19.93
+  data required time                                                   19.93
+  -----------------------------------------------------------------------------
+  data required time                                                   19.93
+  data arrival time                                                    -5.01
+  -----------------------------------------------------------------------------
+  slack (MET)                                                          14.92
+
+
+1

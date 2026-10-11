@@ -1,0 +1,213 @@
+Warning: Cell contains tie connections which are not connected to real PG. (MW-349)
+Warning: Ignore contact DIFFCON. (ZRT-015)
+Turn off antenna since no rule is specified
+Cell Min-Routing-Layer = M1
+Cell Max-Routing-Layer = M9
+Information: Multiple default contact VIA12C found for layer VIA1. (ZRT-021)
+Warning: Ignore 2 top cell ports with no pins. (ZRT-027)
+Warning: Contact VIA12A's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA12A's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA12A's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA12A's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA23's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA23's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA23's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA23's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA34's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA34's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA34's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA34's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA45's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA45's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA45's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA45's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA56's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA56's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA56's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA56's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA67's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA67's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA67's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA67's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA78's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA78's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA78's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA78's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA89's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA89's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA89's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA89's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact POLYCON's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact POLYCON's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA12B's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA12B's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA12B's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA12B's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA12C's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA12C's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA12C's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA12C's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA23C's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA23C's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA23C's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA23C's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA34C's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA34C's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA34C's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA34C's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA45C's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA45C's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA45C's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA45C's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA56C's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA56C's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA56C's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA56C's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA67C's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA67C's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA67C's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA67C's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA78C's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA78C's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA78C's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA78C's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA89C's lower layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA89C's upper layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA89C's lower layer enclosure width does not satisfy end of line enclosure design rule. (ZRT-042)
+Warning: Contact VIA89C's upper layer enclosure height does not satisfy end of line enclosure design rule. (ZRT-042)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 pitch 0.320 may be too small: wire/via-down 0.360, wire/via-up 0.320. (ZRT-026)
+
+
+Start checking for open nets ... 
+
+Total number of nets = 14939, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+
+Check 14939 nets, 0 have Errors
+
+[CHECK OPEN NETS] Elapsed real time: 0:00:00 
+[CHECK OPEN NETS] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[CHECK OPEN NETS] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[CHECK OPEN NETS] Total (MB): Used   25  Alloctr   26  Proc  530 
+Printing options for 'set_route_zrt_common_options'
+
+Printing options for 'set_route_zrt_detail_options'
+
+
+Begin full DRC check ...
+
+Information: Using 1 threads for routing. (ZRT-444)
+Checked	1/16 Partitions, Violations =	24036
+Checked	2/16 Partitions, Violations =	72282
+Checked	3/16 Partitions, Violations =	142151
+Checked	4/16 Partitions, Violations =	157331
+Checked	5/16 Partitions, Violations =	185240
+Checked	6/16 Partitions, Violations =	235510
+Checked	7/16 Partitions, Violations =	293054
+Checked	8/16 Partitions, Violations =	315503
+Checked	9/16 Partitions, Violations =	356247
+Checked	10/16 Partitions, Violations =	398422
+Checked	11/16 Partitions, Violations =	459995
+Checked	12/16 Partitions, Violations =	477709
+Checked	13/16 Partitions, Violations =	487489
+Checked	14/16 Partitions, Violations =	500905
+Checked	15/16 Partitions, Violations =	517255
+Checked	16/16 Partitions, Violations =	525146
+[DRC CHECK] Elapsed real time: 0:00:01 
+[DRC CHECK] Elapsed cpu  time: sys=0:00:00 usr=0:00:01 total=0:00:01
+[DRC CHECK] Stage (MB): Used   18  Alloctr   18  Proc    0 
+[DRC CHECK] Total (MB): Used   41  Alloctr   41  Proc  530 
+Warning: No antenna rules defined, Skip antenna analysis. (ZRT-309)
+Information: Merged away 379586 aligned/redundant DRCs. (ZRT-305)
+
+DRC-SUMMARY:
+	@@@@@@@ TOTAL VIOLATIONS =	145560
+	Diff net spacing : 35261
+	Same net spacing : 2100
+	Diff net via-cut spacing : 5943
+	Same net via-cut spacing : 7
+	Less than minimum width : 140
+	Less than minimum area : 4
+	Short : 102105
+
+
+Total Wire Length =                    305748 micron
+Total Number of Contacts =             59657
+Total Number of Wires =                72679
+Total Number of PtConns =              4568
+	Layer          M1 :      14199 micron
+	Layer          M2 :      96704 micron
+	Layer          M3 :      97758 micron
+	Layer          M4 :      42205 micron
+	Layer          M5 :      36857 micron
+	Layer          M6 :       6652 micron
+	Layer          M7 :       7697 micron
+	Layer          M8 :       2239 micron
+	Layer          M9 :       1436 micron
+	Via        VIA89C :         94
+	Via        VIA78C :          9
+	Via   VIA78C(rot) :        175
+	Via        VIA67C :        361
+	Via        VIA56C :         46
+	Via   VIA56C(rot) :        414
+	Via        VIA45C :       2341
+	Via        VIA34C :        462
+	Via   VIA34C(rot) :       4732
+	Via        VIA23C :      24850
+	Via   VIA23C(rot) :         20
+	Via        VIA12B :       1203
+	Via   VIA12B(rot) :       4105
+	Via        VIA12C :        644
+	Via   VIA12C(rot) :      20201
+
+ 
+Redundant via conversion report:
+--------------------------------
+
+  Total optimized via conversion rate =  0.00% (0 / 59657 vias)
+ 
+    Layer VIA1       =  0.00% (0      / 26153   vias)
+        Un-optimized = 100.00% (26153   vias)
+    Layer VIA2       =  0.00% (0      / 24870   vias)
+        Un-optimized = 100.00% (24870   vias)
+    Layer VIA3       =  0.00% (0      / 5194    vias)
+        Un-optimized = 100.00% (5194    vias)
+    Layer VIA4       =  0.00% (0      / 2341    vias)
+        Un-optimized = 100.00% (2341    vias)
+    Layer VIA5       =  0.00% (0      / 460     vias)
+        Un-optimized = 100.00% (460     vias)
+    Layer VIA6       =  0.00% (0      / 361     vias)
+        Un-optimized = 100.00% (361     vias)
+    Layer VIA7       =  0.00% (0      / 184     vias)
+        Un-optimized = 100.00% (184     vias)
+    Layer VIA8       =  0.00% (0      / 94      vias)
+        Un-optimized = 100.00% (94      vias)
+ 
+  Total double via conversion rate    =  0.00% (0 / 59657 vias)
+ 
+    Layer VIA1       =  0.00% (0      / 26153   vias)
+    Layer VIA2       =  0.00% (0      / 24870   vias)
+    Layer VIA3       =  0.00% (0      / 5194    vias)
+    Layer VIA4       =  0.00% (0      / 2341    vias)
+    Layer VIA5       =  0.00% (0      / 460     vias)
+    Layer VIA6       =  0.00% (0      / 361     vias)
+    Layer VIA7       =  0.00% (0      / 184     vias)
+    Layer VIA8       =  0.00% (0      / 94      vias)
+ 
+
+
+Verify Summary:
+
+Total number of nets = 14939, of which 0 are not extracted
+Total number of open nets = 0, of which 0 are frozen
+Total number of excluded ports = 0 ports of 0 unplaced cells connected to 0 nets
+                                 0 ports without pins of 0 cells connected to 0 nets
+                                 0 ports of 0 cover cells connected to 0 non-pg nets
+Total number of DRCs = 145560
+Total number of antenna violations = no antenna rules defined
+Total number of voltage-area violations = 0
+Total number of tie to rail violations = not checked
+Total number of tie to rail directly violations = not checked
+
+1

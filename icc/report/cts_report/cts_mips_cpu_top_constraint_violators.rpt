@@ -1,0 +1,59 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Wed Apr  1 20:14:52 2015
+****************************************
+
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : -40/25/125
+
+   max_delay/setup ('clock' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   Addr[31]                    16.00          16.31 f        -0.31  (VIOLATED)
+   Addr[0]                     16.00          16.24 f        -0.24  (VIOLATED)
+   Addr[30]                    16.00          16.19 f        -0.19  (VIOLATED)
+   Addr[29]                    16.00          16.09 f        -0.09  (VIOLATED)
+   dat_path_inst/pc_internal_reg[7]/D
+                               23.29          23.36 r        -0.07  (VIOLATED)
+   dat_path_inst/pc_internal_reg[3]/D
+                               23.28          23.33 r        -0.05  (VIOLATED)
+   dat_path_inst/pc_internal_reg[4]/D
+                               23.28          23.29 r        -0.01  (VIOLATED)
+   dat_path_inst/pc_internal_reg[2]/D
+                               23.28          23.29 r        -0.01  (VIOLATED)
+
+
+   min_delay/hold ('clock' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   dat_path_inst/pc_internal_reg[2]/D
+                                5.13           5.08 f        -0.05  (VIOLATED)
+   dat_path_inst/pc_internal_reg[4]/D
+                                5.13           5.09 f        -0.04  (VIOLATED)
+   dat_path_inst/pc_internal_reg[7]/D
+                                5.13           5.11 f        -0.02  (VIOLATED)
+   dat_path_inst/pc_internal_reg[8]/D
+                                5.13           5.13 f         0.00  (VIOLATED: increase signficant digits)
+   dat_path_inst/pc_internal_reg[9]/D
+                                5.13           5.13 f         0.00  (VIOLATED: increase signficant digits)
+   dat_path_inst/pc_internal_reg[13]/D
+                                5.11           5.11 r         0.00  (VIOLATED: increase signficant digits)
+   dat_path_inst/pc_internal_reg[5]/D
+                                5.13           5.13 f         0.00  (VIOLATED: increase signficant digits)
+   dat_path_inst/pc_internal_reg[25]/D
+                                5.11           5.11 r         0.00  (VIOLATED: increase signficant digits)
+   dat_path_inst/pc_internal_reg[14]/D
+                                5.13           5.13 f         0.00  (VIOLATED: increase signficant digits)
+
+
+1

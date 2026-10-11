@@ -1,0 +1,41 @@
+Information: Updating graph... (UID-83)
+Warning: Design 'mips_cpu_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: Changed wire load model for 'reg_file' from '(none)' to '70000'. (OPT-170)
+Information: Changed minimum wire load model for 'reg_file' from '70000' to '70000'. (OPT-171)
+Information: Changed wire load model for 'mips_alu_DW01_sub_0' from '(none)' to '8000'. (OPT-170)
+Information: Changed minimum wire load model for 'mips_alu_DW01_sub_0' from '8000' to '8000'. (OPT-171)
+Information: Changed wire load model for 'mips_alu_DW01_add_0' from '(none)' to '8000'. (OPT-170)
+Information: Changed minimum wire load model for 'mips_alu_DW01_add_0' from '8000' to '8000'. (OPT-171)
+Information: Changed wire load model for 'mips_alu' from '(none)' to '8000'. (OPT-170)
+Information: Changed minimum wire load model for 'mips_alu' from '8000' to '8000'. (OPT-171)
+Information: Changed wire load model for 'shifter' from '(none)' to '8000'. (OPT-170)
+Information: Changed minimum wire load model for 'shifter' from '8000' to '8000'. (OPT-171)
+Information: Changed wire load model for 'mips_datapath_DW01_add_0' from '(none)' to '8000'. (OPT-170)
+Information: Changed minimum wire load model for 'mips_datapath_DW01_add_0' from '8000' to '8000'. (OPT-171)
+Information: Changed wire load model for 'mips_datapath_DW01_add_1' from '(none)' to '8000'. (OPT-170)
+Information: Changed minimum wire load model for 'mips_datapath_DW01_add_1' from '8000' to '8000'. (OPT-171)
+Information: Changed wire load model for 'mips_datapath' from '(none)' to '140000'. (OPT-170)
+Information: Changed minimum wire load model for 'mips_datapath' from '140000' to '140000'. (OPT-171)
+Information: Changed wire load model for 'mips_controller' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed minimum wire load model for 'mips_controller' from 'ForQA' to 'ForQA'. (OPT-171)
+Information: Changed wire load model for 'alu_ctrl' from '(none)' to '8000'. (OPT-170)
+Information: Changed minimum wire load model for 'alu_ctrl' from '8000' to '8000'. (OPT-171)
+Information: Changed wire load model for 'mips_cpu_top' from 'ForQA' to '140000'. (OPT-170)
+Information: Changed minimum wire load model for 'mips_cpu_top' from '140000' to '140000'. (OPT-171)
+Information: Updating design information... (UID-85)
+Warning: Design 'mips_cpu_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1

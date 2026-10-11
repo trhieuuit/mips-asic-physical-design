@@ -1,0 +1,72 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Wed Apr  1 20:14:52 2015
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: BEST   Library: saed90nm_min
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : -40/25/125
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[24][2]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: dat_path_inst/pc_internal_reg[2]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        4.13       4.13
+  dat_path_inst/u1_reg_file/reg_blk_reg[24][2]/CLK (DFFARX1)
+                                                          0.00       4.13 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[24][2]/Q (DFFARX1)
+                                                          0.12       4.26 f
+  dat_path_inst/u1_reg_file/U1638/Q (MUX41X1)             0.06 *     4.32 f
+  dat_path_inst/u1_reg_file/U1153/QN (NAND3X0)            0.02 *     4.34 r
+  dat_path_inst/u1_reg_file/U1123/QN (NAND3X0)            0.02 *     4.36 f
+  dat_path_inst/u1_reg_file/U1125/ZN (INVX0)              0.01 *     4.37 r
+  dat_path_inst/u1_reg_file/U1124/QN (NAND2X1)            0.02 *     4.39 f
+  dat_path_inst/u1_reg_file/U1189/QN (NAND2X2)            0.02 *     4.41 r
+  dat_path_inst/u1_reg_file/U1190/QN (NAND2X4)            0.03 *     4.44 f
+  dat_path_inst/u1_reg_file/rd_data1[2] (reg_file)        0.00       4.44 f
+  dat_path_inst/U75/Q (AO22X1)                            0.05 *     4.50 f
+  dat_path_inst/U74/Q (AO221X1)                           0.04 *     4.53 f
+  dat_path_inst/*cell*33840/ZN (INVX1)                    0.01 *     4.54 r
+  dat_path_inst/*cell*33841/ZN (INVX1)                    0.01 *     4.55 f
+  dat_path_inst/*cell*1311/Z (DELLN2X2)                   0.17 *     4.72 f
+  dat_path_inst/*cell*1320/Z (NBUFFX2)                    0.03 *     4.75 f
+  dat_path_inst/*cell*23505/Z (NBUFFX2)                   0.02 *     4.78 f
+  dat_path_inst/*cell*23515/Z (NBUFFX2)                   0.02 *     4.80 f
+  dat_path_inst/*cell*23527/Z (NBUFFX2)                   0.02 *     4.83 f
+  dat_path_inst/*cell*32720/Z (NBUFFX2)                   0.02 *     4.85 f
+  dat_path_inst/*cell*32742/Z (NBUFFX2)                   0.09 *     4.94 f
+  dat_path_inst/*cell*1301/ZN (INVX32)                    0.01 *     4.95 r
+  dat_path_inst/*cell*1302/ZN (IBUFFX32)                  0.13 *     5.08 f
+  dat_path_inst/pc_internal_reg[2]/D (DFFARX1)            0.00 *     5.08 f
+  data arrival time                                                  5.08
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        4.13       4.13
+  clock uncertainty                                       1.00       5.13
+  dat_path_inst/pc_internal_reg[2]/CLK (DFFARX1)          0.00       5.13 r
+  library hold time                                       0.00       5.13
+  data required time                                                 5.13
+  --------------------------------------------------------------------------
+  data required time                                                 5.13
+  data arrival time                                                 -5.08
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.05
+
+
+1

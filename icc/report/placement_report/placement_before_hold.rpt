@@ -1,0 +1,54 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Sun Jan  4 16:35:18 2015
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: BEST   Library: saed90nm_min
+
+  Startpoint: dat_path_inst/pc_internal_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: dat_path_inst/pc_internal_reg[0]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  dat_path_inst/pc_internal_reg[0]/CLK (DFFARX1)          0.00 #     1.00 r
+  dat_path_inst/pc_internal_reg[0]/Q (DFFARX1)            0.15       1.15 f
+  dat_path_inst/add_115/A[0] (mips_datapath_DW01_add_1)
+                                                          0.00       1.15 f
+  dat_path_inst/add_115/SUM[0] (mips_datapath_DW01_add_1)
+                                                          0.00       1.15 f
+  dat_path_inst/add_118/A[0] (mips_datapath_DW01_add_0)
+                                                          0.00       1.15 f
+  dat_path_inst/add_118/SUM[0] (mips_datapath_DW01_add_0)
+                                                          0.00       1.15 f
+  dat_path_inst/U118/Q (AO222X1)                          0.03       1.18 f
+  dat_path_inst/pc_internal_reg[0]/D (DFFARX1)            0.00       1.18 f
+  data arrival time                                                  1.18
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  clock uncertainty                                       1.00       2.00
+  dat_path_inst/pc_internal_reg[0]/CLK (DFFARX1)          0.00       2.00 r
+  library hold time                                       0.03       2.03
+  data required time                                                 2.03
+  --------------------------------------------------------------------------
+  data required time                                                 2.03
+  data arrival time                                                 -1.18
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.85
+
+
+1

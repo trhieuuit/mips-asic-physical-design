@@ -1,0 +1,130 @@
+Information: Updating graph... (UID-83)
+Information: Updating design information... (UID-85)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Wed Apr  1 19:51:33 2015
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: WORST   Library: saed90nm_max
+
+  Startpoint: Inst[19] (input port clocked by clock)
+  Endpoint: Addr[31] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  input external delay                                    4.00       5.00 r
+  Inst[19] (in)                                           0.00       5.00 r
+  dat_path_inst/inst[19] (mips_datapath)                  0.00       5.00 r
+  dat_path_inst/u1_reg_file/rd_addr2[3] (reg_file)        0.00       5.00 r
+  dat_path_inst/u1_reg_file/U1116/Q (MUX41X1)            52.98      57.98 r
+  dat_path_inst/u1_reg_file/U1183/QN (NAND2X2)            0.13 *    58.11 f
+  dat_path_inst/u1_reg_file/U1184/QN (NAND2X4)            0.11 *    58.22 r
+  dat_path_inst/u1_reg_file/rd_data2[0] (reg_file)        0.00      58.22 r
+  dat_path_inst/U233/QN (NAND2X4)                         0.09 *    58.31 f
+  dat_path_inst/U244/QN (NAND2X4)                         0.09 *    58.40 r
+  dat_path_inst/u2_alu/in2[0] (mips_alu)                  0.00      58.40 r
+  dat_path_inst/u2_alu/sub_38/B[0] (mips_alu_DW01_sub_0)
+                                                          0.00      58.40 r
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.10 *    58.49 f
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.09 *    58.59 r
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.17 *    58.75 f
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.10 *    58.85 r
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.16 *    59.01 f
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.10 *    59.11 r
+  dat_path_inst/u2_alu/sub_38/U215/QN (NAND3X0)           0.17 *    59.28 f
+  dat_path_inst/u2_alu/sub_38/U80/QN (NAND2X2)            0.09 *    59.37 r
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.16 *    59.53 f
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.10 *    59.63 r
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.17 *    59.80 f
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.08 *    59.88 r
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.19 *    60.07 f
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.41 *    60.48 f
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.08 *    60.56 r
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.10 *    60.66 f
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.08 *    60.74 r
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.08 *    60.82 f
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.08 *    60.90 r
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.17 *    61.07 f
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.09 *    61.16 r
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.10 *    61.26 f
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.07      61.33 r
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.08 *    61.42 f
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.08 *    61.50 r
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.17 *    61.67 f
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.10 *    61.76 r
+  dat_path_inst/u2_alu/sub_38/U140/QN (NAND3X0)           0.17 *    61.93 f
+  dat_path_inst/u2_alu/sub_38/U114/QN (NAND2X2)           0.09 *    62.02 r
+  dat_path_inst/u2_alu/sub_38/U211/QN (NAND3X0)           0.17 *    62.18 f
+  dat_path_inst/u2_alu/sub_38/U199/QN (NAND2X2)           0.09 *    62.27 r
+  dat_path_inst/u2_alu/sub_38/U196/QN (NAND2X2)           0.10 *    62.37 f
+  dat_path_inst/u2_alu/sub_38/U198/ZN (INVX2)             0.07 *    62.45 r
+  dat_path_inst/u2_alu/sub_38/U197/QN (NAND2X4)           0.08 *    62.52 f
+  dat_path_inst/u2_alu/sub_38/U2_15/CO (FADDX2)           0.38 *    62.91 f
+  dat_path_inst/u2_alu/sub_38/U238/QN (NAND2X2)           0.09 *    63.00 r
+  dat_path_inst/u2_alu/sub_38/U134/QN (NAND3X0)           0.17 *    63.17 f
+  dat_path_inst/u2_alu/sub_38/U107/QN (NAND2X2)           0.10 *    63.26 r
+  dat_path_inst/u2_alu/sub_38/U120/QN (NAND3X0)           0.17 *    63.43 f
+  dat_path_inst/u2_alu/sub_38/U108/QN (NAND2X2)           0.10 *    63.53 r
+  dat_path_inst/u2_alu/sub_38/U54/QN (NAND3X0)            0.17 *    63.70 f
+  dat_path_inst/u2_alu/sub_38/U130/QN (NAND2X2)           0.10 *    63.80 r
+  dat_path_inst/u2_alu/sub_38/U328/QN (NAND3X0)           0.17 *    63.97 f
+  dat_path_inst/u2_alu/sub_38/U116/QN (NAND2X2)           0.10 *    64.06 r
+  dat_path_inst/u2_alu/sub_38/U126/QN (NAND3X0)           0.17 *    64.24 f
+  dat_path_inst/u2_alu/sub_38/U119/QN (NAND2X2)           0.08 *    64.31 r
+  dat_path_inst/u2_alu/sub_38/U188/QN (NAND3X0)           0.19 *    64.50 f
+  dat_path_inst/u2_alu/sub_38/U2_22/CO (FADDX2)           0.43 *    64.93 f
+  dat_path_inst/u2_alu/sub_38/U284/QN (NAND2X2)           0.08 *    65.01 r
+  dat_path_inst/u2_alu/sub_38/U283/QN (NAND3X0)           0.16 *    65.17 f
+  dat_path_inst/u2_alu/sub_38/U281/QN (NAND2X2)           0.09 *    65.26 r
+  dat_path_inst/u2_alu/sub_38/U288/QN (NAND2X2)           0.10 *    65.36 f
+  dat_path_inst/u2_alu/sub_38/U290/ZN (INVX2)             0.08 *    65.44 r
+  dat_path_inst/u2_alu/sub_38/U289/QN (NAND2X4)           0.10 *    65.54 f
+  dat_path_inst/u2_alu/sub_38/U69/QN (NAND2X2)            0.08 *    65.62 r
+  dat_path_inst/u2_alu/sub_38/U263/QN (NAND3X0)           0.16 *    65.78 f
+  dat_path_inst/u2_alu/sub_38/U81/QN (NAND2X2)            0.10 *    65.88 r
+  dat_path_inst/u2_alu/sub_38/U273/QN (NAND3X0)           0.17 *    66.05 f
+  dat_path_inst/u2_alu/sub_38/U122/QN (NAND2X2)           0.09 *    66.14 r
+  dat_path_inst/u2_alu/sub_38/U241/QN (NAND3X0)           0.17 *    66.31 f
+  dat_path_inst/u2_alu/sub_38/U76/QN (NAND2X2)            0.10 *    66.41 r
+  dat_path_inst/u2_alu/sub_38/U247/QN (NAND3X0)           0.17 *    66.58 f
+  dat_path_inst/u2_alu/sub_38/U144/QN (NAND2X2)           0.10 *    66.68 r
+  dat_path_inst/u2_alu/sub_38/U117/QN (NAND3X0)           0.18 *    66.86 f
+  dat_path_inst/u2_alu/sub_38/U83/QN (NAND2X2)            0.08 *    66.94 r
+  dat_path_inst/u2_alu/sub_38/U176/QN (NAND3X0)           0.15 *    67.09 f
+  dat_path_inst/u2_alu/sub_38/U2_31/Q (XOR3X1)            0.28 *    67.37 f
+  dat_path_inst/u2_alu/sub_38/DIFF[31] (mips_alu_DW01_sub_0)
+                                                          0.00      67.37 f
+  dat_path_inst/u2_alu/U81/Q (AO222X1)                    0.27 *    67.64 f
+  dat_path_inst/u2_alu/U80/Q (AO221X2)                    0.39 *    68.03 f
+  dat_path_inst/u2_alu/alu_out[31] (mips_alu)             0.00      68.03 f
+  dat_path_inst/data_mem_addr[31] (mips_datapath)         0.00      68.03 f
+  Addr[31] (out)                                          0.00 *    68.03 f
+  data arrival time                                                 68.03
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (ideal)                             1.00      21.00
+  clock uncertainty                                      -1.00      20.00
+  output external delay                                  -4.00      16.00
+  data required time                                                16.00
+  --------------------------------------------------------------------------
+  data required time                                                16.00
+  data arrival time                                                -68.03
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                 -52.03
+
+
+1

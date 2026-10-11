@@ -1,0 +1,13 @@
+Warning: In design 'mips_datapath', port 'inst[31]' is not connected to any nets. (LINT-28)
+Warning: In design 'mips_datapath', port 'inst[30]' is not connected to any nets. (LINT-28)
+Warning: In design 'mips_datapath', port 'inst[29]' is not connected to any nets. (LINT-28)
+Warning: In design 'mips_datapath', port 'inst[28]' is not connected to any nets. (LINT-28)
+Warning: In design 'mips_datapath', port 'inst[27]' is not connected to any nets. (LINT-28)
+Warning: In design 'mips_datapath', port 'inst[26]' is not connected to any nets. (LINT-28)
+Warning: In design 'mips_cpu_top', net 'dat_path_inst/dummy_cout' driven by pin 'dat_path_inst/u2_alu/cout' has no loads. (LINT-2)
+Warning: In design 'mips_controller', output port 'mem_rd' is connected directly to output port 'mem2reg'. (LINT-31)
+Warning: In design 'alu_ctrl', output port 'alu_ctrl[3]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'mips_alu', cell 'B_9' does not drive any nets. (LINT-1)
+Warning: In design 'mips_alu', cell 'B_10' does not drive any nets. (LINT-1)
+Warning: In design 'mips_alu', cell 'B_11' does not drive any nets. (LINT-1)
+1

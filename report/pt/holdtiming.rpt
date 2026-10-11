@@ -1,0 +1,58 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-max_paths 1
+Design : mips_cpu_top
+Version: D-2010.06-SP2
+Date   : Fri Jan  2 12:36:53 2015
+****************************************
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[3]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: dat_path_inst/pc_internal_reg[3]
+               (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  dat_path_inst/pc_internal_reg[3]/CLK (DFFARX1)          0.00       1.00 r
+  dat_path_inst/pc_internal_reg[3]/Q (DFFARX1)            0.14 +     1.14 f
+  dat_path_inst/U11944/Z (NBUFFX32)                       0.08 H     1.22 f
+  dat_path_inst/U10845/Z (NBUFFX32)                       0.08       1.29 f
+  dat_path_inst/U8677/Z (NBUFFX32)                        0.08       1.37 f
+  dat_path_inst/U9817/Z (NBUFFX32)                        0.08 H     1.45 f
+  dat_path_inst/U3391/Z (NBUFFX32)                        0.08 H     1.52 f
+  dat_path_inst/add_115/A[3] (mips_datapath_DW01_add_1)
+                                                          0.00       1.52 f
+  dat_path_inst/add_115/U12989/Z (NBUFFX2)                0.03 H     1.55 f
+  dat_path_inst/add_115/U58/Q (XOR2X1)                    0.05 H     1.60 f
+  dat_path_inst/add_115/SUM[3] (mips_datapath_DW01_add_1)
+                                                          0.00       1.60 f
+  dat_path_inst/U70/Q (AO221X1)                           0.05       1.65 f
+  dat_path_inst/U4971/Z (NBUFFX32)                        0.08       1.73 f
+  dat_path_inst/U5857/Z (NBUFFX32)                        0.08       1.80 f
+  dat_path_inst/U6631/Z (NBUFFX32)                        0.08       1.88 f
+  dat_path_inst/U8229/Z (NBUFFX32)                        0.08 H     1.95 f
+  dat_path_inst/U3178/Z (NBUFFX32)                        0.08 +     2.03 f
+  dat_path_inst/pc_internal_reg[3]/D (DFFARX1)            0.00 +     2.03 f
+  data arrival time                                                  2.03
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  clock uncertainty                                       1.00       2.00
+  dat_path_inst/pc_internal_reg[3]/CLK (DFFARX1)                     2.00 r
+  library hold time                                       0.03       2.03
+  data required time                                                 2.03
+  ------------------------------------------------------------------------------
+  data required time                                                 2.03
+  data arrival time                                                 -2.03
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

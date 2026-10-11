@@ -1,0 +1,28 @@
+Information: Updating graph... (UID-83)
+Warning: Design 'mips_cpu_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : area
+Design : mips_cpu_top
+Version: D-2010.03-SP4
+Date   : Fri Jan  2 11:04:51 2015
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'mips_cpu_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    saed90nm_min (File: /home/ltk/ASIC_LIB/Lib/syn_lib/syn_lib/saed90nm_min.db)
+
+Number of ports:              164
+Number of nets:               182
+Number of cells:                3
+Number of references:           3
+
+Combinational area:       43075.584295
+Noncombinational area:    34062.336548
+Net Interconnect area:    7207.916987  
+
+Total cell area:          77137.920843
+Total area:               84345.837830
+1

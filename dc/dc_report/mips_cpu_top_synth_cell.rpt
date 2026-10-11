@@ -1,0 +1,26 @@
+ 
+****************************************
+Report : cell
+Design : mips_cpu_top
+Version: D-2010.03-SP4
+Date   : Fri Jan  2 11:04:51 2015
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+alu_ctrl_inst             alu_ctrl                        200.908801
+                                                                    h
+ctrl_inst                 mips_controller                 182.476801
+                                                                    h
+dat_path_inst             mips_datapath                   76754.535241
+                                                                    h, n
+--------------------------------------------------------------------------------
+Total 3 cells                                             77137.920843
+1

@@ -1,0 +1,58 @@
+
+Cell mw_mips_cts.err existed already. Replace it ...
+Warning: Cell contains tie connections which are not connected to real PG. (MW-349)
+
+============================================
+==        Check Pin access points         ==
+============================================
+
+Pin [OR4X1       ,IN4 ] has no good access point on V  grid
+Pin [OR4X1       ,IN2 ] has no good access point on V  grid
+Pin [AOI222X1    ,IN3 ] has no good access point on    grid
+Pin [NOR4X0      ,IN2 ] has no good access point on V  grid
+
+******** Pin Access Analysis *******
+** # Cell Masters    =   58
+** # Ports (logical) =  226
+** # Pins (physical) =  226
+** # Pins with no good access point on Grid (V&H) =   4 ( 1%)
+** # Pins with no good access point on Ver-Grid   =   3 ( 1%)
+
+============================================
+==    Check Cell-Instance wire tracks     ==
+============================================
+
+Checking cell instance tracks on layer (M1)
+Checking cell instance tracks on layer (M2)
+Checking cell instance tracks on layer (M3)
+Checking cell instance tracks on layer (M4)
+Checking cell instance tracks on layer (M5)
+Checking cell instance tracks on layer (M6)
+Checking cell instance tracks on layer (M7)
+Checking cell instance tracks on layer (M8)
+Checking cell instance tracks on layer (M9)
+
+============================================
+==         Check Pin out of bound         ==
+============================================
+
+No out-of-bound error found
+
+============================================
+==             Check Min-Grid             ==
+============================================
+
+No min-grid error found
+
+============================================
+==        Check for blocked ports         ==
+============================================
+
+No blocked port was detected
+
+[        CHECK DESIGN] CPU = 0:00:00, Elapsed = 0:00:01
+
+[        CHECK DESIGN] Peak Memory =    113M Data =     11M
+
+Update error cell ...
+1

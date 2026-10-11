@@ -1,0 +1,14 @@
+Warning: Design 'mips_cpu_top' has '90' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Cannot read file 'your_library.db'. (UID-58)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Sun Jan  4 15:26:17 2015
+****************************************
+
+This design has no constraints.
+
+1

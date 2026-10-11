@@ -1,0 +1,14 @@
+ 
+****************************************
+Report : clock tree
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Wed Apr  1 20:13:53 2015
+****************************************
+
+
+============= Clock Tree Summary ==============
+Clock     Sinks     CTBuffers ClkCells  Skew      LongestPath TotalDRC   BufferArea
+-----------------------------------------------------------------------------------
+clock     1056      0         0         0.000     2375.865    1          0.000     
+1

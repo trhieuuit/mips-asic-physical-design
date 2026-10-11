@@ -1,0 +1,14 @@
+*/work/
+*mips_cpu_top_Lib/
+*.db
+*.log
+*.ddc
+*.svf
+*.spef
+simv*
+csrc/
+*.vpd
+*.fsdb
+*.vcd
+icc_output.txt
+cpd_pre_route_opt_*/

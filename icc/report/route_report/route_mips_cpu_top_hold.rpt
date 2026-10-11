@@ -1,0 +1,54 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Wed Apr  1 20:03:50 2015
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: BEST   Library: saed90nm_min
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : -40/25/125
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[12][13]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[12][13]
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        4.13       4.13
+  dat_path_inst/u1_reg_file/reg_blk_reg[12][13]/CLK (DFFARX1)
+                                                          0.00       4.13 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[12][13]/Q (DFFARX1)
+                                                          0.12       4.25 f
+  dat_path_inst/u1_reg_file/U694/Q (AO22X1)               0.04 *     4.29 f
+  dat_path_inst/u1_reg_file/reg_blk_reg[12][13]/D (DFFARX1)
+                                                          0.00 *     4.29 f
+  data arrival time                                                  4.29
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        4.13       4.13
+  clock uncertainty                                       1.00       5.13
+  dat_path_inst/u1_reg_file/reg_blk_reg[12][13]/CLK (DFFARX1)
+                                                          0.00       5.13 r
+  library hold time                                       0.01       5.14
+  data required time                                                 5.14
+  --------------------------------------------------------------------------
+  data required time                                                 5.14
+  data arrival time                                                 -4.29
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.85
+
+
+1

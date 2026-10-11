@@ -1,0 +1,22 @@
+Information: The design has horizontal rows, and Y-symmetry has been used for sites. (MWDC-217)
+Floorplan loading succeeded.
+ 
+****************************************
+Report : clocks
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Wed Apr  1 19:51:31 2015
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clock           20.00   {0 10}              f         {clock}
+--------------------------------------------------------------------------------
+1
