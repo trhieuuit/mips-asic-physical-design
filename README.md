@@ -1,4 +1,103 @@
-# MIPS CPU ASIC Physical Design
+# MIPS CPU ASIC Physical Design Flow
+
+This project implements a complete ASIC design flow for a MIPS CPU, from RTL design and functional simulation to logic synthesis, physical design, and static timing analysis.
+This project focus on Physical Design
+The project uses the Synopsys ASIC toolchain and the SAED 90 nm standard-cell technology library.
+
+---
+
+## 1. Project Overview
+
+The overall ASIC implementation flow is:
+
+```text
+RTL Design
+    │
+    ▼
+RTL Simulation
+   (VCS)
+    │
+    ▼
+Logic Synthesis
+(Design Compiler)
+    │
+    ├──────────────► Post-Synthesis Verification
+    │                       │
+    │                   Formality
+    │                   PrimeTime
+    │                       │
+    ▼                       │
+Physical Design             │
+(IC Compiler)               │
+    │                       │
+    ├── Import              │
+    ├── Floorplan           │
+    ├── Placement           │
+    ├── CTS                 │
+    └── Routing             │
+    │                       │
+    ▼                       │
+Post-Layout Netlist         │
+    │                       │
+    ├──────────────► Post-Layout Simulation
+    │
+    ├──────────────► Formal Verification
+    │
+    └──────────────► PrimeTime STA
+```
+
+The main objective of this project is to study and implement the complete RTL-to-layout ASIC flow and analyze timing, placement, clock distribution, congestion, and routing results.
+
+---
+
+## 2. Repository Structure
+
+```text
+.
+├── dc/
+│   ├── dc_script.tcl
+│   └── dc_report/
+│
+├── fm/
+│   ├── post_syn/
+│   └── post_layout/
+│
+├── icc/
+│   ├── import_script/
+│   ├── floorplan_script/
+│   ├── placement_script/
+│   ├── cts_script/
+│   ├── routing_script/
+│   └── report/
+│
+├── image/
+│
+├── netlist/
+│   ├── mips_cpu_top_NL.v
+│   └── mips_cpu_top_post_layout.v
+│
+├── pt/
+│   ├── post_syn/
+│   └── post_layout/
+│
+├── report/
+│   ├── pt/
+│   └── pt_post_layout/
+│
+├── rtl/
+│
+├── sdc/
+│
+├── tb/
+│
+└── vcs/
+    ├── pre_syn/
+    ├── post_syn/
+    └── post_layout/
+```
+
+---
+# 3. MIPS CPU ASIC Physical Design
 
 This project implements the physical design flow of a MIPS CPU using **Synopsys IC Compiler (ICC)** with the **SAED 90 nm** technology library.
 
@@ -61,11 +160,7 @@ sdc/mips_cpu_top_SDC.sdc
 
 The floorplanning stage defines the core area, I/O pins, power rings, power straps, and standard-cell power rails.
 
-Typical checkpoint:
 
-```text
-mw_mips_floorplan_done
-```
 
 ![Floorplan](image/floorplan.png)
 
@@ -84,11 +179,6 @@ report_qor
 report_congestion
 ```
 
-Typical checkpoint:
-
-```text
-mw_mips_placed
-```
 
 ![Placement](image/placement.png)
 
@@ -103,11 +193,7 @@ CTS builds the clock distribution network and inserts clock buffers to control:
 - Clock transition
 - Clock fanout
 
-Typical checkpoint:
 
-```text
-mw_mips_cts
-```
 
 ![Clock Tree Synthesis](image/cts.png)
 
@@ -140,6 +226,12 @@ route_opt -incremental
 verify_zrt_route
 ```
 
+Final routed design:
+
+![Routing Result](image/routing_1.png)
+
+![Routing Result](image/routing_2.png)
+
 Global routing congestion:
 
 ![Global Routing Congestion](image/global_routing_congestion.png)
@@ -148,17 +240,9 @@ Detailed routing congestion:
 
 ![Detailed Routing Congestion](image/detailed_routing_congestion.png)
 
-Final routed design:
 
-![Routing Result](image/routing_1.png)
 
-![Routing Result](image/routing_2.png)
 
-Typical checkpoint:
-
-```text
-mw_mips_route
-```
 
 ---
 
@@ -198,8 +282,3 @@ icc/report/
 - Synopsys PrimeTime
 - SAED 90 nm technology library
 
-## Author
-
-**Trọng Hiếu Lê**  
-Computer Engineering  
-University of Information Technology - VNU-HCM
