@@ -1,0 +1,44 @@
+checking tluplus...
+CPD_Runtime: ::check_tlu_plus_files CPU:          0 s (  0.00 hr) 
+checking physical objects...
+CPD_Runtime: ::get_placement_area CPU:          0 s (  0.00 hr) 
+CPD_Runtime: report_routing_metal_info CPU:          0 s (  0.00 hr) 
+CPD_Runtime: check_track_and_unit CPU:          0 s (  0.00 hr) 
+CPD_Runtime: check_layer_direction CPU:          0 s (  0.00 hr) 
+CPD_Runtime: check_physical_only_ports CPU:          0 s (  0.00 hr) 
+checking timing...
+CPD_Runtime: check_timing CPU:          0 s (  0.00 hr) 
+checking HFN/ideal/dont_touch nets...
+CPD_Runtime: check_for_HFN_ideal CPU:          0 s (  0.00 hr) 
+CPD_Runtime: check_for_dont_touch_net_with_drc_violation CPU:          0 s (  0.00 hr) 
+checking ilm...
+CPD_Runtime: check_ilm -stage pre_clock_opt CPU:          0 s (  0.00 hr) 
+checking placement constraints...
+CPD_Runtime: check_placement_utilization_violation CPU:          0 s (  0.00 hr) 
+CPD_Runtime: check_legality_violation CPU:          0 s (  0.00 hr) 
+CPD_Runtime: check_unplaced_cells CPU:          0 s (  0.00 hr) 
+checking clock trees...
+CPD_Runtime: check_clock_tree CPU:          0 s (  0.00 hr) 
+checking clock routing rules...
+CPD_Runtime: check_net_routing_rules CPU:          0 s (  0.00 hr) 
+**************************************************
+Report : check_physical_design
+Stage  : pre_clock_opt
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Thu Apr  2 12:58:03 2015
+**************************************************
+Total messages: 0 errors, 2 warnings
+
+-----------------------------------------------
+Other Warning Summary for check_physical_design
+-----------------------------------------------
+
+  ---------------------------------------------------------------------------
+  ID		Occurances	Title
+  ---------------------------------------------------------------------------
+  PNR-133	1		Net (%s) has fanout of over 1000 and not marked...
+  TIM-134	1		Design '%s' contains %d high-fanout nets. A fan...
+  ---------------------------------------------------------------------------
+dump check_physical_design result to file ./cpd_pre_clock_opt_2015Apr02125803_6690/index.html
+1

@@ -33,7 +33,7 @@ set LinkLibrary_mw "${PDK_ROOT}/process"
 set LinkLibrary_db "${PDK_ROOT}/syn_lib/syn_lib"
 
 # Report
-set LinkReport "${PROJECT_ROOT}/report/icc_test"
+set LinkReport "${PROJECT_ROOT}/report/icc/placement"
 file mkdir $LinkReport
 
 

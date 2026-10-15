@@ -1,0 +1,16 @@
+Create error cell mw_mips_imported.err ...
+Ignore contact DIFFCON, which has non-routing layers:
+	layerNumber = 3
+**** WARNING:Multiple default via [VIA12C] for layer(VIA1):VIA12B
+
+Checking [VSS]:
+	There are no floating shapes
+	All the pins are connected.
+	No errors are found.
+Checking [VDD]:
+	There are no floating shapes
+	All the pins are connected.
+	No errors are found.
+Checked 2 nets, 0 have Errors
+Update error cell ...
+1

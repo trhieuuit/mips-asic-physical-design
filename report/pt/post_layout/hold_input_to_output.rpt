@@ -1,0 +1,633 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-max_paths 20
+Design : mips_cpu_top
+Version: D-2010.06-SP2
+Date   : Sat May  2 16:28:01 2015
+****************************************
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[2] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 r
+  Inst[20] (in)                                           0.00 &     4.00 r
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 r
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 r
+  dat_path_inst/u1_reg_file/U1136/QN (NAND2X1)            0.19 &     4.19 f
+  dat_path_inst/u1_reg_file/U1122/QN (NAND2X4)            0.19 &     4.39 r
+  dat_path_inst/u1_reg_file/rd_data2[2] (reg_file)        0.00 &     4.39 r
+  dat_path_inst/sw_data[2] (mips_datapath)                0.00 &     4.39 r
+  Din[2] (out)                                            0.01 &     4.40 r
+  data arrival time                                                  4.40
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.40
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.30
+
+
+  Startpoint: Inst[29] (input port clocked by clock)
+  Endpoint: MemWrite (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[29] (in)                                           0.00 &     4.00 f
+  ctrl_inst/opcode[3] (mips_controller)                   0.00 &     4.00 f
+  ctrl_inst/U9/Q (AND3X1)                                 0.47 &     4.47 f
+  ctrl_inst/mem_wrt (mips_controller)                     0.00 &     4.47 f
+  MemWrite (out)                                          0.01 &     4.47 f
+  data arrival time                                                  4.47
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.47
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.37
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[30] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2307/Q (MUX21X1)             0.47 &     4.47 f
+  dat_path_inst/u1_reg_file/rd_data2[30] (reg_file)       0.00 &     4.47 f
+  dat_path_inst/sw_data[30] (mips_datapath)               0.00 &     4.47 f
+  Din[30] (out)                                           0.00 &     4.48 f
+  data arrival time                                                  4.48
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.38
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[27] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2274/Q (MUX21X1)             0.48 &     4.48 f
+  dat_path_inst/u1_reg_file/rd_data2[27] (reg_file)       0.00 &     4.48 f
+  dat_path_inst/sw_data[27] (mips_datapath)               0.00 &     4.48 f
+  Din[27] (out)                                           0.00 &     4.48 f
+  data arrival time                                                  4.48
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.38
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[29] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2296/Q (MUX21X1)             0.48 &     4.48 f
+  dat_path_inst/u1_reg_file/rd_data2[29] (reg_file)       0.00 &     4.48 f
+  dat_path_inst/sw_data[29] (mips_datapath)               0.00 &     4.48 f
+  Din[29] (out)                                           0.00 &     4.48 f
+  data arrival time                                                  4.48
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.38
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[0] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 r
+  Inst[20] (in)                                           0.00 &     4.00 r
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 r
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 r
+  dat_path_inst/u1_reg_file/U1187/QN (NAND2X4)            0.12 &     4.12 f
+  dat_path_inst/u1_reg_file/U1188/QN (NAND2X4)            0.07 &     4.19 r
+  dat_path_inst/u1_reg_file/rd_data2[0] (reg_file)        0.00 &     4.19 r
+  dat_path_inst/U219/Z (NBUFFX2)                          0.29 &     4.47 r
+  dat_path_inst/sw_data[0] (mips_datapath)                0.00 &     4.47 r
+  Din[0] (out)                                            0.01 &     4.48 r
+  data arrival time                                                  4.48
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.38
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[24] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2241/Q (MUX21X1)             0.48 &     4.48 f
+  dat_path_inst/u1_reg_file/rd_data2[24] (reg_file)       0.00 &     4.48 f
+  dat_path_inst/sw_data[24] (mips_datapath)               0.00 &     4.48 f
+  Din[24] (out)                                           0.00 &     4.48 f
+  data arrival time                                                  4.48
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.38
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[25] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2252/Q (MUX21X1)             0.48 &     4.48 f
+  dat_path_inst/u1_reg_file/rd_data2[25] (reg_file)       0.00 &     4.48 f
+  dat_path_inst/sw_data[25] (mips_datapath)               0.00 &     4.48 f
+  Din[25] (out)                                           0.00 &     4.48 f
+  data arrival time                                                  4.48
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.38
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[28] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2285/Q (MUX21X1)             0.49 &     4.49 f
+  dat_path_inst/u1_reg_file/rd_data2[28] (reg_file)       0.00 &     4.49 f
+  dat_path_inst/sw_data[28] (mips_datapath)               0.00 &     4.49 f
+  Din[28] (out)                                           0.00 &     4.49 f
+  data arrival time                                                  4.49
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.49
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.39
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[23] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2230/Q (MUX21X1)             0.49 &     4.49 f
+  dat_path_inst/u1_reg_file/rd_data2[23] (reg_file)       0.00 &     4.49 f
+  dat_path_inst/sw_data[23] (mips_datapath)               0.00 &     4.49 f
+  Din[23] (out)                                           0.00 &     4.49 f
+  data arrival time                                                  4.49
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.49
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.39
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[26] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2263/Q (MUX21X1)             0.49 &     4.49 f
+  dat_path_inst/u1_reg_file/rd_data2[26] (reg_file)       0.00 &     4.49 f
+  dat_path_inst/sw_data[26] (mips_datapath)               0.00 &     4.49 f
+  Din[26] (out)                                           0.00 &     4.49 f
+  data arrival time                                                  4.49
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.49
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.39
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[22] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2219/Q (MUX21X1)             0.49 &     4.49 f
+  dat_path_inst/u1_reg_file/rd_data2[22] (reg_file)       0.00 &     4.49 f
+  dat_path_inst/sw_data[22] (mips_datapath)               0.00 &     4.49 f
+  Din[22] (out)                                           0.00 &     4.50 f
+  data arrival time                                                  4.50
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.50
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.40
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[6] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2043/Q (MUX21X2)             0.50 &     4.50 r
+  dat_path_inst/u1_reg_file/rd_data2[6] (reg_file)        0.00 &     4.50 r
+  dat_path_inst/sw_data[6] (mips_datapath)                0.00 &     4.50 r
+  Din[6] (out)                                            0.00 &     4.50 r
+  data arrival time                                                  4.50
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.50
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.40
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[20] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2197/Q (MUX21X1)             0.50 &     4.50 f
+  dat_path_inst/u1_reg_file/rd_data2[20] (reg_file)       0.00 &     4.50 f
+  dat_path_inst/sw_data[20] (mips_datapath)               0.00 &     4.50 f
+  Din[20] (out)                                           0.00 &     4.50 f
+  data arrival time                                                  4.50
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.50
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.40
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[21] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2208/Q (MUX21X1)             0.50 &     4.50 f
+  dat_path_inst/u1_reg_file/rd_data2[21] (reg_file)       0.00 &     4.50 f
+  dat_path_inst/sw_data[21] (mips_datapath)               0.00 &     4.50 f
+  Din[21] (out)                                           0.00 &     4.51 f
+  data arrival time                                                  4.51
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.51
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.41
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[31] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2318/Q (MUX21X2)             0.51 &     4.51 r
+  dat_path_inst/u1_reg_file/rd_data2[31] (reg_file)       0.00 &     4.51 r
+  dat_path_inst/sw_data[31] (mips_datapath)               0.00 &     4.51 r
+  Din[31] (out)                                           0.00 &     4.52 r
+  data arrival time                                                  4.52
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.52
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.42
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[19] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2186/Q (MUX21X1)             0.52 &     4.52 f
+  dat_path_inst/u1_reg_file/rd_data2[19] (reg_file)       0.00 &     4.52 f
+  dat_path_inst/sw_data[19] (mips_datapath)               0.00 &     4.52 f
+  Din[19] (out)                                           0.01 &     4.53 f
+  data arrival time                                                  4.53
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.53
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.43
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[12] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2109/Q (MUX21X2)             0.52 &     4.52 r
+  dat_path_inst/u1_reg_file/rd_data2[12] (reg_file)       0.00 &     4.52 r
+  dat_path_inst/sw_data[12] (mips_datapath)               0.00 &     4.52 r
+  Din[12] (out)                                           0.01 &     4.53 r
+  data arrival time                                                  4.53
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.53
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.43
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[7] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2054/Q (MUX21X1)             0.54 &     4.54 f
+  dat_path_inst/u1_reg_file/rd_data2[7] (reg_file)        0.00 &     4.54 f
+  dat_path_inst/sw_data[7] (mips_datapath)                0.00 &     4.54 f
+  Din[7] (out)                                            0.00 &     4.54 f
+  data arrival time                                                  4.54
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.54
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.44
+
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Din[11] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00 &     4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00 &     4.00 f
+  dat_path_inst/u1_reg_file/U2098/Q (MUX21X2)             0.53 &     4.53 r
+  dat_path_inst/u1_reg_file/rd_data2[11] (reg_file)       0.00 &     4.53 r
+  dat_path_inst/sw_data[11] (mips_datapath)               0.00 &     4.53 r
+  Din[11] (out)                                           0.02 &     4.54 r
+  data arrival time                                                  4.54
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                        0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  ------------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -4.54
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        4.44
+
+
+1

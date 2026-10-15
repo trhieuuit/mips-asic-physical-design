@@ -1,0 +1,578 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 20
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Sat May  2 10:29:22 2015
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: BEST   Library: saed90nm_min
+
+  Startpoint: dat_path_inst/pc_internal_reg[31]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[31] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[31]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[31]/Q (DFFARX1)           0.14       0.14 r
+  dat_path_inst/pc[31] (mips_datapath)                    0.00       0.14 r
+  PC[31] (out)                                            0.00 *     0.14 r
+  data arrival time                                                  0.14
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.04
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[28]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[28] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[28]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[28]/Q (DFFARX1)           0.14       0.14 r
+  dat_path_inst/pc[28] (mips_datapath)                    0.00       0.14 r
+  PC[28] (out)                                            0.00 *     0.14 r
+  data arrival time                                                  0.14
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.04
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[29]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[29] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[29]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[29]/Q (DFFARX1)           0.14       0.14 r
+  dat_path_inst/pc[29] (mips_datapath)                    0.00       0.14 r
+  PC[29] (out)                                            0.00 *     0.14 r
+  data arrival time                                                  0.14
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.04
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[30]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[30] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[30]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[30]/Q (DFFARX1)           0.14       0.14 r
+  dat_path_inst/pc[30] (mips_datapath)                    0.00       0.14 r
+  PC[30] (out)                                            0.00 *     0.14 r
+  data arrival time                                                  0.14
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.04
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[27]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[27] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[27]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[27]/Q (DFFARX1)           0.14       0.14 r
+  dat_path_inst/pc[27] (mips_datapath)                    0.00       0.14 r
+  PC[27] (out)                                            0.00 *     0.14 r
+  data arrival time                                                  0.14
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.04
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[26]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[26] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[26]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[26]/Q (DFFARX1)           0.14       0.14 r
+  dat_path_inst/pc[26] (mips_datapath)                    0.00       0.14 r
+  PC[26] (out)                                            0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[24]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[24] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[24]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[24]/Q (DFFARX1)           0.14       0.14 r
+  dat_path_inst/pc[24] (mips_datapath)                    0.00       0.14 r
+  PC[24] (out)                                            0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[21]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[21] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[21]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[21]/Q (DFFARX1)           0.14       0.14 r
+  dat_path_inst/pc[21] (mips_datapath)                    0.00       0.14 r
+  PC[21] (out)                                            0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[23]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[23] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[23]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[23]/Q (DFFARX1)           0.15       0.15 r
+  dat_path_inst/pc[23] (mips_datapath)                    0.00       0.15 r
+  PC[23] (out)                                            0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[19]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[19] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[19]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[19]/Q (DFFARX1)           0.15       0.15 r
+  dat_path_inst/pc[19] (mips_datapath)                    0.00       0.15 r
+  PC[19] (out)                                            0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[22]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[22] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[22]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[22]/Q (DFFARX1)           0.15       0.15 r
+  dat_path_inst/pc[22] (mips_datapath)                    0.00       0.15 r
+  PC[22] (out)                                            0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[17]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[17] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[17]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[17]/Q (DFFARX1)           0.15       0.15 r
+  dat_path_inst/pc[17] (mips_datapath)                    0.00       0.15 r
+  PC[17] (out)                                            0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[20]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[20] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[20]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[20]/Q (DFFARX1)           0.15       0.15 r
+  dat_path_inst/pc[20] (mips_datapath)                    0.00       0.15 r
+  PC[20] (out)                                            0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[1]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[1] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[1]/CLK (DFFARX1)          0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[1]/Q (DFFARX1)            0.15       0.15 r
+  dat_path_inst/pc[1] (mips_datapath)                     0.00       0.15 r
+  PC[1] (out)                                             0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[25]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[25] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[25]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[25]/Q (DFFARX1)           0.15       0.15 r
+  dat_path_inst/pc[25] (mips_datapath)                    0.00       0.15 r
+  PC[25] (out)                                            0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[16]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[16] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[16]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[16]/Q (DFFARX1)           0.15       0.15 r
+  dat_path_inst/pc[16] (mips_datapath)                    0.00       0.15 r
+  PC[16] (out)                                            0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[18]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[18] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[18]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[18]/Q (DFFARX1)           0.15       0.15 r
+  dat_path_inst/pc[18] (mips_datapath)                    0.00       0.15 r
+  PC[18] (out)                                            0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[0]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[0] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[0]/CLK (DFFARX1)          0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[0]/Q (DFFARX1)            0.15       0.15 r
+  dat_path_inst/pc[0] (mips_datapath)                     0.00       0.15 r
+  PC[0] (out)                                             0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[15]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[15] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[15]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[15]/Q (DFFARX1)           0.15       0.15 r
+  dat_path_inst/pc[15] (mips_datapath)                    0.00       0.15 r
+  PC[15] (out)                                            0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: dat_path_inst/pc_internal_reg[14]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: PC[14] (output port clocked by clock)
+  Path Group: clock
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  dat_path_inst/pc_internal_reg[14]/CLK (DFFARX1)         0.00 #     0.00 r
+  dat_path_inst/pc_internal_reg[14]/Q (DFFARX1)           0.15       0.15 r
+  dat_path_inst/pc[14] (mips_datapath)                    0.00       0.15 r
+  PC[14] (out)                                            0.00 *     0.15 r
+  data arrival time                                                  0.15
+
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  output external delay                                   0.00       0.10
+  data required time                                                 0.10
+  --------------------------------------------------------------------------
+  data required time                                                 0.10
+  data arrival time                                                 -0.15
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+1

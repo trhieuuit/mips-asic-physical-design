@@ -1,0 +1,24 @@
+ 
+****************************************
+Report : area
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Sat May  2 19:07:40 2015
+****************************************
+
+Library(s) Used:
+
+    saed90nm_max (File: /home/ltk/ASIC_LIB/Lib/syn_lib/syn_lib/saed90nm_max.db)
+
+Number of ports:              166
+Number of nets:               192
+Number of cells:               11
+Number of references:           4
+
+Combinational area:       46028.390637
+Noncombinational area:    34062.336548
+Net Interconnect area:    12098.913915 
+
+Total cell area:          80090.727185
+Total area:               92189.641100
+1

@@ -1,473 +1,192 @@
 # ==============================================================================
 # SCRIPT: route.tcl
 # DESIGN: mips_cpu_top
-# 
-#   Signal Routing
-#   + Post-Route Optimization
-#   + Routing Verification
+# TOOL  : Synopsys ICC D-2010.03-SP4
+#
+# INPUT  : mw_mips_cts
+# WORK   : mw_mips_route_work
+# OUTPUT : mw_mips_route_clean
+#
+# FLOW:
+#   1. Restore timing / RC environment
+#   2. Preserve the original CTS checkpoint
+#   3. Global routing
+#   4. Track assignment
+#   5. Detailed routing
+#   6. Routing, placement, clock-tree and timing verification
+#
+# IMPORTANT:
+#   Do NOT run route_opt or route_opt -incremental in this project.
+#   The staged ZRoute sequence previously achieved 0 opens and 0 DRCs.
+# ===============================================================================
+
+puts "\n============================================================"
+puts " START SIGNAL ROUTING: mips_cpu_top"
+puts "============================================================\n"
+
 # ==============================================================================
-
-
-echo "\n============================================================"
-echo " ROUTING"
-echo "============================================================\n"
-
-
-# ==============================================================================
-# 0. PROJECT SETUP
-# ==============================================================================
+# 0. PATHS AND PROJECT CONFIGURATION
+# ===============================================================================
 
 set cell_name "mips_cpu_top"
 
-#
-# File:
-#
-#   .../icc/routing/route.tcl
-#
-
 set SCRIPT_DIR [file dirname [file normalize [info script]]]
-
-#
-# .../icc
-#
-
 set ICC_ROOT [file dirname $SCRIPT_DIR]
-
-#
-# .../full_flow_test
-#
-
 set PROJECT_ROOT [file dirname $ICC_ROOT]
-
-
-#
-# Shared Milkyway database:
-#
-#   .../icc/mips_cpu_top_Lib
-#
 
 set my_mw_lib "${ICC_ROOT}/${cell_name}_Lib"
 
-
-#
-# PDK root
-#
-
 set PDK_ROOT "/home/ltk/ASIC_LIB/Lib"
+set DB_DIR "${PDK_ROOT}/syn_lib/syn_lib"
+set PROCESS_DIR "${PDK_ROOT}/process"
 
-set LinkLibrary_mw "${PDK_ROOT}/process"
-set LinkLibrary_db "${PDK_ROOT}/syn_lib/syn_lib"
+set MAX_LIB "${DB_DIR}/saed90nm_max.db"
+set MIN_LIB "${DB_DIR}/saed90nm_min.db"
 
+set Tlupmax "${PROCESS_DIR}/star_rcxt/tluplus/saed90nm_1p9m_1t_Cmax.tluplus"
+set Tlupmin "${PROCESS_DIR}/star_rcxt/tluplus/saed90nm_1p9m_1t_Cmin.tluplus"
+set Tech2itf "${PROCESS_DIR}/astro/tech/tech2itf.map"
 
-#
-# Report directory
-#
-
-set LinkReport "${PROJECT_ROOT}/report/icc_test"
-
+set LinkReport "${PROJECT_ROOT}/report/icc/route"
 file mkdir $LinkReport
 
-
-
 # ==============================================================================
-# 1. TIMING LIBRARIES
-# ==============================================================================
+# 1. LIBRARY SETUP
+# ===============================================================================
 
-echo "\n*** SETUP TIMING LIBRARIES ***\n"
-
-
-#
-# MAX:
-#   Max-delay side Setup
-#
-# MIN:
-#   Min-delay side Hold
-#
-
-set MAX_LIB "${LinkLibrary_db}/saed90nm_max.db"
-
-set MIN_LIB "${LinkLibrary_db}/saed90nm_min.db"
-
-
-#
-# Main target library
-#
+puts "\n*** LIBRARY SETUP ***\n"
 
 set target_library [list $MAX_LIB]
-
-
-#
-# Resolve standard-cell references
-#
-
-set link_library [list * $MAX_LIB]
-
-
+set link_library [list "*" $MAX_LIB]
 
 # ==============================================================================
-# 2. RC / TLU+ SETUP
-# ==============================================================================
+# 2. OPEN CTS CHECKPOINT AND CREATE A WORKING COPY
+# ===============================================================================
 
-echo "\n*** SETUP RC CORNERS / TLU+ ***\n"
-
-
-set Tlupmax "${LinkLibrary_mw}/star_rcxt/tluplus/saed90nm_1p9m_1t_Cmax.tluplus"
-
-set Tlupmin "${LinkLibrary_mw}/star_rcxt/tluplus/saed90nm_1p9m_1t_Cmin.tluplus"
-
-set Tech2itf "${LinkLibrary_mw}/astro/tech/tech2itf.map"
-
-
-
-# ==============================================================================
-# 3. OPEN CTS CHECKPOINT
-# ==============================================================================
-
-echo "\n*** OPEN CTS CHECKPOINT ***\n"
-
+puts "\n*** OPEN CTS CHECKPOINT ***\n"
 
 open_mw_lib $my_mw_lib
-
-open_mw_cel "mw_mips_cts"
-
+open_mw_cel mw_mips_cts
 current_design $cell_name
 
+# Protect mw_mips_cts from any change by the router.
+# For a clean rerun, start with fresh work/output CEL names in the MW library.
+puts "\n*** SAVE ROUTING WORKING COPY ***\n"
 
+save_mw_cel -as mw_mips_route_work
+close_mw_cel
+open_mw_cel mw_mips_route_work
+current_design $cell_name
 
 # ==============================================================================
-# 4. RESTORE TIMING / RC ENVIRONMENT
-# ==============================================================================
+# 3. RESTORE TIMING + RC SETUP
+# ===============================================================================
 
-echo "\n*** RESTORE TIMING / RC ENVIRONMENT ***\n"
-
-
-#
-# Associate MAX library with MIN timing version
-#
+puts "\n*** RESTORE TIMING AND RC CORNERS ***\n"
 
 set_min_library $MAX_LIB -min_version $MIN_LIB
-
-
-#
-# Restore interconnect RC corners
-#
-
 set_tlu_plus_files -max_tluplus $Tlupmax -min_tluplus $Tlupmin -tech2itf_map $Tech2itf
-
-
-#
-# Resolve design references
-#
-
 link
 
-
-
-# ==============================================================================
-# 5. PRE-ROUTE SANITY CHECKS
-# ==============================================================================
-
-echo "\n============================================================"
-echo " PRE-ROUTE CHECKS"
-echo "============================================================\n"
-
-
-#
-# Check RC setup
-#
-
-check_tlu_plus_files > ${LinkReport}/route_tluplus_check.rpt
-
-
-#
-# Check timing environment
-#
-
-check_timing > ${LinkReport}/route_check_timing_before.rpt
-
-
-#
-# Check clock
-#
-
-report_clock > ${LinkReport}/route_clock.rpt
-
-
-#
-# Check routing feasibility / congestion
-#
-
-check_routeability > ${LinkReport}/route_routeability_check.rpt
-
-
-#
-# Check physical database before route_opt
-#
-
-check_physical_design -stage pre_route_opt > ${LinkReport}/route_pre_route_check.rpt
-
-
+# CTS already built and routed the clock network.
+# Keep the propagated clock model for routing / post-route STA.
+set_propagated_clock [all_clocks]
+update_timing
 
 # ==============================================================================
-# 6. BASELINE BEFORE ROUTING
-# ==============================================================================
+# 4. CHECK BEFORE SIGNAL ROUTING
+# ===============================================================================
 
-echo "\n*** BASELINE BEFORE ROUTING ***\n"
+puts "\n*** PRE-ROUTE CHECKS ***\n"
 
+check_tlu_plus_files > "${LinkReport}/01_tluplus_check.rpt"
+check_timing > "${LinkReport}/02_check_timing_before.rpt"
+report_clock > "${LinkReport}/03_clock_before.rpt"
+report_clock_tree -summary > "${LinkReport}/04_clock_tree_before.rpt"
+check_legality > "${LinkReport}/05_legality_before.rpt"
 
-#
-# Setup timing before signal routing
-#
-
-report_timing -delay max > ${LinkReport}/route_before_setup.rpt
-
-
-#
-# Hold timing before signal routing
-#
-
-report_timing -delay min > ${LinkReport}/route_before_hold.rpt
-
-
-#
-# Constraint violations before route
-#
-
-report_constraint -all_violators > ${LinkReport}/route_before_constraint_violators.rpt
-
-
-#
-# Overall QoR
-#
-
-report_qor > ${LinkReport}/route_before_qor.rpt
-
-
-#
-# Placement utilization 
-#
-
-report_placement_utilization > ${LinkReport}/route_before_utilization.rpt
-
-
-#
-# Congestion estimate
-#
-
-report_congestion > ${LinkReport}/route_before_congestion.rpt
-
-
+report_timing -delay max -max_paths 20 > "${LinkReport}/06_setup_before.rpt"
+report_timing -delay min -max_paths 20 > "${LinkReport}/07_hold_before.rpt"
+report_qor > "${LinkReport}/08_qor_before.rpt"
 
 # ==============================================================================
-# 7. MAIN SIGNAL ROUTING + OPTIMIZATION
-# ==============================================================================
+# 5. GLOBAL ROUTING
+# ===============================================================================
 
-echo "\n============================================================"
-echo " MAIN ROUTE_OPT"
-echo "============================================================\n"
+puts "\n============================================================"
+puts " GLOBAL ROUTING"
+puts "============================================================\n"
 
+route_zrt_global
 
-#
-# route_opt:  flow routing + optimization.
-#
-# Conceptually:
-#
-#   Global routing
-#       ↓
-#   Track assignment
-#       ↓
-#   Detailed routing
-#       ↓
-#   Timing-driven optimization
-#       ↓
-#   Electrical / routing DRC repair
-#
-# Tool:
-#
-#   - insert buffers
-#   - resize cells
-#   - reroute nets
-#   - optimize setup
-#   - optimize hold
-#   - fix transition / capacitance violations
-#
-
-route_opt
-
-
+# Congestion statistics after global routing.
+report_congestion -grc_based -by_layer -routing_stage global > "${LinkReport}/09_global_congestion.rpt"
 
 # ==============================================================================
-# 8. INCREMENTAL POST-ROUTE OPTIMIZATION
-# ==============================================================================
+# 6. TRACK ASSIGNMENT
+# ===============================================================================
 
-echo "\n============================================================"
-echo " INCREMENTAL ROUTE OPTIMIZATION"
-echo "============================================================\n"
+puts "\n============================================================"
+puts " TRACK ASSIGNMENT"
+puts "============================================================\n"
 
-
-route_opt -incremental
-
-
+route_zrt_track
 
 # ==============================================================================
-# 9. ROUTING VERIFICATION
-# ==============================================================================
+# 7. DETAILED ROUTING
+# ===============================================================================
 
-echo "\n============================================================"
-echo " ROUTING VERIFICATION"
-echo "============================================================\n"
+puts "\n============================================================"
+puts " DETAILED ROUTING"
+puts "============================================================\n"
 
-
-#
-# Check ZRoute:
-#
-#   opens
-#   shorts
-#   routing DRC
-#   connectivity problems
-#
-
-verify_zrt_route > ${LinkReport}/route_${cell_name}_zrt_verify.rpt
-
-
+route_zrt_detail
 
 # ==============================================================================
-# 10. POST-ROUTE TIMING ANALYSIS
-# ==============================================================================
+# 8. PHYSICAL VERIFICATION AFTER ROUTING
+# ===============================================================================
 
-echo "\n*** POST-ROUTE TIMING ANALYSIS ***\n"
+puts "\n*** VERIFY ROUTING AND PLACEMENT ***\n"
 
-
-
-#
-# Setup / Max-delay
-#
-
-report_timing -delay max > ${LinkReport}/route_${cell_name}_setup.rpt
-
-
-#
-# Hold / Min-delay
-#
-
-report_timing -delay min > ${LinkReport}/route_${cell_name}_hold.rpt
-
-
+verify_zrt_route > "${LinkReport}/10_verify_zrt_route.rpt"
+check_legality > "${LinkReport}/11_legality_after.rpt"
+check_clock_tree > "${LinkReport}/12_clock_tree_check_after.rpt"
+report_clock_tree -summary > "${LinkReport}/13_clock_tree_summary_after.rpt"
 
 # ==============================================================================
-# 11. POST-ROUTE CONSTRAINT / QOR ANALYSIS
-# ==============================================================================
+# 9. POST-ROUTE EXTRACTION AND TIMING
+# ===============================================================================
 
-echo "\n*** POST-ROUTE QoR / CONSTRAINT ANALYSIS ***\n"
+puts "\n*** POST-ROUTE RC / STA ***\n"
 
+# Extract route-based parasitics before final ICC timing reports.
+# SPEF export is handled by export_post_layout.tcl in a later stage.
+extract_rc
+set_propagated_clock [all_clocks]
+update_timing
 
-#
-# Constraint violations:
-#
-#   setup
-#   hold
-#   max transition
-#   max capacitance
-#   max fanout
-#   ...
-#
-
-report_constraint -all_violators > ${LinkReport}/route_${cell_name}_constraint_violators.rpt
-
-
-#
-# Overall QoR
-#
-
-report_qor > ${LinkReport}/route_${cell_name}_qor.rpt
-
-
-#
-# Final utilization
-#
-
-report_placement_utilization > ${LinkReport}/route_${cell_name}_utilization.rpt
-
-
-#
-# Congestion after routing
-#
-
-report_congestion > ${LinkReport}/route_${cell_name}_congestion.rpt
-
-
+report_timing -delay max -max_paths 20 > "${LinkReport}/14_setup_after.rpt"
+report_timing -delay min -max_paths 20 > "${LinkReport}/15_hold_after.rpt"
+report_constraint -all_violators > "${LinkReport}/16_constraint_violators_after.rpt"
+report_qor > "${LinkReport}/17_qor_after.rpt"
+report_placement_utilization > "${LinkReport}/18_placement_utilization_after.rpt"
 
 # ==============================================================================
-# 12. POST-ROUTE LEGALITY CHECK
-# ==============================================================================
+# 10. SAVE ROUTED CHECKPOINT
+# ===============================================================================
 
-echo "\n*** POST-ROUTE PLACEMENT LEGALITY CHECK ***\n"
+# IMPORTANT: Read 10_verify_zrt_route.rpt and 11_legality_after.rpt.
+# A successful TCL run alone does not guarantee DRC=0 or zero open nets.
+# If violations exist, investigate them before using this checkpoint for signoff.
 
+puts "\n*** SAVE ROUTING CHECKPOINT ***\n"
 
-#
-# route_opt:
-#
-#   - insert buffers
-#   - resize cells
-#   - move cells
-#
-# check placement legality.
-#
+save_mw_cel -as mw_mips_route_clean
 
-check_legality > ${LinkReport}/route_${cell_name}_legality.rpt
-
-
-
-# ==============================================================================
-# 13. STANDARD-CELL FILLER
-# ==============================================================================
-
-
-
-
-
-
-# ==============================================================================
-# 14. FINAL ROUTING VERIFICATION
-# ==============================================================================
-
-echo "\n*** FINAL ROUTING VERIFICATION ***\n"
-
-
-#
-# Verify routing
-#
-
-verify_zrt_route > ${LinkReport}/route_${cell_name}_final_verify.rpt
-
-
-#
-# Final constraint report
-#
-
-report_constraint -all_violators > ${LinkReport}/route_${cell_name}_final_constraint_violators.rpt
-
-
-#
-# Final QoR
-#
-
-report_qor > ${LinkReport}/route_${cell_name}_final_qor.rpt
-
-
-
-# ==============================================================================
-# 15. SAVE ROUTED CHECKPOINT
-# ==============================================================================
-
-echo "\n*** SAVE ROUTED CHECKPOINT ***\n"
-
-
-save_mw_cel -as "mw_mips_route"
-
-
-
-echo "\n============================================================"
-echo " ROUTING COMPLETED"
-echo " CHECKPOINT: mw_mips_route"
-echo "============================================================\n"
+puts "\n============================================================"
+puts " SIGNAL ROUTING SCRIPT COMPLETED"
+puts " DESIGN     : $cell_name"
+puts " CHECKPOINT : mw_mips_route_clean"
+puts " REPORT DIR : $LinkReport"
+puts " NEXT STEP  : Check verification and setup/hold reports"
+puts "============================================================\n"

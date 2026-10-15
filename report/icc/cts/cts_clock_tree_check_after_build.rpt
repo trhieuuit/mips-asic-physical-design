@@ -1,0 +1,4 @@
+Information: Updating design information... (UID-85)
+Information: Input delay ('rise') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('fall') on clock port 'clock' will be added to the clock's propagated skew. (TIM-112)
+1

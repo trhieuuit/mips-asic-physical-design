@@ -1,0 +1,7 @@
+Logical Libraries:
+-------------------------------------------------------------------------
+Library		File			Path
+-------		----			----
+M saed90nm_max	saed90nm_max.db		/home/ltk/ASIC_LIB/Lib/syn_lib/syn_lib
+m saed90nm_min	saed90nm_min.db		/home/ltk/ASIC_LIB/Lib/syn_lib/syn_lib
+1

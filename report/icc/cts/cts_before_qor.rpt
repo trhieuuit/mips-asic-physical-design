@@ -1,0 +1,64 @@
+ 
+****************************************
+Report : qor
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Sat May  2 10:29:22 2015
+****************************************
+
+
+  Timing Path Group 'clock'
+  -----------------------------------
+  Levels of Logic:              78.00
+  Critical Path Length:         11.00
+  Critical Path Slack:           0.00
+  Critical Path Clk Period:     20.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:         10
+  Hierarchical Port Count:        907
+  Leaf Cell Count:               4522
+  Buf/Inv Cell Count:             470
+  CT Buf/Inv Cell Count:            0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    44916.019406
+  Noncombinational Area: 34062.336548
+  Net Area:              13815.040318
+  Net XLength        :      144350.64
+  Net YLength        :      123596.86
+  -----------------------------------
+  Cell Area:             78978.355954
+  Design Area:           92793.396272
+  Net Length        :       267947.50
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          4677
+  Nets With Violations:             0
+  -----------------------------------
+
+
+  Hostname: virtualpc
+
+  Compile CPU Statistics
+  -----------------------------------
+  Resource Sharing:              0.00
+  Logic Optimization:            0.00
+  Mapping Optimization:         19.66
+  -----------------------------------
+  Overall Compile Time:         19.73
+
+1

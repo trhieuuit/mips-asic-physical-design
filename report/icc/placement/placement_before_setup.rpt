@@ -1,0 +1,91 @@
+Information: Updating graph... (UID-83)
+Warning: Design 'mips_cpu_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Information: Updating design information... (UID-85)
+Warning: Design 'mips_cpu_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Thu Apr  2 12:57:03 2015
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WORST   Library: saed90nm_max
+
+  Startpoint: Inst[20] (input port clocked by clock)
+  Endpoint: Addr[31] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    4.00       4.00 f
+  Inst[20] (in)                                           0.00       4.00 f
+  dat_path_inst/inst[20] (mips_datapath)                  0.00       4.00 f
+  dat_path_inst/u1_reg_file/rd_addr2[4] (reg_file)        0.00       4.00 f
+  dat_path_inst/u1_reg_file/U1977/Q (MUX21X1)             5.93       9.93 f
+  dat_path_inst/u1_reg_file/rd_data2[0] (reg_file)        0.00       9.93 f
+  dat_path_inst/U155/Q (AO22X1)                           0.40      10.33 f
+  dat_path_inst/u2_alu/in2[0] (mips_alu)                  0.00      10.33 f
+  dat_path_inst/u2_alu/add_36/B[0] (mips_alu_DW01_add_0)
+                                                          0.00      10.33 f
+  dat_path_inst/u2_alu/add_36/U1/Q (AND2X1)               0.26      10.58 f
+  dat_path_inst/u2_alu/add_36/U1_1/CO (FADDX1)            0.36      10.94 f
+  dat_path_inst/u2_alu/add_36/U1_2/CO (FADDX1)            0.37      11.32 f
+  dat_path_inst/u2_alu/add_36/U1_3/CO (FADDX1)            0.37      11.69 f
+  dat_path_inst/u2_alu/add_36/U1_4/CO (FADDX1)            0.37      12.06 f
+  dat_path_inst/u2_alu/add_36/U1_5/CO (FADDX1)            0.37      12.43 f
+  dat_path_inst/u2_alu/add_36/U1_6/CO (FADDX1)            0.37      12.80 f
+  dat_path_inst/u2_alu/add_36/U1_7/CO (FADDX1)            0.37      13.17 f
+  dat_path_inst/u2_alu/add_36/U1_8/CO (FADDX1)            0.37      13.55 f
+  dat_path_inst/u2_alu/add_36/U1_9/CO (FADDX1)            0.37      13.92 f
+  dat_path_inst/u2_alu/add_36/U1_10/CO (FADDX1)           0.37      14.29 f
+  dat_path_inst/u2_alu/add_36/U1_11/CO (FADDX1)           0.37      14.66 f
+  dat_path_inst/u2_alu/add_36/U1_12/CO (FADDX1)           0.37      15.03 f
+  dat_path_inst/u2_alu/add_36/U1_13/CO (FADDX1)           0.37      15.40 f
+  dat_path_inst/u2_alu/add_36/U1_14/CO (FADDX1)           0.37      15.78 f
+  dat_path_inst/u2_alu/add_36/U1_15/CO (FADDX1)           0.37      16.15 f
+  dat_path_inst/u2_alu/add_36/U1_16/CO (FADDX1)           0.37      16.52 f
+  dat_path_inst/u2_alu/add_36/U1_17/CO (FADDX1)           0.37      16.89 f
+  dat_path_inst/u2_alu/add_36/U1_18/CO (FADDX1)           0.37      17.26 f
+  dat_path_inst/u2_alu/add_36/U1_19/CO (FADDX1)           0.37      17.64 f
+  dat_path_inst/u2_alu/add_36/U1_20/CO (FADDX1)           0.37      18.01 f
+  dat_path_inst/u2_alu/add_36/U1_21/CO (FADDX1)           0.37      18.38 f
+  dat_path_inst/u2_alu/add_36/U1_22/CO (FADDX1)           0.37      18.75 f
+  dat_path_inst/u2_alu/add_36/U1_23/CO (FADDX1)           0.37      19.12 f
+  dat_path_inst/u2_alu/add_36/U1_24/CO (FADDX1)           0.37      19.49 f
+  dat_path_inst/u2_alu/add_36/U1_25/CO (FADDX1)           0.37      19.87 f
+  dat_path_inst/u2_alu/add_36/U1_26/CO (FADDX1)           0.37      20.24 f
+  dat_path_inst/u2_alu/add_36/U1_27/CO (FADDX1)           0.37      20.61 f
+  dat_path_inst/u2_alu/add_36/U1_28/CO (FADDX1)           0.37      20.98 f
+  dat_path_inst/u2_alu/add_36/U1_29/CO (FADDX1)           0.37      21.35 f
+  dat_path_inst/u2_alu/add_36/U1_30/CO (FADDX1)           0.37      21.72 f
+  dat_path_inst/u2_alu/add_36/U1_31/S (FADDX1)            0.39      22.12 f
+  dat_path_inst/u2_alu/add_36/SUM[31] (mips_alu_DW01_add_0)
+                                                          0.00      22.12 f
+  dat_path_inst/u2_alu/U80/Q (AO221X1)                    0.43      22.54 f
+  dat_path_inst/u2_alu/alu_out[31] (mips_alu)             0.00      22.54 f
+  dat_path_inst/data_mem_addr[31] (mips_datapath)         0.00      22.54 f
+  Addr[31] (out)                                          0.00      22.55 f
+  data arrival time                                                 22.55
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (ideal)                             0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  --------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                                -22.55
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -7.55
+
+
+1

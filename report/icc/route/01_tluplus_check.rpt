@@ -1,0 +1,18 @@
+
+Sanity check for TLU+ vs MW-Tech files:
+ max_tlu+: /home/ltk/ASIC_LIB/Lib/process/star_rcxt/tluplus/saed90nm_1p9m_1t_Cmax.tluplus
+ min_tlu+: /home/ltk/ASIC_LIB/Lib/process/star_rcxt/tluplus/saed90nm_1p9m_1t_Cmin.tluplus
+ mapping_file: /home/ltk/ASIC_LIB/Lib/process/astro/tech/tech2itf.map
+ max_emul_tlu+: **NONE**
+ min_emul_tlu+: **NONE**
+ MW design lib: mips_cpu_top_Lib
+
+--------- Sanity Check on TLUPlus Files -------------
+1. Checking the conducting layer names in ITF and mapping file ... 
+[ Passed! ]
+2. Checking the via layer names in ITF and mapping file ... 
+[ Passed! ]
+3. Checking the consistency of Min Width and Min Spacing between MW-tech and ITF ... 
+[ Passed! ]
+----------------- Check Ends ------------------
+1

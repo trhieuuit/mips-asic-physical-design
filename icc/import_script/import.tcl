@@ -9,7 +9,7 @@
 #   - Import gate-level netlist
 #   - Read SDC
 #   - Check basic timing 
-#   - Lưu checkpoint cho Floorplanning
+#   - Save checkpoint for Floorplanning
 # ==============================================================================
 
 
@@ -51,10 +51,10 @@ set Techfile "${LinkLibrary_mw}/astro/tech/astroTechFile.tf"
 
 set Ref_lib\
 	"${LinkLibrary_mw}/astro/fram/saed90nm_fr"
-set Tlumax\
-	"${LinkLibrary_mw}/star_rcxt/tluplus/saed90nm_1p9_1t_Cmax.tluplus"
-set Tlumax\
-	"${LinkLibrary_mw}/star_rcxt/tluplus/saed90nm_1p9_1t_Cmin.tluplus"
+	
+set Tlupmax "${LinkLibrary_mw}/star_rcxt/tluplus/saed90nm_1p9m_1t_Cmax.tluplus"
+set Tlupmin "${LinkLibrary_mw}/star_rcxt/tluplus/saed90nm_1p9m_1t_Cmin.tluplus"
+	
 
 set Tech2itf\
 	"${LinkLibrary_mw}/astro/tech/tech2itf.map"
@@ -97,8 +97,8 @@ set SDC_FILE     "${LinkSDC}/${cell_name}_SDC.sdc"
 foreach f [list\
 	$Techfile\
 	$Ref_lib\	
-	$Tlumax\
-	$Tlumin\
+	$Tlupmax\
+	$Tlupmin\
 	$Tech2itf\
 	$MAX_LIB\
 	$MIN_LIB \

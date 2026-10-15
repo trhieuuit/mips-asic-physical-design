@@ -42,7 +42,7 @@ set LinkLibrary_db "${PDK_ROOT}/syn_lib/syn_lib"
 
 # Report directory
 
-set LinkReport "${PROJECT_ROOT}/report/icc_test"
+set LinkReport "${PROJECT_ROOT}/report/icc/cts"
 
 file mkdir $LinkReport
 
@@ -116,8 +116,14 @@ open_mw_cel "mw_mips_placed"
 
 current_design $cell_name
 
+#create working checkpoint
+save_mw_cel -as nw_mips_cts_work
 
+close_mw_cel
 
+open_mw_cel nw_mips_cts_work
+
+current_design $cell_name
 # ==============================================================================
 # 4. RESTORE MIN/MAX TIMING ENVIRONMENT
 # ==============================================================================
@@ -203,7 +209,7 @@ report_clock_tree -summary > ${LinkReport}/cts_clock_tree_before.rpt
 # 6. BASELINE TIMING BEFORE CTS
 # ==============================================================================
 
-echo "\n*** TIMING BASELINE TRUOC CTS ***\n"
+echo "\n*** TIMING BASELINE BEFORE CTS ***\n"
 
 
 #

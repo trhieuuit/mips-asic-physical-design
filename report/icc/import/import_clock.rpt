@@ -1,0 +1,20 @@
+ 
+****************************************
+Report : clocks
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Thu Apr  2 12:54:49 2015
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clock           20.00   {0 10}                        {clock}
+--------------------------------------------------------------------------------
+1

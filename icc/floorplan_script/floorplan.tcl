@@ -28,7 +28,7 @@ set my_mw_lib "${ICC_ROOT}/${cell_name}_Lib"
 set PDK_ROOT "/home/ltk/ASIC_LIB/Lib"
 
 set LinkProject ".."
-set LinkReport "${LinkProject}/report/icc_test"
+set LinkReport "${LinkProject}/report/icc/floorplan"
 
 set LinkLibrary_mw "${PDK_ROOT}/process"
 set LinkLibrary_db "${PDK_ROOT}/syn_lib/syn_lib"

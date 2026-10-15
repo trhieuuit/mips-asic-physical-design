@@ -1,178 +1,171 @@
 ###################################################################
-
-# Created by write_sdc on Fri Jan  2 11:04:51 2015
-
+# MIPS CPU - Base Timing Constraints
+# Design : mips_cpu_top
+#
+# Used for:
+#   - Synthesis
+#   - ICC Import
+#   - Placement
+#   - CTS
+#   - Routing
+#
+# Clock period : 20 ns = 50 MHz
+# Reset        : Asynchronous, Active-High
 ###################################################################
+
 set sdc_version 1.8
 
-set_units -time ns -resistance MOhm -capacitance fF -voltage V -current uA
-set_operating_conditions -max WORST -max_library saed90nm_max\
-                         -min BEST -min_library saed90nm_min
-create_clock [get_ports clock]  -period 20  -waveform {0 10}
-set_clock_latency 1  [get_clocks clock]
-set_clock_uncertainty 1  [get_clocks clock]
-set_clock_transition -rise 1 [get_clocks clock]
-set_clock_transition -fall 1 [get_clocks clock]
-set_input_delay -clock clock  4  [get_ports clock]
-set_input_delay -clock clock  4  [get_ports {Inst[31]}]
-set_input_delay -clock clock  4  [get_ports {Inst[30]}]
-set_input_delay -clock clock  4  [get_ports {Inst[29]}]
-set_input_delay -clock clock  4  [get_ports {Inst[28]}]
-set_input_delay -clock clock  4  [get_ports {Inst[27]}]
-set_input_delay -clock clock  4  [get_ports {Inst[26]}]
-set_input_delay -clock clock  4  [get_ports {Inst[25]}]
-set_input_delay -clock clock  4  [get_ports {Inst[24]}]
-set_input_delay -clock clock  4  [get_ports {Inst[23]}]
-set_input_delay -clock clock  4  [get_ports {Inst[22]}]
-set_input_delay -clock clock  4  [get_ports {Inst[21]}]
-set_input_delay -clock clock  4  [get_ports {Inst[20]}]
-set_input_delay -clock clock  4  [get_ports {Inst[19]}]
-set_input_delay -clock clock  4  [get_ports {Inst[18]}]
-set_input_delay -clock clock  4  [get_ports {Inst[17]}]
-set_input_delay -clock clock  4  [get_ports {Inst[16]}]
-set_input_delay -clock clock  4  [get_ports {Inst[15]}]
-set_input_delay -clock clock  4  [get_ports {Inst[14]}]
-set_input_delay -clock clock  4  [get_ports {Inst[13]}]
-set_input_delay -clock clock  4  [get_ports {Inst[12]}]
-set_input_delay -clock clock  4  [get_ports {Inst[11]}]
-set_input_delay -clock clock  4  [get_ports {Inst[10]}]
-set_input_delay -clock clock  4  [get_ports {Inst[9]}]
-set_input_delay -clock clock  4  [get_ports {Inst[8]}]
-set_input_delay -clock clock  4  [get_ports {Inst[7]}]
-set_input_delay -clock clock  4  [get_ports {Inst[6]}]
-set_input_delay -clock clock  4  [get_ports {Inst[5]}]
-set_input_delay -clock clock  4  [get_ports {Inst[4]}]
-set_input_delay -clock clock  4  [get_ports {Inst[3]}]
-set_input_delay -clock clock  4  [get_ports {Inst[2]}]
-set_input_delay -clock clock  4  [get_ports {Inst[1]}]
-set_input_delay -clock clock  4  [get_ports {Inst[0]}]
-set_input_delay -clock clock  4  [get_ports {Dout[31]}]
-set_input_delay -clock clock  4  [get_ports {Dout[30]}]
-set_input_delay -clock clock  4  [get_ports {Dout[29]}]
-set_input_delay -clock clock  4  [get_ports {Dout[28]}]
-set_input_delay -clock clock  4  [get_ports {Dout[27]}]
-set_input_delay -clock clock  4  [get_ports {Dout[26]}]
-set_input_delay -clock clock  4  [get_ports {Dout[25]}]
-set_input_delay -clock clock  4  [get_ports {Dout[24]}]
-set_input_delay -clock clock  4  [get_ports {Dout[23]}]
-set_input_delay -clock clock  4  [get_ports {Dout[22]}]
-set_input_delay -clock clock  4  [get_ports {Dout[21]}]
-set_input_delay -clock clock  4  [get_ports {Dout[20]}]
-set_input_delay -clock clock  4  [get_ports {Dout[19]}]
-set_input_delay -clock clock  4  [get_ports {Dout[18]}]
-set_input_delay -clock clock  4  [get_ports {Dout[17]}]
-set_input_delay -clock clock  4  [get_ports {Dout[16]}]
-set_input_delay -clock clock  4  [get_ports {Dout[15]}]
-set_input_delay -clock clock  4  [get_ports {Dout[14]}]
-set_input_delay -clock clock  4  [get_ports {Dout[13]}]
-set_input_delay -clock clock  4  [get_ports {Dout[12]}]
-set_input_delay -clock clock  4  [get_ports {Dout[11]}]
-set_input_delay -clock clock  4  [get_ports {Dout[10]}]
-set_input_delay -clock clock  4  [get_ports {Dout[9]}]
-set_input_delay -clock clock  4  [get_ports {Dout[8]}]
-set_input_delay -clock clock  4  [get_ports {Dout[7]}]
-set_input_delay -clock clock  4  [get_ports {Dout[6]}]
-set_input_delay -clock clock  4  [get_ports {Dout[5]}]
-set_input_delay -clock clock  4  [get_ports {Dout[4]}]
-set_input_delay -clock clock  4  [get_ports {Dout[3]}]
-set_input_delay -clock clock  4  [get_ports {Dout[2]}]
-set_input_delay -clock clock  4  [get_ports {Dout[1]}]
-set_input_delay -clock clock  4  [get_ports {Dout[0]}]
-set_output_delay -clock clock  4  [get_ports {PC[31]}]
-set_output_delay -clock clock  4  [get_ports {PC[30]}]
-set_output_delay -clock clock  4  [get_ports {PC[29]}]
-set_output_delay -clock clock  4  [get_ports {PC[28]}]
-set_output_delay -clock clock  4  [get_ports {PC[27]}]
-set_output_delay -clock clock  4  [get_ports {PC[26]}]
-set_output_delay -clock clock  4  [get_ports {PC[25]}]
-set_output_delay -clock clock  4  [get_ports {PC[24]}]
-set_output_delay -clock clock  4  [get_ports {PC[23]}]
-set_output_delay -clock clock  4  [get_ports {PC[22]}]
-set_output_delay -clock clock  4  [get_ports {PC[21]}]
-set_output_delay -clock clock  4  [get_ports {PC[20]}]
-set_output_delay -clock clock  4  [get_ports {PC[19]}]
-set_output_delay -clock clock  4  [get_ports {PC[18]}]
-set_output_delay -clock clock  4  [get_ports {PC[17]}]
-set_output_delay -clock clock  4  [get_ports {PC[16]}]
-set_output_delay -clock clock  4  [get_ports {PC[15]}]
-set_output_delay -clock clock  4  [get_ports {PC[14]}]
-set_output_delay -clock clock  4  [get_ports {PC[13]}]
-set_output_delay -clock clock  4  [get_ports {PC[12]}]
-set_output_delay -clock clock  4  [get_ports {PC[11]}]
-set_output_delay -clock clock  4  [get_ports {PC[10]}]
-set_output_delay -clock clock  4  [get_ports {PC[9]}]
-set_output_delay -clock clock  4  [get_ports {PC[8]}]
-set_output_delay -clock clock  4  [get_ports {PC[7]}]
-set_output_delay -clock clock  4  [get_ports {PC[6]}]
-set_output_delay -clock clock  4  [get_ports {PC[5]}]
-set_output_delay -clock clock  4  [get_ports {PC[4]}]
-set_output_delay -clock clock  4  [get_ports {PC[3]}]
-set_output_delay -clock clock  4  [get_ports {PC[2]}]
-set_output_delay -clock clock  4  [get_ports {PC[1]}]
-set_output_delay -clock clock  4  [get_ports {PC[0]}]
-set_output_delay -clock clock  4  [get_ports MemRead]
-set_output_delay -clock clock  4  [get_ports MemWrite]
-set_output_delay -clock clock  4  [get_ports {Addr[31]}]
-set_output_delay -clock clock  4  [get_ports {Addr[30]}]
-set_output_delay -clock clock  4  [get_ports {Addr[29]}]
-set_output_delay -clock clock  4  [get_ports {Addr[28]}]
-set_output_delay -clock clock  4  [get_ports {Addr[27]}]
-set_output_delay -clock clock  4  [get_ports {Addr[26]}]
-set_output_delay -clock clock  4  [get_ports {Addr[25]}]
-set_output_delay -clock clock  4  [get_ports {Addr[24]}]
-set_output_delay -clock clock  4  [get_ports {Addr[23]}]
-set_output_delay -clock clock  4  [get_ports {Addr[22]}]
-set_output_delay -clock clock  4  [get_ports {Addr[21]}]
-set_output_delay -clock clock  4  [get_ports {Addr[20]}]
-set_output_delay -clock clock  4  [get_ports {Addr[19]}]
-set_output_delay -clock clock  4  [get_ports {Addr[18]}]
-set_output_delay -clock clock  4  [get_ports {Addr[17]}]
-set_output_delay -clock clock  4  [get_ports {Addr[16]}]
-set_output_delay -clock clock  4  [get_ports {Addr[15]}]
-set_output_delay -clock clock  4  [get_ports {Addr[14]}]
-set_output_delay -clock clock  4  [get_ports {Addr[13]}]
-set_output_delay -clock clock  4  [get_ports {Addr[12]}]
-set_output_delay -clock clock  4  [get_ports {Addr[11]}]
-set_output_delay -clock clock  4  [get_ports {Addr[10]}]
-set_output_delay -clock clock  4  [get_ports {Addr[9]}]
-set_output_delay -clock clock  4  [get_ports {Addr[8]}]
-set_output_delay -clock clock  4  [get_ports {Addr[7]}]
-set_output_delay -clock clock  4  [get_ports {Addr[6]}]
-set_output_delay -clock clock  4  [get_ports {Addr[5]}]
-set_output_delay -clock clock  4  [get_ports {Addr[4]}]
-set_output_delay -clock clock  4  [get_ports {Addr[3]}]
-set_output_delay -clock clock  4  [get_ports {Addr[2]}]
-set_output_delay -clock clock  4  [get_ports {Addr[1]}]
-set_output_delay -clock clock  4  [get_ports {Addr[0]}]
-set_output_delay -clock clock  4  [get_ports {Din[31]}]
-set_output_delay -clock clock  4  [get_ports {Din[30]}]
-set_output_delay -clock clock  4  [get_ports {Din[29]}]
-set_output_delay -clock clock  4  [get_ports {Din[28]}]
-set_output_delay -clock clock  4  [get_ports {Din[27]}]
-set_output_delay -clock clock  4  [get_ports {Din[26]}]
-set_output_delay -clock clock  4  [get_ports {Din[25]}]
-set_output_delay -clock clock  4  [get_ports {Din[24]}]
-set_output_delay -clock clock  4  [get_ports {Din[23]}]
-set_output_delay -clock clock  4  [get_ports {Din[22]}]
-set_output_delay -clock clock  4  [get_ports {Din[21]}]
-set_output_delay -clock clock  4  [get_ports {Din[20]}]
-set_output_delay -clock clock  4  [get_ports {Din[19]}]
-set_output_delay -clock clock  4  [get_ports {Din[18]}]
-set_output_delay -clock clock  4  [get_ports {Din[17]}]
-set_output_delay -clock clock  4  [get_ports {Din[16]}]
-set_output_delay -clock clock  4  [get_ports {Din[15]}]
-set_output_delay -clock clock  4  [get_ports {Din[14]}]
-set_output_delay -clock clock  4  [get_ports {Din[13]}]
-set_output_delay -clock clock  4  [get_ports {Din[12]}]
-set_output_delay -clock clock  4  [get_ports {Din[11]}]
-set_output_delay -clock clock  4  [get_ports {Din[10]}]
-set_output_delay -clock clock  4  [get_ports {Din[9]}]
-set_output_delay -clock clock  4  [get_ports {Din[8]}]
-set_output_delay -clock clock  4  [get_ports {Din[7]}]
-set_output_delay -clock clock  4  [get_ports {Din[6]}]
-set_output_delay -clock clock  4  [get_ports {Din[5]}]
-set_output_delay -clock clock  4  [get_ports {Din[4]}]
-set_output_delay -clock clock  4  [get_ports {Din[3]}]
-set_output_delay -clock clock  4  [get_ports {Din[2]}]
-set_output_delay -clock clock  4  [get_ports {Din[1]}]
-set_output_delay -clock clock  4  [get_ports {Din[0]}]
+
+# ==================================================================
+# 1. UNITS
+# ==================================================================
+
+set_units \
+    -time ns \
+    -resistance MOhm \
+    -capacitance fF \
+    -voltage V \
+    -current uA
+
+
+# ==================================================================
+# 2. OPERATING CONDITIONS
+# ==================================================================
+
+set_operating_conditions \
+    -max WORST \
+    -max_library saed90nm_max \
+    -min BEST \
+    -min_library saed90nm_min
+
+
+# ==================================================================
+# 3. CLOCK
+# ==================================================================
+
+# 20 ns period = 50 MHz
+create_clock \
+    -name clock \
+    -period 20 \
+    -waveform {0 10} \
+    [get_ports clock]
+
+
+# ------------------------------------------------------------------
+# Clock uncertainty
+#
+# Setup margin : 1.0 ns
+# Hold margin  : 0.1 ns
+#
+# ------------------------------------------------------------------
+
+set_clock_uncertainty \
+    -setup 1.0 \
+    [get_clocks clock]
+
+set_clock_uncertainty \
+    -hold 0.1 \
+    [get_clocks clock]
+
+
+# ------------------------------------------------------------------
+# Clock source transition
+#
+# 0.1 ns is an assumed source slew for this project.
+# ------------------------------------------------------------------
+
+set_clock_transition \
+    -rise 0.1 \
+    [get_clocks clock]
+
+set_clock_transition \
+    -fall 0.1 \
+    [get_clocks clock]
+
+
+# ==================================================================
+# 4. ASYNCHRONOUS RESET
+# ==================================================================
+
+# reset is asynchronous active-high.
+#
+# For normal functional STA:
+#   reset = 0 -> inactive
+#
+# Do NOT apply set_input_delay to reset.
+
+set_case_analysis 0 [get_ports reset]
+
+
+# ==================================================================
+# 5. DATA INPUTS
+# ==================================================================
+
+set DATA_INPUT_PORTS \
+    [get_ports {Inst* Dout*}]
+
+
+# ------------------------------------------------------------------
+# Input delay
+#
+# 4 ns is an external-interface assumption for this project.
+# Using the same value for min/max preserves the behavior of the
+# original project constraint.
+#
+# If real interface timing becomes available later, replace these
+# with actual -max and -min values.
+# ------------------------------------------------------------------
+
+set_input_delay \
+    -max \
+    -clock [get_clocks clock] \
+    4.0 \
+    $DATA_INPUT_PORTS
+
+set_input_delay \
+    -min \
+    -clock [get_clocks clock] \
+    4.0 \
+    $DATA_INPUT_PORTS
+
+
+# Input slew assumption
+set_input_transition \
+    0.1 \
+    $DATA_INPUT_PORTS
+
+
+# ==================================================================
+# 6. DATA OUTPUTS
+# ==================================================================
+
+set DATA_OUTPUT_PORTS \
+    [get_ports {PC* Addr* Din* MemRead MemWrite}]
+
+
+# ------------------------------------------------------------------
+# Output delay
+#
+# Maximum output delay = 4 ns.
+#
+# For this personal project, use 0 ns as a simple hold-side
+# external requirement instead of accidentally applying +4 ns
+# to both max and min.
+# ------------------------------------------------------------------
+
+set_output_delay \
+    -max \
+    -clock [get_clocks clock] \
+    4.0 \
+    $DATA_OUTPUT_PORTS
+
+set_output_delay \
+    -min \
+    -clock [get_clocks clock] \
+    0.0 \
+    $DATA_OUTPUT_PORTS
+
+
+###################################################################
+# END OF BASE SDC
+###################################################################

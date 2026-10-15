@@ -1,0 +1,19 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : mips_cpu_top
+Version: D-2010.06-SP2
+Date   : Sat May  2 16:58:33 2015
+****************************************
+
+
+   max_delay/setup ('clock' group)
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   Addr[31]                                                  -0.05  (VIOLATED)
+
+
+
+1

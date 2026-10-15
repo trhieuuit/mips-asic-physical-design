@@ -1,0 +1,3 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'mips_cpu_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+1

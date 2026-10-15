@@ -1,0 +1,47 @@
+ 
+****************************************
+Report : area
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Sat May  2 19:07:48 2015
+****************************************
+
+Library(s) Used:
+
+    saed90nm_max (File: /home/ltk/ASIC_LIB/Lib/syn_lib/syn_lib/saed90nm_max.db)
+
+Number of ports:              166
+Number of nets:               192
+Number of cells:               11
+Number of references:           4
+
+Combinational area:       46028.390637
+Noncombinational area:    34062.336548
+Net Interconnect area:    12098.913915 
+
+Total cell area:          80090.727185
+Total area:               92189.641100
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  ------------------------
+mips_cpu_top                      80094.1328    100.0     44.2368      0.0000  0.0000  mips_cpu_top
+alu_ctrl_inst                       201.8304      0.3    201.8304      0.0000  0.0000  alu_ctrl
+ctrl_inst                           339.1489      0.4    339.1489      0.0000  0.0000  mips_controller
+dat_path_inst                     79508.8281     99.3   2222.8977   1032.1918  0.0000  mips_datapath
+dat_path_inst/add_115               612.8641      0.8    612.8641      0.0000  0.0000  mips_datapath_DW01_add_1
+dat_path_inst/add_118               869.0690      1.1    869.0690      0.0000  0.0000  mips_datapath_DW01_add_0
+dat_path_inst/u1_reg_file         63522.7109     79.3  30490.7285  33030.0391  0.0000  reg_file
+dat_path_inst/u2_alu               7475.0830      9.3   2327.9602      0.0000  0.0000  mips_alu
+dat_path_inst/u2_alu/add_36        2361.1340      2.9   2361.1340      0.0000  0.0000  mips_alu_DW01_add_0
+dat_path_inst/u2_alu/sub_38        2785.9937      3.5   2785.9937      0.0000  0.0000  mips_alu_DW01_sub_0
+dat_path_inst/u3_shifter           3772.1018      4.7   3772.1018      0.0000  0.0000  shifter
+--------------------------------  ----------  -------  ----------  ----------  ------  ------------------------
+Total                                                  46027.9609  34062.2305  0.0000
+
+1

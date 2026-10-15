@@ -1,0 +1,23 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Sat May  2 10:35:33 2015
+****************************************
+
+	Parasitic source    : LPE
+	Parasitic mode      : RealRC
+	Extraction mode     : MIN_MAX
+	Extraction derating : -40/25/125
+
+   max_delay/setup ('clock' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   Addr[31]                    15.00          15.06 f        -0.06  (VIOLATED)
+
+
+1

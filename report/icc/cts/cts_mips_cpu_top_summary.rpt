@@ -1,0 +1,15 @@
+Information: Float pin scale factor for the 'max' operating condition of scenario 'default' is set to 1.000 (CTS-375)
+ 
+****************************************
+Report : clock tree
+Design : mips_cpu_top
+Version: D-2010.03-ICC-SP4
+Date   : Sat May  2 10:29:43 2015
+****************************************
+
+
+============= Clock Tree Summary ==============
+Clock     Sinks     CTBuffers ClkCells  Skew      LongestPath TotalDRC   BufferArea
+-----------------------------------------------------------------------------------
+clock     1056      210       210       0.149     0.677       0          1161.215  
+1

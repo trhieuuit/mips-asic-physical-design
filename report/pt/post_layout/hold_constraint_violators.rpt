@@ -1,0 +1,13 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : mips_cpu_top
+Version: D-2010.06-SP2
+Date   : Sat May  2 16:28:01 2015
+****************************************
+
+
+
+
+1

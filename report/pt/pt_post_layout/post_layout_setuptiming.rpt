@@ -1,0 +1,2494 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 20
+Design : mips_cpu_top
+Version: D-2010.06-SP2
+Date   : Thu Apr  2 08:02:28 2015
+****************************************
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[22][0]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[22][0]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[22][0]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[22][9]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[22][9]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[22][9]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[23][9]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[23][9]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[23][9]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[16][0]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[16][0]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[16][0]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[18][0]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[19][0]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[19][0]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[19][0]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[19][2]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[19][2]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[19][2]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[20][0]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[20][0]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[20][0]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[20][2]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[20][2]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[20][2]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[20][9]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[20][9]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[20][9]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[20][16]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[20][16]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[20][16]/CLK (DFFARX1)     2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[21][0]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[21][0]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[21][0]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[21][2]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[21][2]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[21][2]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[21][9]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[21][9]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[21][9]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[16][2]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[16][2]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[16][2]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[18][2]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][2]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][2]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[19][3]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[19][3]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[19][3]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[16][16]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[16][16]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[16][16]/CLK (DFFARX1)     2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[17][2]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[17][2]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[17][2]/CLK (DFFARX1)      2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: reset (input port)
+  Endpoint: dat_path_inst/u1_reg_file/reg_blk_reg[17][16]
+               (recovery check against rising-edge clock clock)
+  Path Group: **async_default**
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock (input port clock) (rise edge)                    0.00       0.00
+  input external delay                                    0.00       0.00 f
+  reset (in)                                              0.00 &     0.00 f
+  dat_path_inst/reset (mips_datapath)                     0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/rst (reg_file)                0.00 &     0.00 f
+  dat_path_inst/u1_reg_file/U1113/ZN (INVX4)              0.45 &     0.45 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[17][16]/RSTB (DFFARX1)
+                                                          0.02 &     0.48 r
+  data arrival time                                                  0.48
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                     2916.69    2936.69
+  clock uncertainty                                      -1.00    2935.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[17][16]/CLK (DFFARX1)     2935.69 r
+  library recovery time                                   0.71    2936.40
+  data required time                                              2936.40
+  ------------------------------------------------------------------------------
+  data required time                                              2936.40
+  data arrival time                                                 -0.48
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     2935.93
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[6][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[31] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1156/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1135/Q (MUX41X1)             0.56 &  2918.82 f
+  dat_path_inst/u1_reg_file/U1180/QN (NAND2X4)            0.11 &  2918.93 r
+  dat_path_inst/u1_reg_file/U1186/QN (NAND2X4)            0.14 &  2919.07 f
+  dat_path_inst/u1_reg_file/rd_data1[0] (reg_file)        0.00 &  2919.07 f
+  dat_path_inst/u2_alu/in1[0] (mips_alu)                  0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/A[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/U1/ZN (INVX4)               0.08 &  2919.15 r
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.10 &  2919.24 f
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.09 &  2919.34 r
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.17 &  2919.51 f
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.10 &  2919.60 r
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.16 &  2919.77 f
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.10 &  2919.87 r
+  dat_path_inst/u2_alu/sub_38/U216/QN (NAND3X0)           0.17 &  2920.04 f
+  dat_path_inst/u2_alu/sub_38/U105/QN (NAND2X2)           0.10 &  2920.13 r
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.16 &  2920.30 f
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.10 &  2920.40 r
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.17 &  2920.57 f
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.07 &  2920.64 r
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.18 &  2920.83 f
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.42 &  2921.24 f
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.08 &  2921.32 r
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.10 &  2921.42 f
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.08 &  2921.50 r
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.08 &  2921.58 f
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.08 &  2921.66 r
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.18 &  2921.84 f
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.09 &  2921.93 r
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.10 &  2922.03 f
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.07 &  2922.10 r
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.08 &  2922.18 f
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.08 &  2922.26 r
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.17 &  2922.44 f
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.10 &  2922.53 r
+  dat_path_inst/u2_alu/sub_38/U140/QN (NAND3X0)           0.17 &  2922.70 f
+  dat_path_inst/u2_alu/sub_38/U114/QN (NAND2X2)           0.09 &  2922.79 r
+  dat_path_inst/u2_alu/sub_38/U211/QN (NAND3X0)           0.17 &  2922.96 f
+  dat_path_inst/u2_alu/sub_38/U199/QN (NAND2X2)           0.09 &  2923.04 r
+  dat_path_inst/u2_alu/sub_38/U196/QN (NAND2X2)           0.10 &  2923.14 f
+  dat_path_inst/u2_alu/sub_38/U198/ZN (INVX2)             0.07 &  2923.22 r
+  dat_path_inst/u2_alu/sub_38/U197/QN (NAND2X4)           0.07 &  2923.29 f
+  dat_path_inst/u2_alu/sub_38/U2_15/CO (FADDX2)           0.38 &  2923.68 f
+  dat_path_inst/u2_alu/sub_38/U238/QN (NAND2X2)           0.09 &  2923.77 r
+  dat_path_inst/u2_alu/sub_38/U134/QN (NAND3X0)           0.17 &  2923.94 f
+  dat_path_inst/u2_alu/sub_38/U107/QN (NAND2X2)           0.10 &  2924.03 r
+  dat_path_inst/u2_alu/sub_38/U120/QN (NAND3X0)           0.17 &  2924.20 f
+  dat_path_inst/u2_alu/sub_38/U108/QN (NAND2X2)           0.10 &  2924.30 r
+  dat_path_inst/u2_alu/sub_38/U54/QN (NAND3X0)            0.17 &  2924.47 f
+  dat_path_inst/u2_alu/sub_38/U130/QN (NAND2X2)           0.10 &  2924.57 r
+  dat_path_inst/u2_alu/sub_38/U328/QN (NAND3X0)           0.17 &  2924.74 f
+  dat_path_inst/u2_alu/sub_38/U116/QN (NAND2X2)           0.10 &  2924.84 r
+  dat_path_inst/u2_alu/sub_38/U126/QN (NAND3X0)           0.17 &  2925.02 f
+  dat_path_inst/u2_alu/sub_38/U119/QN (NAND2X2)           0.08 &  2925.09 r
+  dat_path_inst/u2_alu/sub_38/U188/QN (NAND3X0)           0.19 &  2925.28 f
+  dat_path_inst/u2_alu/sub_38/U2_22/CO (FADDX2)           0.42 &  2925.70 f
+  dat_path_inst/u2_alu/sub_38/U284/QN (NAND2X2)           0.08 &  2925.78 r
+  dat_path_inst/u2_alu/sub_38/U283/QN (NAND3X0)           0.16 &  2925.95 f
+  dat_path_inst/u2_alu/sub_38/U281/QN (NAND2X2)           0.09 &  2926.03 r
+  dat_path_inst/u2_alu/sub_38/U288/QN (NAND2X2)           0.10 &  2926.13 f
+  dat_path_inst/u2_alu/sub_38/U290/ZN (INVX2)             0.08 &  2926.21 r
+  dat_path_inst/u2_alu/sub_38/U289/QN (NAND2X4)           0.10 &  2926.31 f
+  dat_path_inst/u2_alu/sub_38/U69/QN (NAND2X2)            0.08 &  2926.39 r
+  dat_path_inst/u2_alu/sub_38/U263/QN (NAND3X0)           0.16 &  2926.55 f
+  dat_path_inst/u2_alu/sub_38/U81/QN (NAND2X2)            0.10 &  2926.65 r
+  dat_path_inst/u2_alu/sub_38/U273/QN (NAND3X0)           0.17 &  2926.82 f
+  dat_path_inst/u2_alu/sub_38/U122/QN (NAND2X2)           0.10 &  2926.91 r
+  dat_path_inst/u2_alu/sub_38/U241/QN (NAND3X0)           0.17 &  2927.09 f
+  dat_path_inst/u2_alu/sub_38/U76/QN (NAND2X2)            0.10 &  2927.19 r
+  dat_path_inst/u2_alu/sub_38/U247/QN (NAND3X0)           0.17 &  2927.36 f
+  dat_path_inst/u2_alu/sub_38/U144/QN (NAND2X2)           0.10 &  2927.46 r
+  dat_path_inst/u2_alu/sub_38/U117/QN (NAND3X0)           0.18 &  2927.63 f
+  dat_path_inst/u2_alu/sub_38/U83/QN (NAND2X2)            0.08 &  2927.71 r
+  dat_path_inst/u2_alu/sub_38/U176/QN (NAND3X0)           0.15 &  2927.86 f
+  dat_path_inst/u2_alu/sub_38/U2_31/Q (XOR3X1)            0.28 &  2928.14 f
+  dat_path_inst/u2_alu/sub_38/DIFF[31] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2928.14 f
+  dat_path_inst/u2_alu/U81/Q (AO222X1)                    0.27 &  2928.40 f
+  dat_path_inst/u2_alu/U80/Q (AO221X2)                    0.37 &  2928.77 f
+  dat_path_inst/u2_alu/alu_out[31] (mips_alu)             0.00 &  2928.77 f
+  dat_path_inst/data_mem_addr[31] (mips_datapath)         0.00 &  2928.77 f
+  Addr[31] (out)                                          0.00 &  2928.77 f
+  data arrival time                                               2928.77
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2928.77
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2913.77
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[18][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[30] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1115/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1116/Q (MUX41X1)             0.53 &  2918.79 f
+  dat_path_inst/u1_reg_file/U1183/QN (NAND2X2)            0.11 &  2918.90 r
+  dat_path_inst/u1_reg_file/U1184/QN (NAND2X4)            0.12 &  2919.03 f
+  dat_path_inst/u1_reg_file/rd_data2[0] (reg_file)        0.00 &  2919.03 f
+  dat_path_inst/U233/QN (NAND2X4)                         0.08 &  2919.10 r
+  dat_path_inst/U244/QN (NAND2X4)                         0.11 &  2919.21 f
+  dat_path_inst/u2_alu/in2[0] (mips_alu)                  0.00 &  2919.21 f
+  dat_path_inst/u2_alu/sub_38/B[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.21 f
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.08 &  2919.29 r
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.11 &  2919.40 f
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.15 &  2919.54 r
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.12 &  2919.67 f
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.14 &  2919.81 r
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.12 &  2919.93 f
+  dat_path_inst/u2_alu/sub_38/U215/QN (NAND3X0)           0.15 &  2920.08 r
+  dat_path_inst/u2_alu/sub_38/U80/QN (NAND2X2)            0.13 &  2920.20 f
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.15 &  2920.35 r
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.13 &  2920.48 f
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.15 &  2920.62 r
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.10 &  2920.73 f
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.16 &  2920.88 r
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.39 &  2921.28 r
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.10 &  2921.37 f
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.08 &  2921.45 r
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.09 &  2921.54 f
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.07 &  2921.61 r
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.10 &  2921.71 f
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.15 &  2921.85 r
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.12 &  2921.98 f
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.08 &  2922.06 r
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.08 &  2922.14 f
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.07 &  2922.21 r
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.10 &  2922.31 f
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.14 &  2922.45 r
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.12 &  2922.57 f
+  dat_path_inst/u2_alu/sub_38/U140/QN (NAND3X0)           0.14 &  2922.72 r
+  dat_path_inst/u2_alu/sub_38/U114/QN (NAND2X2)           0.12 &  2922.84 f
+  dat_path_inst/u2_alu/sub_38/U211/QN (NAND3X0)           0.15 &  2922.98 r
+  dat_path_inst/u2_alu/sub_38/U199/QN (NAND2X2)           0.11 &  2923.09 f
+  dat_path_inst/u2_alu/sub_38/U196/QN (NAND2X2)           0.08 &  2923.18 r
+  dat_path_inst/u2_alu/sub_38/U198/ZN (INVX2)             0.08 &  2923.26 f
+  dat_path_inst/u2_alu/sub_38/U197/QN (NAND2X4)           0.06 &  2923.32 r
+  dat_path_inst/u2_alu/sub_38/U2_15/CO (FADDX2)           0.34 &  2923.66 r
+  dat_path_inst/u2_alu/sub_38/U238/QN (NAND2X2)           0.11 &  2923.77 f
+  dat_path_inst/u2_alu/sub_38/U134/QN (NAND3X0)           0.14 &  2923.92 r
+  dat_path_inst/u2_alu/sub_38/U107/QN (NAND2X2)           0.12 &  2924.04 f
+  dat_path_inst/u2_alu/sub_38/U120/QN (NAND3X0)           0.15 &  2924.19 r
+  dat_path_inst/u2_alu/sub_38/U108/QN (NAND2X2)           0.13 &  2924.31 f
+  dat_path_inst/u2_alu/sub_38/U54/QN (NAND3X0)            0.15 &  2924.46 r
+  dat_path_inst/u2_alu/sub_38/U130/QN (NAND2X2)           0.13 &  2924.59 f
+  dat_path_inst/u2_alu/sub_38/U328/QN (NAND3X0)           0.15 &  2924.73 r
+  dat_path_inst/u2_alu/sub_38/U116/QN (NAND2X2)           0.13 &  2924.86 f
+  dat_path_inst/u2_alu/sub_38/U126/QN (NAND3X0)           0.15 &  2925.01 r
+  dat_path_inst/u2_alu/sub_38/U119/QN (NAND2X2)           0.10 &  2925.12 f
+  dat_path_inst/u2_alu/sub_38/U188/QN (NAND3X0)           0.16 &  2925.27 r
+  dat_path_inst/u2_alu/sub_38/U2_22/CO (FADDX2)           0.40 &  2925.68 r
+  dat_path_inst/u2_alu/sub_38/U284/QN (NAND2X2)           0.10 &  2925.77 f
+  dat_path_inst/u2_alu/sub_38/U283/QN (NAND3X0)           0.14 &  2925.91 r
+  dat_path_inst/u2_alu/sub_38/U281/QN (NAND2X2)           0.12 &  2926.03 f
+  dat_path_inst/u2_alu/sub_38/U288/QN (NAND2X2)           0.08 &  2926.11 r
+  dat_path_inst/u2_alu/sub_38/U290/ZN (INVX2)             0.09 &  2926.20 f
+  dat_path_inst/u2_alu/sub_38/U289/QN (NAND2X4)           0.08 &  2926.27 r
+  dat_path_inst/u2_alu/sub_38/U69/QN (NAND2X2)            0.11 &  2926.38 f
+  dat_path_inst/u2_alu/sub_38/U263/QN (NAND3X0)           0.13 &  2926.51 r
+  dat_path_inst/u2_alu/sub_38/U81/QN (NAND2X2)            0.13 &  2926.64 f
+  dat_path_inst/u2_alu/sub_38/U273/QN (NAND3X0)           0.15 &  2926.78 r
+  dat_path_inst/u2_alu/sub_38/U122/QN (NAND2X2)           0.13 &  2926.91 f
+  dat_path_inst/u2_alu/sub_38/U241/QN (NAND3X0)           0.15 &  2927.06 r
+  dat_path_inst/u2_alu/sub_38/U76/QN (NAND2X2)            0.13 &  2927.19 f
+  dat_path_inst/u2_alu/sub_38/U250/QN (NAND3X0)           0.15 &  2927.34 r
+  dat_path_inst/u2_alu/sub_38/U82/QN (NAND2X2)            0.14 &  2927.48 f
+  dat_path_inst/u2_alu/sub_38/U84/QN (NAND3X0)            0.17 &  2927.64 r
+  dat_path_inst/u2_alu/sub_38/U181/ZN (INVX0)             0.15 &  2927.79 f
+  dat_path_inst/u2_alu/sub_38/U177/QN (NAND2X1)           0.09 &  2927.88 r
+  dat_path_inst/u2_alu/sub_38/U179/QN (NAND2X1)           0.11 &  2928.00 f
+  dat_path_inst/u2_alu/sub_38/DIFF[30] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2928.00 f
+  dat_path_inst/u2_alu/U84/Q (AO222X1)                    0.27 &  2928.26 f
+  dat_path_inst/u2_alu/U83/Q (AO221X1)                    0.41 &  2928.67 f
+  dat_path_inst/u2_alu/alu_out[30] (mips_alu)             0.00 &  2928.67 f
+  dat_path_inst/data_mem_addr[30] (mips_datapath)         0.00 &  2928.67 f
+  Addr[30] (out)                                          0.00 &  2928.67 f
+  data arrival time                                               2928.67
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2928.67
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2913.67
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[6][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[29] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1156/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1135/Q (MUX41X1)             0.56 &  2918.82 f
+  dat_path_inst/u1_reg_file/U1180/QN (NAND2X4)            0.11 &  2918.93 r
+  dat_path_inst/u1_reg_file/U1186/QN (NAND2X4)            0.14 &  2919.07 f
+  dat_path_inst/u1_reg_file/rd_data1[0] (reg_file)        0.00 &  2919.07 f
+  dat_path_inst/u2_alu/in1[0] (mips_alu)                  0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/A[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/U1/ZN (INVX4)               0.08 &  2919.15 r
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.10 &  2919.24 f
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.09 &  2919.34 r
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.17 &  2919.51 f
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.10 &  2919.60 r
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.16 &  2919.77 f
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.10 &  2919.87 r
+  dat_path_inst/u2_alu/sub_38/U216/QN (NAND3X0)           0.17 &  2920.04 f
+  dat_path_inst/u2_alu/sub_38/U105/QN (NAND2X2)           0.10 &  2920.13 r
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.16 &  2920.30 f
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.10 &  2920.40 r
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.17 &  2920.57 f
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.07 &  2920.64 r
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.18 &  2920.83 f
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.42 &  2921.24 f
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.08 &  2921.32 r
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.10 &  2921.42 f
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.08 &  2921.50 r
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.08 &  2921.58 f
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.08 &  2921.66 r
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.18 &  2921.84 f
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.09 &  2921.93 r
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.10 &  2922.03 f
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.07 &  2922.10 r
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.08 &  2922.18 f
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.08 &  2922.26 r
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.17 &  2922.44 f
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.10 &  2922.53 r
+  dat_path_inst/u2_alu/sub_38/U140/QN (NAND3X0)           0.17 &  2922.70 f
+  dat_path_inst/u2_alu/sub_38/U114/QN (NAND2X2)           0.09 &  2922.79 r
+  dat_path_inst/u2_alu/sub_38/U211/QN (NAND3X0)           0.17 &  2922.96 f
+  dat_path_inst/u2_alu/sub_38/U199/QN (NAND2X2)           0.09 &  2923.04 r
+  dat_path_inst/u2_alu/sub_38/U196/QN (NAND2X2)           0.10 &  2923.14 f
+  dat_path_inst/u2_alu/sub_38/U198/ZN (INVX2)             0.07 &  2923.22 r
+  dat_path_inst/u2_alu/sub_38/U197/QN (NAND2X4)           0.07 &  2923.29 f
+  dat_path_inst/u2_alu/sub_38/U2_15/CO (FADDX2)           0.38 &  2923.68 f
+  dat_path_inst/u2_alu/sub_38/U238/QN (NAND2X2)           0.09 &  2923.77 r
+  dat_path_inst/u2_alu/sub_38/U134/QN (NAND3X0)           0.17 &  2923.94 f
+  dat_path_inst/u2_alu/sub_38/U107/QN (NAND2X2)           0.10 &  2924.03 r
+  dat_path_inst/u2_alu/sub_38/U120/QN (NAND3X0)           0.17 &  2924.20 f
+  dat_path_inst/u2_alu/sub_38/U108/QN (NAND2X2)           0.10 &  2924.30 r
+  dat_path_inst/u2_alu/sub_38/U54/QN (NAND3X0)            0.17 &  2924.47 f
+  dat_path_inst/u2_alu/sub_38/U130/QN (NAND2X2)           0.10 &  2924.57 r
+  dat_path_inst/u2_alu/sub_38/U328/QN (NAND3X0)           0.17 &  2924.74 f
+  dat_path_inst/u2_alu/sub_38/U116/QN (NAND2X2)           0.10 &  2924.84 r
+  dat_path_inst/u2_alu/sub_38/U126/QN (NAND3X0)           0.17 &  2925.02 f
+  dat_path_inst/u2_alu/sub_38/U119/QN (NAND2X2)           0.08 &  2925.09 r
+  dat_path_inst/u2_alu/sub_38/U188/QN (NAND3X0)           0.19 &  2925.28 f
+  dat_path_inst/u2_alu/sub_38/U2_22/CO (FADDX2)           0.42 &  2925.70 f
+  dat_path_inst/u2_alu/sub_38/U284/QN (NAND2X2)           0.08 &  2925.78 r
+  dat_path_inst/u2_alu/sub_38/U283/QN (NAND3X0)           0.16 &  2925.95 f
+  dat_path_inst/u2_alu/sub_38/U281/QN (NAND2X2)           0.09 &  2926.03 r
+  dat_path_inst/u2_alu/sub_38/U288/QN (NAND2X2)           0.10 &  2926.13 f
+  dat_path_inst/u2_alu/sub_38/U290/ZN (INVX2)             0.08 &  2926.21 r
+  dat_path_inst/u2_alu/sub_38/U289/QN (NAND2X4)           0.10 &  2926.31 f
+  dat_path_inst/u2_alu/sub_38/U69/QN (NAND2X2)            0.08 &  2926.39 r
+  dat_path_inst/u2_alu/sub_38/U263/QN (NAND3X0)           0.16 &  2926.55 f
+  dat_path_inst/u2_alu/sub_38/U81/QN (NAND2X2)            0.10 &  2926.65 r
+  dat_path_inst/u2_alu/sub_38/U273/QN (NAND3X0)           0.17 &  2926.82 f
+  dat_path_inst/u2_alu/sub_38/U122/QN (NAND2X2)           0.10 &  2926.91 r
+  dat_path_inst/u2_alu/sub_38/U241/QN (NAND3X0)           0.17 &  2927.09 f
+  dat_path_inst/u2_alu/sub_38/U76/QN (NAND2X2)            0.10 &  2927.19 r
+  dat_path_inst/u2_alu/sub_38/U124/QN (NAND3X2)           0.41 &  2927.60 f
+  dat_path_inst/u2_alu/sub_38/U254/QN (NAND2X0)           0.13 &  2927.72 r
+  dat_path_inst/u2_alu/sub_38/U258/QN (NAND2X1)           0.15 &  2927.87 f
+  dat_path_inst/u2_alu/sub_38/DIFF[29] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2927.87 f
+  dat_path_inst/u2_alu/U90/Q (AO222X1)                    0.28 &  2928.16 f
+  dat_path_inst/u2_alu/U89/Q (AO221X1)                    0.43 &  2928.58 f
+  dat_path_inst/u2_alu/alu_out[29] (mips_alu)             0.00 &  2928.58 f
+  dat_path_inst/data_mem_addr[29] (mips_datapath)         0.00 &  2928.58 f
+  Addr[29] (out)                                          0.00 &  2928.58 f
+  data arrival time                                               2928.58
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2928.58
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2913.58
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[18][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[0] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1115/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1116/Q (MUX41X1)             0.53 &  2918.79 f
+  dat_path_inst/u1_reg_file/U1183/QN (NAND2X2)            0.11 &  2918.90 r
+  dat_path_inst/u1_reg_file/U1184/QN (NAND2X4)            0.12 &  2919.03 f
+  dat_path_inst/u1_reg_file/rd_data2[0] (reg_file)        0.00 &  2919.03 f
+  dat_path_inst/U233/QN (NAND2X4)                         0.08 &  2919.10 r
+  dat_path_inst/U244/QN (NAND2X4)                         0.11 &  2919.21 f
+  dat_path_inst/u2_alu/in2[0] (mips_alu)                  0.00 &  2919.21 f
+  dat_path_inst/u2_alu/U15/ZN (INVX0)                     0.14 &  2919.35 r
+  dat_path_inst/u2_alu/U204/QN (NOR2X0)                   0.16 &  2919.51 f
+  dat_path_inst/u2_alu/U205/Q (AND2X1)                    0.21 &  2919.72 f
+  dat_path_inst/u2_alu/U206/Q (OA222X1)                   0.37 &  2920.09 f
+  dat_path_inst/u2_alu/U207/Q (AO221X1)                   0.25 &  2920.34 f
+  dat_path_inst/u2_alu/U208/Q (OA221X1)                   0.29 &  2920.63 f
+  dat_path_inst/u2_alu/U209/Q (AO221X1)                   0.25 &  2920.88 f
+  dat_path_inst/u2_alu/U210/Q (OA221X1)                   0.29 &  2921.17 f
+  dat_path_inst/u2_alu/U211/Q (AO221X1)                   0.24 &  2921.42 f
+  dat_path_inst/u2_alu/U212/Q (OA221X1)                   0.29 &  2921.71 f
+  dat_path_inst/u2_alu/U213/Q (AO221X1)                   0.25 &  2921.96 f
+  dat_path_inst/u2_alu/U214/Q (OA221X1)                   0.29 &  2922.25 f
+  dat_path_inst/u2_alu/U215/Q (AO221X1)                   0.25 &  2922.49 f
+  dat_path_inst/u2_alu/U216/Q (OA221X1)                   0.29 &  2922.78 f
+  dat_path_inst/u2_alu/U217/Q (AO221X1)                   0.25 &  2923.03 f
+  dat_path_inst/u2_alu/U218/Q (OA221X1)                   0.29 &  2923.32 f
+  dat_path_inst/u2_alu/U219/Q (AO221X1)                   0.26 &  2923.57 f
+  dat_path_inst/u2_alu/U220/Q (OA221X1)                   0.29 &  2923.87 f
+  dat_path_inst/u2_alu/U221/Q (AO221X1)                   0.24 &  2924.11 f
+  dat_path_inst/u2_alu/U222/Q (OA221X1)                   0.29 &  2924.40 f
+  dat_path_inst/u2_alu/U223/Q (AO221X1)                   0.25 &  2924.65 f
+  dat_path_inst/u2_alu/U224/Q (OA221X1)                   0.29 &  2924.94 f
+  dat_path_inst/u2_alu/U225/Q (AO221X1)                   0.25 &  2925.19 f
+  dat_path_inst/u2_alu/U226/Q (OA221X1)                   0.29 &  2925.47 f
+  dat_path_inst/u2_alu/U227/Q (AO221X1)                   0.25 &  2925.72 f
+  dat_path_inst/u2_alu/U228/Q (OA221X1)                   0.29 &  2926.01 f
+  dat_path_inst/u2_alu/U229/Q (AO221X1)                   0.24 &  2926.25 f
+  dat_path_inst/u2_alu/U230/Q (OA221X1)                   0.28 &  2926.53 f
+  dat_path_inst/u2_alu/U231/Q (AO221X1)                   0.24 &  2926.78 f
+  dat_path_inst/u2_alu/U232/Q (OA221X1)                   0.29 &  2927.07 f
+  dat_path_inst/u2_alu/U233/Q (AO221X1)                   0.24 &  2927.31 f
+  dat_path_inst/u2_alu/U234/Q (OA221X1)                   0.28 &  2927.59 f
+  dat_path_inst/u2_alu/U235/Q (OA22X1)                    0.25 &  2927.83 f
+  dat_path_inst/u2_alu/U236/Q (AO21X1)                    0.30 &  2928.13 f
+  dat_path_inst/u2_alu/U160/QN (NAND4X0)                  0.16 &  2928.30 r
+  dat_path_inst/u2_alu/U152/QN (NAND4X0)                  0.25 &  2928.55 f
+  dat_path_inst/u2_alu/alu_out[0] (mips_alu)              0.00 &  2928.55 f
+  dat_path_inst/data_mem_addr[0] (mips_datapath)          0.00 &  2928.55 f
+  Addr[0] (out)                                           0.00 &  2928.55 f
+  data arrival time                                               2928.55
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2928.55
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2913.55
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[6][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[28] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1156/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1135/Q (MUX41X1)             0.56 &  2918.82 f
+  dat_path_inst/u1_reg_file/U1180/QN (NAND2X4)            0.11 &  2918.93 r
+  dat_path_inst/u1_reg_file/U1186/QN (NAND2X4)            0.14 &  2919.07 f
+  dat_path_inst/u1_reg_file/rd_data1[0] (reg_file)        0.00 &  2919.07 f
+  dat_path_inst/u2_alu/in1[0] (mips_alu)                  0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/A[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/U1/ZN (INVX4)               0.08 &  2919.15 r
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.10 &  2919.24 f
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.09 &  2919.34 r
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.17 &  2919.51 f
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.10 &  2919.60 r
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.16 &  2919.77 f
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.10 &  2919.87 r
+  dat_path_inst/u2_alu/sub_38/U216/QN (NAND3X0)           0.17 &  2920.04 f
+  dat_path_inst/u2_alu/sub_38/U105/QN (NAND2X2)           0.10 &  2920.13 r
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.16 &  2920.30 f
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.10 &  2920.40 r
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.17 &  2920.57 f
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.07 &  2920.64 r
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.18 &  2920.83 f
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.42 &  2921.24 f
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.08 &  2921.32 r
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.10 &  2921.42 f
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.08 &  2921.50 r
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.08 &  2921.58 f
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.08 &  2921.66 r
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.18 &  2921.84 f
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.09 &  2921.93 r
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.10 &  2922.03 f
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.07 &  2922.10 r
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.08 &  2922.18 f
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.08 &  2922.26 r
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.17 &  2922.44 f
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.10 &  2922.53 r
+  dat_path_inst/u2_alu/sub_38/U140/QN (NAND3X0)           0.17 &  2922.70 f
+  dat_path_inst/u2_alu/sub_38/U114/QN (NAND2X2)           0.09 &  2922.79 r
+  dat_path_inst/u2_alu/sub_38/U211/QN (NAND3X0)           0.17 &  2922.96 f
+  dat_path_inst/u2_alu/sub_38/U199/QN (NAND2X2)           0.09 &  2923.04 r
+  dat_path_inst/u2_alu/sub_38/U196/QN (NAND2X2)           0.10 &  2923.14 f
+  dat_path_inst/u2_alu/sub_38/U198/ZN (INVX2)             0.07 &  2923.22 r
+  dat_path_inst/u2_alu/sub_38/U197/QN (NAND2X4)           0.07 &  2923.29 f
+  dat_path_inst/u2_alu/sub_38/U2_15/CO (FADDX2)           0.38 &  2923.68 f
+  dat_path_inst/u2_alu/sub_38/U238/QN (NAND2X2)           0.09 &  2923.77 r
+  dat_path_inst/u2_alu/sub_38/U134/QN (NAND3X0)           0.17 &  2923.94 f
+  dat_path_inst/u2_alu/sub_38/U107/QN (NAND2X2)           0.10 &  2924.03 r
+  dat_path_inst/u2_alu/sub_38/U120/QN (NAND3X0)           0.17 &  2924.20 f
+  dat_path_inst/u2_alu/sub_38/U108/QN (NAND2X2)           0.10 &  2924.30 r
+  dat_path_inst/u2_alu/sub_38/U54/QN (NAND3X0)            0.17 &  2924.47 f
+  dat_path_inst/u2_alu/sub_38/U130/QN (NAND2X2)           0.10 &  2924.57 r
+  dat_path_inst/u2_alu/sub_38/U328/QN (NAND3X0)           0.17 &  2924.74 f
+  dat_path_inst/u2_alu/sub_38/U116/QN (NAND2X2)           0.10 &  2924.84 r
+  dat_path_inst/u2_alu/sub_38/U126/QN (NAND3X0)           0.17 &  2925.02 f
+  dat_path_inst/u2_alu/sub_38/U119/QN (NAND2X2)           0.08 &  2925.09 r
+  dat_path_inst/u2_alu/sub_38/U188/QN (NAND3X0)           0.19 &  2925.28 f
+  dat_path_inst/u2_alu/sub_38/U2_22/CO (FADDX2)           0.42 &  2925.70 f
+  dat_path_inst/u2_alu/sub_38/U284/QN (NAND2X2)           0.08 &  2925.78 r
+  dat_path_inst/u2_alu/sub_38/U283/QN (NAND3X0)           0.16 &  2925.95 f
+  dat_path_inst/u2_alu/sub_38/U281/QN (NAND2X2)           0.09 &  2926.03 r
+  dat_path_inst/u2_alu/sub_38/U288/QN (NAND2X2)           0.10 &  2926.13 f
+  dat_path_inst/u2_alu/sub_38/U290/ZN (INVX2)             0.08 &  2926.21 r
+  dat_path_inst/u2_alu/sub_38/U289/QN (NAND2X4)           0.10 &  2926.31 f
+  dat_path_inst/u2_alu/sub_38/U69/QN (NAND2X2)            0.08 &  2926.39 r
+  dat_path_inst/u2_alu/sub_38/U263/QN (NAND3X0)           0.16 &  2926.55 f
+  dat_path_inst/u2_alu/sub_38/U81/QN (NAND2X2)            0.10 &  2926.65 r
+  dat_path_inst/u2_alu/sub_38/U273/QN (NAND3X0)           0.17 &  2926.82 f
+  dat_path_inst/u2_alu/sub_38/U122/QN (NAND2X2)           0.10 &  2926.91 r
+  dat_path_inst/u2_alu/sub_38/U36/Q (AND3X1)              0.34 &  2927.26 r
+  dat_path_inst/u2_alu/sub_38/U43/ZN (INVX0)              0.09 &  2927.35 f
+  dat_path_inst/u2_alu/sub_38/U246/QN (NAND2X0)           0.12 &  2927.47 r
+  dat_path_inst/u2_alu/sub_38/U252/QN (NAND2X1)           0.14 &  2927.61 f
+  dat_path_inst/u2_alu/sub_38/DIFF[28] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2927.61 f
+  dat_path_inst/u2_alu/U93/Q (AO222X1)                    0.27 &  2927.89 f
+  dat_path_inst/u2_alu/U92/Q (AO221X1)                    0.42 &  2928.31 f
+  dat_path_inst/u2_alu/alu_out[28] (mips_alu)             0.00 &  2928.31 f
+  dat_path_inst/data_mem_addr[28] (mips_datapath)         0.00 &  2928.31 f
+  Addr[28] (out)                                          0.00 &  2928.31 f
+  data arrival time                                               2928.31
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2928.31
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2913.31
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[6][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[27] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1156/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1135/Q (MUX41X1)             0.56 &  2918.82 f
+  dat_path_inst/u1_reg_file/U1180/QN (NAND2X4)            0.11 &  2918.93 r
+  dat_path_inst/u1_reg_file/U1186/QN (NAND2X4)            0.14 &  2919.07 f
+  dat_path_inst/u1_reg_file/rd_data1[0] (reg_file)        0.00 &  2919.07 f
+  dat_path_inst/u2_alu/in1[0] (mips_alu)                  0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/A[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/U1/ZN (INVX4)               0.08 &  2919.15 r
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.10 &  2919.24 f
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.09 &  2919.34 r
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.17 &  2919.51 f
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.10 &  2919.60 r
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.16 &  2919.77 f
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.10 &  2919.87 r
+  dat_path_inst/u2_alu/sub_38/U216/QN (NAND3X0)           0.17 &  2920.04 f
+  dat_path_inst/u2_alu/sub_38/U105/QN (NAND2X2)           0.10 &  2920.13 r
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.16 &  2920.30 f
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.10 &  2920.40 r
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.17 &  2920.57 f
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.07 &  2920.64 r
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.18 &  2920.83 f
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.42 &  2921.24 f
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.08 &  2921.32 r
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.10 &  2921.42 f
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.08 &  2921.50 r
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.08 &  2921.58 f
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.08 &  2921.66 r
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.18 &  2921.84 f
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.09 &  2921.93 r
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.10 &  2922.03 f
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.07 &  2922.10 r
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.08 &  2922.18 f
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.08 &  2922.26 r
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.17 &  2922.44 f
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.10 &  2922.53 r
+  dat_path_inst/u2_alu/sub_38/U140/QN (NAND3X0)           0.17 &  2922.70 f
+  dat_path_inst/u2_alu/sub_38/U114/QN (NAND2X2)           0.09 &  2922.79 r
+  dat_path_inst/u2_alu/sub_38/U211/QN (NAND3X0)           0.17 &  2922.96 f
+  dat_path_inst/u2_alu/sub_38/U199/QN (NAND2X2)           0.09 &  2923.04 r
+  dat_path_inst/u2_alu/sub_38/U196/QN (NAND2X2)           0.10 &  2923.14 f
+  dat_path_inst/u2_alu/sub_38/U198/ZN (INVX2)             0.07 &  2923.22 r
+  dat_path_inst/u2_alu/sub_38/U197/QN (NAND2X4)           0.07 &  2923.29 f
+  dat_path_inst/u2_alu/sub_38/U2_15/CO (FADDX2)           0.38 &  2923.68 f
+  dat_path_inst/u2_alu/sub_38/U238/QN (NAND2X2)           0.09 &  2923.77 r
+  dat_path_inst/u2_alu/sub_38/U134/QN (NAND3X0)           0.17 &  2923.94 f
+  dat_path_inst/u2_alu/sub_38/U107/QN (NAND2X2)           0.10 &  2924.03 r
+  dat_path_inst/u2_alu/sub_38/U120/QN (NAND3X0)           0.17 &  2924.20 f
+  dat_path_inst/u2_alu/sub_38/U108/QN (NAND2X2)           0.10 &  2924.30 r
+  dat_path_inst/u2_alu/sub_38/U54/QN (NAND3X0)            0.17 &  2924.47 f
+  dat_path_inst/u2_alu/sub_38/U130/QN (NAND2X2)           0.10 &  2924.57 r
+  dat_path_inst/u2_alu/sub_38/U328/QN (NAND3X0)           0.17 &  2924.74 f
+  dat_path_inst/u2_alu/sub_38/U116/QN (NAND2X2)           0.10 &  2924.84 r
+  dat_path_inst/u2_alu/sub_38/U126/QN (NAND3X0)           0.17 &  2925.02 f
+  dat_path_inst/u2_alu/sub_38/U119/QN (NAND2X2)           0.08 &  2925.09 r
+  dat_path_inst/u2_alu/sub_38/U188/QN (NAND3X0)           0.19 &  2925.28 f
+  dat_path_inst/u2_alu/sub_38/U2_22/CO (FADDX2)           0.42 &  2925.70 f
+  dat_path_inst/u2_alu/sub_38/U284/QN (NAND2X2)           0.08 &  2925.78 r
+  dat_path_inst/u2_alu/sub_38/U283/QN (NAND3X0)           0.16 &  2925.95 f
+  dat_path_inst/u2_alu/sub_38/U281/QN (NAND2X2)           0.09 &  2926.03 r
+  dat_path_inst/u2_alu/sub_38/U288/QN (NAND2X2)           0.10 &  2926.13 f
+  dat_path_inst/u2_alu/sub_38/U290/ZN (INVX2)             0.08 &  2926.21 r
+  dat_path_inst/u2_alu/sub_38/U289/QN (NAND2X4)           0.10 &  2926.31 f
+  dat_path_inst/u2_alu/sub_38/U69/QN (NAND2X2)            0.08 &  2926.39 r
+  dat_path_inst/u2_alu/sub_38/U263/QN (NAND3X0)           0.16 &  2926.55 f
+  dat_path_inst/u2_alu/sub_38/U81/QN (NAND2X2)            0.10 &  2926.65 r
+  dat_path_inst/u2_alu/sub_38/U136/QN (NAND3X2)           0.40 &  2927.05 f
+  dat_path_inst/u2_alu/sub_38/U63/ZN (INVX0)              0.07 &  2927.13 r
+  dat_path_inst/u2_alu/sub_38/U62/ZN (INVX0)              0.09 &  2927.21 f
+  dat_path_inst/u2_alu/sub_38/U243/Q (XOR2X1)             0.28 &  2927.49 f
+  dat_path_inst/u2_alu/sub_38/DIFF[27] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2927.49 f
+  dat_path_inst/u2_alu/U96/Q (AO222X1)                    0.26 &  2927.75 f
+  dat_path_inst/u2_alu/U95/Q (AO221X1)                    0.44 &  2928.19 f
+  dat_path_inst/u2_alu/alu_out[27] (mips_alu)             0.00 &  2928.19 f
+  dat_path_inst/data_mem_addr[27] (mips_datapath)         0.00 &  2928.19 f
+  Addr[27] (out)                                          0.00 &  2928.20 f
+  data arrival time                                               2928.20
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2928.20
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2913.20
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[6][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[26] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1156/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1135/Q (MUX41X1)             0.56 &  2918.82 f
+  dat_path_inst/u1_reg_file/U1180/QN (NAND2X4)            0.11 &  2918.93 r
+  dat_path_inst/u1_reg_file/U1186/QN (NAND2X4)            0.14 &  2919.07 f
+  dat_path_inst/u1_reg_file/rd_data1[0] (reg_file)        0.00 &  2919.07 f
+  dat_path_inst/u2_alu/in1[0] (mips_alu)                  0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/A[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/U1/ZN (INVX4)               0.08 &  2919.15 r
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.10 &  2919.24 f
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.09 &  2919.34 r
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.17 &  2919.51 f
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.10 &  2919.60 r
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.16 &  2919.77 f
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.10 &  2919.87 r
+  dat_path_inst/u2_alu/sub_38/U216/QN (NAND3X0)           0.17 &  2920.04 f
+  dat_path_inst/u2_alu/sub_38/U105/QN (NAND2X2)           0.10 &  2920.13 r
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.16 &  2920.30 f
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.10 &  2920.40 r
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.17 &  2920.57 f
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.07 &  2920.64 r
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.18 &  2920.83 f
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.42 &  2921.24 f
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.08 &  2921.32 r
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.10 &  2921.42 f
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.08 &  2921.50 r
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.08 &  2921.58 f
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.08 &  2921.66 r
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.18 &  2921.84 f
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.09 &  2921.93 r
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.10 &  2922.03 f
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.07 &  2922.10 r
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.08 &  2922.18 f
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.08 &  2922.26 r
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.17 &  2922.44 f
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.10 &  2922.53 r
+  dat_path_inst/u2_alu/sub_38/U140/QN (NAND3X0)           0.17 &  2922.70 f
+  dat_path_inst/u2_alu/sub_38/U114/QN (NAND2X2)           0.09 &  2922.79 r
+  dat_path_inst/u2_alu/sub_38/U211/QN (NAND3X0)           0.17 &  2922.96 f
+  dat_path_inst/u2_alu/sub_38/U199/QN (NAND2X2)           0.09 &  2923.04 r
+  dat_path_inst/u2_alu/sub_38/U196/QN (NAND2X2)           0.10 &  2923.14 f
+  dat_path_inst/u2_alu/sub_38/U198/ZN (INVX2)             0.07 &  2923.22 r
+  dat_path_inst/u2_alu/sub_38/U197/QN (NAND2X4)           0.07 &  2923.29 f
+  dat_path_inst/u2_alu/sub_38/U2_15/CO (FADDX2)           0.38 &  2923.68 f
+  dat_path_inst/u2_alu/sub_38/U238/QN (NAND2X2)           0.09 &  2923.77 r
+  dat_path_inst/u2_alu/sub_38/U134/QN (NAND3X0)           0.17 &  2923.94 f
+  dat_path_inst/u2_alu/sub_38/U107/QN (NAND2X2)           0.10 &  2924.03 r
+  dat_path_inst/u2_alu/sub_38/U120/QN (NAND3X0)           0.17 &  2924.20 f
+  dat_path_inst/u2_alu/sub_38/U108/QN (NAND2X2)           0.10 &  2924.30 r
+  dat_path_inst/u2_alu/sub_38/U54/QN (NAND3X0)            0.17 &  2924.47 f
+  dat_path_inst/u2_alu/sub_38/U130/QN (NAND2X2)           0.10 &  2924.57 r
+  dat_path_inst/u2_alu/sub_38/U328/QN (NAND3X0)           0.17 &  2924.74 f
+  dat_path_inst/u2_alu/sub_38/U116/QN (NAND2X2)           0.10 &  2924.84 r
+  dat_path_inst/u2_alu/sub_38/U126/QN (NAND3X0)           0.17 &  2925.02 f
+  dat_path_inst/u2_alu/sub_38/U119/QN (NAND2X2)           0.08 &  2925.09 r
+  dat_path_inst/u2_alu/sub_38/U188/QN (NAND3X0)           0.19 &  2925.28 f
+  dat_path_inst/u2_alu/sub_38/U2_22/CO (FADDX2)           0.42 &  2925.70 f
+  dat_path_inst/u2_alu/sub_38/U284/QN (NAND2X2)           0.08 &  2925.78 r
+  dat_path_inst/u2_alu/sub_38/U283/QN (NAND3X0)           0.16 &  2925.95 f
+  dat_path_inst/u2_alu/sub_38/U281/QN (NAND2X2)           0.09 &  2926.03 r
+  dat_path_inst/u2_alu/sub_38/U288/QN (NAND2X2)           0.10 &  2926.13 f
+  dat_path_inst/u2_alu/sub_38/U290/ZN (INVX2)             0.08 &  2926.21 r
+  dat_path_inst/u2_alu/sub_38/U289/QN (NAND2X4)           0.10 &  2926.31 f
+  dat_path_inst/u2_alu/sub_38/U69/QN (NAND2X2)            0.08 &  2926.39 r
+  dat_path_inst/u2_alu/sub_38/U72/QN (NAND3X1)            0.38 &  2926.78 f
+  dat_path_inst/u2_alu/sub_38/U277/ZN (INVX0)             0.09 &  2926.87 r
+  dat_path_inst/u2_alu/sub_38/U274/QN (NAND2X1)           0.11 &  2926.98 f
+  dat_path_inst/u2_alu/sub_38/U275/QN (NAND2X1)           0.09 &  2927.07 r
+  dat_path_inst/u2_alu/sub_38/DIFF[26] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2927.07 r
+  dat_path_inst/u2_alu/U99/Q (AO222X1)                    0.28 &  2927.35 r
+  dat_path_inst/u2_alu/U98/Q (AO221X1)                    0.42 &  2927.77 r
+  dat_path_inst/u2_alu/alu_out[26] (mips_alu)             0.00 &  2927.77 r
+  dat_path_inst/data_mem_addr[26] (mips_datapath)         0.00 &  2927.77 r
+  Addr[26] (out)                                          0.00 &  2927.77 r
+  data arrival time                                               2927.77
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2927.77
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2912.77
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[18][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[25] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1115/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1116/Q (MUX41X1)             0.53 &  2918.79 f
+  dat_path_inst/u1_reg_file/U1183/QN (NAND2X2)            0.11 &  2918.90 r
+  dat_path_inst/u1_reg_file/U1184/QN (NAND2X4)            0.12 &  2919.03 f
+  dat_path_inst/u1_reg_file/rd_data2[0] (reg_file)        0.00 &  2919.03 f
+  dat_path_inst/U233/QN (NAND2X4)                         0.08 &  2919.10 r
+  dat_path_inst/U244/QN (NAND2X4)                         0.11 &  2919.21 f
+  dat_path_inst/u2_alu/in2[0] (mips_alu)                  0.00 &  2919.21 f
+  dat_path_inst/u2_alu/add_36/B[0] (mips_alu_DW01_add_0)
+                                                          0.00 &  2919.21 f
+  dat_path_inst/u2_alu/add_36/U39/QN (NAND2X2)            0.08 &  2919.29 r
+  dat_path_inst/u2_alu/add_36/U40/ZN (INVX2)              0.09 &  2919.38 f
+  dat_path_inst/u2_alu/add_36/U56/QN (NAND2X2)            0.09 &  2919.47 r
+  dat_path_inst/u2_alu/add_36/U55/QN (NAND3X0)            0.17 &  2919.63 f
+  dat_path_inst/u2_alu/add_36/U77/QN (NAND2X2)            0.10 &  2919.73 r
+  dat_path_inst/u2_alu/add_36/U74/QN (NAND3X0)            0.17 &  2919.89 f
+  dat_path_inst/u2_alu/add_36/U23/QN (NAND2X2)            0.09 &  2919.99 r
+  dat_path_inst/u2_alu/add_36/U115/QN (NAND3X0)           0.17 &  2920.16 f
+  dat_path_inst/u2_alu/add_36/U104/QN (NAND2X2)           0.10 &  2920.25 r
+  dat_path_inst/u2_alu/add_36/U125/QN (NAND3X0)           0.18 &  2920.43 f
+  dat_path_inst/u2_alu/add_36/U50/QN (NAND2X2)            0.10 &  2920.53 r
+  dat_path_inst/u2_alu/add_36/U158/QN (NAND3X0)           0.17 &  2920.70 f
+  dat_path_inst/u2_alu/add_36/U58/QN (NAND2X2)            0.10 &  2920.80 r
+  dat_path_inst/u2_alu/add_36/U214/QN (NAND3X0)           0.17 &  2920.97 f
+  dat_path_inst/u2_alu/add_36/U53/QN (NAND2X2)            0.10 &  2921.07 r
+  dat_path_inst/u2_alu/add_36/U126/QN (NAND3X0)           0.16 &  2921.23 f
+  dat_path_inst/u2_alu/add_36/U1/QN (NAND2X1)             0.10 &  2921.33 r
+  dat_path_inst/u2_alu/add_36/U192/QN (NAND3X0)           0.18 &  2921.51 f
+  dat_path_inst/u2_alu/add_36/U1_9/CO (FADDX2)            0.43 &  2921.94 f
+  dat_path_inst/u2_alu/add_36/U107/QN (NAND2X2)           0.09 &  2922.03 r
+  dat_path_inst/u2_alu/add_36/U133/QN (NAND3X0)           0.17 &  2922.21 f
+  dat_path_inst/u2_alu/add_36/U108/QN (NAND2X2)           0.10 &  2922.31 r
+  dat_path_inst/u2_alu/add_36/U271/QN (NAND3X0)           0.17 &  2922.48 f
+  dat_path_inst/u2_alu/add_36/U96/QN (NAND2X2)            0.12 &  2922.60 r
+  dat_path_inst/u2_alu/add_36/U135/QN (NAND3X0)           0.16 &  2922.76 f
+  dat_path_inst/u2_alu/add_36/U131/QN (NAND2X2)           0.10 &  2922.86 r
+  dat_path_inst/u2_alu/add_36/U129/QN (NAND3X0)           0.18 &  2923.04 f
+  dat_path_inst/u2_alu/add_36/U29/QN (NAND2X2)            0.09 &  2923.13 r
+  dat_path_inst/u2_alu/add_36/U262/QN (NAND3X0)           0.18 &  2923.31 f
+  dat_path_inst/u2_alu/add_36/U1_15/CO (FADDX2)           0.43 &  2923.73 f
+  dat_path_inst/u2_alu/add_36/U244/QN (NAND2X2)           0.09 &  2923.83 r
+  dat_path_inst/u2_alu/add_36/U59/QN (NAND3X0)            0.17 &  2924.00 f
+  dat_path_inst/u2_alu/add_36/U92/QN (NAND2X2)            0.10 &  2924.10 r
+  dat_path_inst/u2_alu/add_36/U90/QN (NAND3X0)            0.18 &  2924.27 f
+  dat_path_inst/u2_alu/add_36/U93/QN (NAND2X2)            0.10 &  2924.37 r
+  dat_path_inst/u2_alu/add_36/U175/QN (NAND3X0)           0.18 &  2924.55 f
+  dat_path_inst/u2_alu/add_36/U173/QN (NAND2X2)           0.09 &  2924.63 r
+  dat_path_inst/u2_alu/add_36/U292/QN (NAND2X2)           0.10 &  2924.73 f
+  dat_path_inst/u2_alu/add_36/U294/ZN (INVX2)             0.07 &  2924.81 r
+  dat_path_inst/u2_alu/add_36/U293/QN (NAND2X4)           0.08 &  2924.89 f
+  dat_path_inst/u2_alu/add_36/U36/QN (NAND2X2)            0.08 &  2924.97 r
+  dat_path_inst/u2_alu/add_36/U246/QN (NAND3X0)           0.18 &  2925.15 f
+  dat_path_inst/u2_alu/add_36/U157/QN (NAND2X2)           0.10 &  2925.25 r
+  dat_path_inst/u2_alu/add_36/U136/QN (NAND3X0)           0.17 &  2925.42 f
+  dat_path_inst/u2_alu/add_36/U123/QN (NAND2X2)           0.10 &  2925.52 r
+  dat_path_inst/u2_alu/add_36/U146/QN (NAND3X0)           0.17 &  2925.69 f
+  dat_path_inst/u2_alu/add_36/U124/QN (NAND2X2)           0.09 &  2925.78 r
+  dat_path_inst/u2_alu/add_36/U82/QN (NAND2X2)            0.10 &  2925.87 f
+  dat_path_inst/u2_alu/add_36/U21/ZN (INVX2)              0.07 &  2925.95 r
+  dat_path_inst/u2_alu/add_36/U20/QN (NAND2X4)            0.09 &  2926.03 f
+  dat_path_inst/u2_alu/add_36/U11/QN (NAND2X4)            0.08 &  2926.11 r
+  dat_path_inst/u2_alu/add_36/U8/QN (NAND2X4)             0.09 &  2926.21 f
+  dat_path_inst/u2_alu/add_36/U10/ZN (INVX4)              0.05 &  2926.26 r
+  dat_path_inst/u2_alu/add_36/U9/QN (NAND2X4)             0.08 &  2926.34 f
+  dat_path_inst/u2_alu/add_36/U299/ZN (INVX0)             0.09 &  2926.44 r
+  dat_path_inst/u2_alu/add_36/U203/ZN (INVX0)             0.09 &  2926.52 f
+  dat_path_inst/u2_alu/add_36/U68/ZN (INVX0)              0.07 &  2926.59 r
+  dat_path_inst/u2_alu/add_36/U67/ZN (INVX0)              0.11 &  2926.70 f
+  dat_path_inst/u2_alu/add_36/U224/Q (XOR2X1)             0.29 &  2926.99 f
+  dat_path_inst/u2_alu/add_36/SUM[25] (mips_alu_DW01_add_0)
+                                                          0.00 &  2926.99 f
+  dat_path_inst/u2_alu/U101/Q (AO221X1)                   0.62 &  2927.61 f
+  dat_path_inst/u2_alu/alu_out[25] (mips_alu)             0.00 &  2927.61 f
+  dat_path_inst/data_mem_addr[25] (mips_datapath)         0.00 &  2927.61 f
+  Addr[25] (out)                                          0.00 &  2927.61 f
+  data arrival time                                               2927.61
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2927.61
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2912.61
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[18][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[23] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1115/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1116/Q (MUX41X1)             0.53 &  2918.79 f
+  dat_path_inst/u1_reg_file/U1183/QN (NAND2X2)            0.11 &  2918.90 r
+  dat_path_inst/u1_reg_file/U1184/QN (NAND2X4)            0.12 &  2919.03 f
+  dat_path_inst/u1_reg_file/rd_data2[0] (reg_file)        0.00 &  2919.03 f
+  dat_path_inst/U233/QN (NAND2X4)                         0.08 &  2919.10 r
+  dat_path_inst/U244/QN (NAND2X4)                         0.11 &  2919.21 f
+  dat_path_inst/u2_alu/in2[0] (mips_alu)                  0.00 &  2919.21 f
+  dat_path_inst/u2_alu/sub_38/B[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.21 f
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.08 &  2919.29 r
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.11 &  2919.40 f
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.15 &  2919.54 r
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.12 &  2919.67 f
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.14 &  2919.81 r
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.12 &  2919.93 f
+  dat_path_inst/u2_alu/sub_38/U215/QN (NAND3X0)           0.15 &  2920.08 r
+  dat_path_inst/u2_alu/sub_38/U80/QN (NAND2X2)            0.13 &  2920.20 f
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.15 &  2920.35 r
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.13 &  2920.48 f
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.15 &  2920.62 r
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.10 &  2920.73 f
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.16 &  2920.88 r
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.39 &  2921.28 r
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.10 &  2921.37 f
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.08 &  2921.45 r
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.09 &  2921.54 f
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.07 &  2921.61 r
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.10 &  2921.71 f
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.15 &  2921.85 r
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.12 &  2921.98 f
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.08 &  2922.06 r
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.08 &  2922.14 f
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.07 &  2922.21 r
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.10 &  2922.31 f
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.14 &  2922.45 r
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.12 &  2922.57 f
+  dat_path_inst/u2_alu/sub_38/U140/QN (NAND3X0)           0.14 &  2922.72 r
+  dat_path_inst/u2_alu/sub_38/U114/QN (NAND2X2)           0.12 &  2922.84 f
+  dat_path_inst/u2_alu/sub_38/U211/QN (NAND3X0)           0.15 &  2922.98 r
+  dat_path_inst/u2_alu/sub_38/U199/QN (NAND2X2)           0.11 &  2923.09 f
+  dat_path_inst/u2_alu/sub_38/U196/QN (NAND2X2)           0.08 &  2923.18 r
+  dat_path_inst/u2_alu/sub_38/U198/ZN (INVX2)             0.08 &  2923.26 f
+  dat_path_inst/u2_alu/sub_38/U197/QN (NAND2X4)           0.06 &  2923.32 r
+  dat_path_inst/u2_alu/sub_38/U2_15/CO (FADDX2)           0.34 &  2923.66 r
+  dat_path_inst/u2_alu/sub_38/U238/QN (NAND2X2)           0.11 &  2923.77 f
+  dat_path_inst/u2_alu/sub_38/U134/QN (NAND3X0)           0.14 &  2923.92 r
+  dat_path_inst/u2_alu/sub_38/U107/QN (NAND2X2)           0.12 &  2924.04 f
+  dat_path_inst/u2_alu/sub_38/U120/QN (NAND3X0)           0.15 &  2924.19 r
+  dat_path_inst/u2_alu/sub_38/U108/QN (NAND2X2)           0.13 &  2924.31 f
+  dat_path_inst/u2_alu/sub_38/U54/QN (NAND3X0)            0.15 &  2924.46 r
+  dat_path_inst/u2_alu/sub_38/U130/QN (NAND2X2)           0.13 &  2924.59 f
+  dat_path_inst/u2_alu/sub_38/U328/QN (NAND3X0)           0.15 &  2924.73 r
+  dat_path_inst/u2_alu/sub_38/U116/QN (NAND2X2)           0.13 &  2924.86 f
+  dat_path_inst/u2_alu/sub_38/U126/QN (NAND3X0)           0.15 &  2925.01 r
+  dat_path_inst/u2_alu/sub_38/U119/QN (NAND2X2)           0.10 &  2925.12 f
+  dat_path_inst/u2_alu/sub_38/U188/QN (NAND3X0)           0.16 &  2925.27 r
+  dat_path_inst/u2_alu/sub_38/U2_22/CO (FADDX2)           0.40 &  2925.68 r
+  dat_path_inst/u2_alu/sub_38/U33/ZN (IBUFFX16)           0.38 &  2926.05 f
+  dat_path_inst/u2_alu/sub_38/U74/ZN (INVX0)              0.08 &  2926.13 r
+  dat_path_inst/u2_alu/sub_38/U305/ZN (INVX0)             0.08 &  2926.20 f
+  dat_path_inst/u2_alu/sub_38/U304/ZN (INVX0)             0.07 &  2926.27 r
+  dat_path_inst/u2_alu/sub_38/U59/ZN (INVX0)              0.07 &  2926.34 f
+  dat_path_inst/u2_alu/sub_38/U99/ZN (INVX0)              0.08 &  2926.42 r
+  dat_path_inst/u2_alu/sub_38/U286/Q (XOR2X1)             0.32 &  2926.74 f
+  dat_path_inst/u2_alu/sub_38/DIFF[23] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2926.74 f
+  dat_path_inst/u2_alu/U108/Q (AO222X1)                   0.28 &  2927.03 f
+  dat_path_inst/u2_alu/U107/Q (AO221X1)                   0.48 &  2927.51 f
+  dat_path_inst/u2_alu/alu_out[23] (mips_alu)             0.00 &  2927.51 f
+  dat_path_inst/data_mem_addr[23] (mips_datapath)         0.00 &  2927.51 f
+  Addr[23] (out)                                          0.00 &  2927.52 f
+  data arrival time                                               2927.52
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2927.52
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2912.52
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[18][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[24] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1115/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1116/Q (MUX41X1)             0.53 &  2918.79 f
+  dat_path_inst/u1_reg_file/U1183/QN (NAND2X2)            0.11 &  2918.90 r
+  dat_path_inst/u1_reg_file/U1184/QN (NAND2X4)            0.12 &  2919.03 f
+  dat_path_inst/u1_reg_file/rd_data2[0] (reg_file)        0.00 &  2919.03 f
+  dat_path_inst/U233/QN (NAND2X4)                         0.08 &  2919.10 r
+  dat_path_inst/U244/QN (NAND2X4)                         0.11 &  2919.21 f
+  dat_path_inst/u2_alu/in2[0] (mips_alu)                  0.00 &  2919.21 f
+  dat_path_inst/u2_alu/add_36/B[0] (mips_alu_DW01_add_0)
+                                                          0.00 &  2919.21 f
+  dat_path_inst/u2_alu/add_36/U39/QN (NAND2X2)            0.08 &  2919.29 r
+  dat_path_inst/u2_alu/add_36/U40/ZN (INVX2)              0.09 &  2919.38 f
+  dat_path_inst/u2_alu/add_36/U56/QN (NAND2X2)            0.09 &  2919.47 r
+  dat_path_inst/u2_alu/add_36/U55/QN (NAND3X0)            0.17 &  2919.63 f
+  dat_path_inst/u2_alu/add_36/U77/QN (NAND2X2)            0.10 &  2919.73 r
+  dat_path_inst/u2_alu/add_36/U74/QN (NAND3X0)            0.17 &  2919.89 f
+  dat_path_inst/u2_alu/add_36/U23/QN (NAND2X2)            0.09 &  2919.99 r
+  dat_path_inst/u2_alu/add_36/U115/QN (NAND3X0)           0.17 &  2920.16 f
+  dat_path_inst/u2_alu/add_36/U104/QN (NAND2X2)           0.10 &  2920.25 r
+  dat_path_inst/u2_alu/add_36/U125/QN (NAND3X0)           0.18 &  2920.43 f
+  dat_path_inst/u2_alu/add_36/U50/QN (NAND2X2)            0.10 &  2920.53 r
+  dat_path_inst/u2_alu/add_36/U159/QN (NAND3X0)           0.18 &  2920.71 f
+  dat_path_inst/u2_alu/add_36/U57/QN (NAND2X2)            0.10 &  2920.81 r
+  dat_path_inst/u2_alu/add_36/U214/QN (NAND3X0)           0.16 &  2920.97 f
+  dat_path_inst/u2_alu/add_36/U53/QN (NAND2X2)            0.10 &  2921.07 r
+  dat_path_inst/u2_alu/add_36/U126/QN (NAND3X0)           0.16 &  2921.23 f
+  dat_path_inst/u2_alu/add_36/U1/QN (NAND2X1)             0.10 &  2921.33 r
+  dat_path_inst/u2_alu/add_36/U192/QN (NAND3X0)           0.18 &  2921.51 f
+  dat_path_inst/u2_alu/add_36/U1_9/CO (FADDX2)            0.43 &  2921.94 f
+  dat_path_inst/u2_alu/add_36/U107/QN (NAND2X2)           0.09 &  2922.03 r
+  dat_path_inst/u2_alu/add_36/U133/QN (NAND3X0)           0.17 &  2922.21 f
+  dat_path_inst/u2_alu/add_36/U108/QN (NAND2X2)           0.10 &  2922.31 r
+  dat_path_inst/u2_alu/add_36/U271/QN (NAND3X0)           0.17 &  2922.48 f
+  dat_path_inst/u2_alu/add_36/U96/QN (NAND2X2)            0.12 &  2922.60 r
+  dat_path_inst/u2_alu/add_36/U135/QN (NAND3X0)           0.16 &  2922.76 f
+  dat_path_inst/u2_alu/add_36/U131/QN (NAND2X2)           0.10 &  2922.86 r
+  dat_path_inst/u2_alu/add_36/U129/QN (NAND3X0)           0.18 &  2923.04 f
+  dat_path_inst/u2_alu/add_36/U29/QN (NAND2X2)            0.09 &  2923.13 r
+  dat_path_inst/u2_alu/add_36/U262/QN (NAND3X0)           0.18 &  2923.31 f
+  dat_path_inst/u2_alu/add_36/U1_15/CO (FADDX2)           0.43 &  2923.73 f
+  dat_path_inst/u2_alu/add_36/U244/QN (NAND2X2)           0.09 &  2923.83 r
+  dat_path_inst/u2_alu/add_36/U59/QN (NAND3X0)            0.17 &  2924.00 f
+  dat_path_inst/u2_alu/add_36/U92/QN (NAND2X2)            0.10 &  2924.10 r
+  dat_path_inst/u2_alu/add_36/U90/QN (NAND3X0)            0.18 &  2924.27 f
+  dat_path_inst/u2_alu/add_36/U93/QN (NAND2X2)            0.10 &  2924.37 r
+  dat_path_inst/u2_alu/add_36/U175/QN (NAND3X0)           0.18 &  2924.55 f
+  dat_path_inst/u2_alu/add_36/U173/QN (NAND2X2)           0.09 &  2924.63 r
+  dat_path_inst/u2_alu/add_36/U292/QN (NAND2X2)           0.10 &  2924.73 f
+  dat_path_inst/u2_alu/add_36/U294/ZN (INVX2)             0.07 &  2924.81 r
+  dat_path_inst/u2_alu/add_36/U293/QN (NAND2X4)           0.08 &  2924.89 f
+  dat_path_inst/u2_alu/add_36/U36/QN (NAND2X2)            0.08 &  2924.97 r
+  dat_path_inst/u2_alu/add_36/U246/QN (NAND3X0)           0.18 &  2925.15 f
+  dat_path_inst/u2_alu/add_36/U157/QN (NAND2X2)           0.10 &  2925.25 r
+  dat_path_inst/u2_alu/add_36/U136/QN (NAND3X0)           0.17 &  2925.42 f
+  dat_path_inst/u2_alu/add_36/U123/QN (NAND2X2)           0.10 &  2925.52 r
+  dat_path_inst/u2_alu/add_36/U146/QN (NAND3X0)           0.17 &  2925.69 f
+  dat_path_inst/u2_alu/add_36/U124/QN (NAND2X2)           0.09 &  2925.78 r
+  dat_path_inst/u2_alu/add_36/U82/QN (NAND2X2)            0.10 &  2925.87 f
+  dat_path_inst/u2_alu/add_36/U21/ZN (INVX2)              0.07 &  2925.95 r
+  dat_path_inst/u2_alu/add_36/U20/QN (NAND2X4)            0.09 &  2926.03 f
+  dat_path_inst/u2_alu/add_36/U317/ZN (INVX0)             0.08 &  2926.12 r
+  dat_path_inst/u2_alu/add_36/U316/ZN (INVX0)             0.10 &  2926.21 f
+  dat_path_inst/u2_alu/add_36/U15/Q (XOR2X1)              0.31 &  2926.52 f
+  dat_path_inst/u2_alu/add_36/SUM[24] (mips_alu_DW01_add_0)
+                                                          0.00 &  2926.52 f
+  dat_path_inst/u2_alu/U104/Q (AO221X1)                   0.64 &  2927.15 f
+  dat_path_inst/u2_alu/alu_out[24] (mips_alu)             0.00 &  2927.15 f
+  dat_path_inst/data_mem_addr[24] (mips_datapath)         0.00 &  2927.15 f
+  Addr[24] (out)                                          0.00 &  2927.16 f
+  data arrival time                                               2927.16
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2927.16
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2912.16
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[6][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[21] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1156/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1135/Q (MUX41X1)             0.56 &  2918.82 f
+  dat_path_inst/u1_reg_file/U1180/QN (NAND2X4)            0.11 &  2918.93 r
+  dat_path_inst/u1_reg_file/U1186/QN (NAND2X4)            0.14 &  2919.07 f
+  dat_path_inst/u1_reg_file/rd_data1[0] (reg_file)        0.00 &  2919.07 f
+  dat_path_inst/u2_alu/in1[0] (mips_alu)                  0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/A[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/U1/ZN (INVX4)               0.08 &  2919.15 r
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.10 &  2919.24 f
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.09 &  2919.34 r
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.17 &  2919.51 f
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.10 &  2919.60 r
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.16 &  2919.77 f
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.10 &  2919.87 r
+  dat_path_inst/u2_alu/sub_38/U216/QN (NAND3X0)           0.17 &  2920.04 f
+  dat_path_inst/u2_alu/sub_38/U105/QN (NAND2X2)           0.10 &  2920.13 r
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.16 &  2920.30 f
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.10 &  2920.40 r
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.17 &  2920.57 f
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.07 &  2920.64 r
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.18 &  2920.83 f
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.42 &  2921.24 f
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.08 &  2921.32 r
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.10 &  2921.42 f
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.08 &  2921.50 r
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.08 &  2921.58 f
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.08 &  2921.66 r
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.18 &  2921.84 f
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.09 &  2921.93 r
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.10 &  2922.03 f
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.07 &  2922.10 r
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.08 &  2922.18 f
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.08 &  2922.26 r
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.17 &  2922.44 f
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.10 &  2922.53 r
+  dat_path_inst/u2_alu/sub_38/U140/QN (NAND3X0)           0.17 &  2922.70 f
+  dat_path_inst/u2_alu/sub_38/U114/QN (NAND2X2)           0.09 &  2922.79 r
+  dat_path_inst/u2_alu/sub_38/U211/QN (NAND3X0)           0.17 &  2922.96 f
+  dat_path_inst/u2_alu/sub_38/U199/QN (NAND2X2)           0.09 &  2923.04 r
+  dat_path_inst/u2_alu/sub_38/U196/QN (NAND2X2)           0.10 &  2923.14 f
+  dat_path_inst/u2_alu/sub_38/U198/ZN (INVX2)             0.07 &  2923.22 r
+  dat_path_inst/u2_alu/sub_38/U197/QN (NAND2X4)           0.07 &  2923.29 f
+  dat_path_inst/u2_alu/sub_38/U2_15/CO (FADDX2)           0.38 &  2923.68 f
+  dat_path_inst/u2_alu/sub_38/U238/QN (NAND2X2)           0.09 &  2923.77 r
+  dat_path_inst/u2_alu/sub_38/U134/QN (NAND3X0)           0.17 &  2923.94 f
+  dat_path_inst/u2_alu/sub_38/U107/QN (NAND2X2)           0.10 &  2924.03 r
+  dat_path_inst/u2_alu/sub_38/U120/QN (NAND3X0)           0.17 &  2924.20 f
+  dat_path_inst/u2_alu/sub_38/U108/QN (NAND2X2)           0.10 &  2924.30 r
+  dat_path_inst/u2_alu/sub_38/U54/QN (NAND3X0)            0.17 &  2924.47 f
+  dat_path_inst/u2_alu/sub_38/U130/QN (NAND2X2)           0.10 &  2924.57 r
+  dat_path_inst/u2_alu/sub_38/U328/QN (NAND3X0)           0.17 &  2924.74 f
+  dat_path_inst/u2_alu/sub_38/U116/QN (NAND2X2)           0.10 &  2924.84 r
+  dat_path_inst/u2_alu/sub_38/U325/ZN (INVX0)             0.11 &  2924.95 f
+  dat_path_inst/u2_alu/sub_38/U324/ZN (INVX0)             0.08 &  2925.03 r
+  dat_path_inst/u2_alu/sub_38/U66/QN (NAND3X1)            0.35 &  2925.37 f
+  dat_path_inst/u2_alu/sub_38/U186/Q (XOR3X1)             0.65 &  2926.03 f
+  dat_path_inst/u2_alu/sub_38/DIFF[21] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2926.03 f
+  dat_path_inst/u2_alu/U114/Q (AO222X1)                   0.27 &  2926.30 f
+  dat_path_inst/u2_alu/U113/Q (AO221X1)                   0.38 &  2926.67 f
+  dat_path_inst/u2_alu/alu_out[21] (mips_alu)             0.00 &  2926.67 f
+  dat_path_inst/data_mem_addr[21] (mips_datapath)         0.00 &  2926.67 f
+  Addr[21] (out)                                          0.00 &  2926.67 f
+  data arrival time                                               2926.67
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2926.67
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2911.67
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[18][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[22] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1115/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1116/Q (MUX41X1)             0.53 &  2918.79 f
+  dat_path_inst/u1_reg_file/U1183/QN (NAND2X2)            0.11 &  2918.90 r
+  dat_path_inst/u1_reg_file/U1184/QN (NAND2X4)            0.12 &  2919.03 f
+  dat_path_inst/u1_reg_file/rd_data2[0] (reg_file)        0.00 &  2919.03 f
+  dat_path_inst/U233/QN (NAND2X4)                         0.08 &  2919.10 r
+  dat_path_inst/U244/QN (NAND2X4)                         0.11 &  2919.21 f
+  dat_path_inst/u2_alu/in2[0] (mips_alu)                  0.00 &  2919.21 f
+  dat_path_inst/u2_alu/add_36/B[0] (mips_alu_DW01_add_0)
+                                                          0.00 &  2919.21 f
+  dat_path_inst/u2_alu/add_36/U39/QN (NAND2X2)            0.08 &  2919.29 r
+  dat_path_inst/u2_alu/add_36/U40/ZN (INVX2)              0.09 &  2919.38 f
+  dat_path_inst/u2_alu/add_36/U56/QN (NAND2X2)            0.09 &  2919.47 r
+  dat_path_inst/u2_alu/add_36/U55/QN (NAND3X0)            0.17 &  2919.63 f
+  dat_path_inst/u2_alu/add_36/U77/QN (NAND2X2)            0.10 &  2919.73 r
+  dat_path_inst/u2_alu/add_36/U74/QN (NAND3X0)            0.17 &  2919.89 f
+  dat_path_inst/u2_alu/add_36/U23/QN (NAND2X2)            0.09 &  2919.99 r
+  dat_path_inst/u2_alu/add_36/U115/QN (NAND3X0)           0.17 &  2920.16 f
+  dat_path_inst/u2_alu/add_36/U104/QN (NAND2X2)           0.10 &  2920.25 r
+  dat_path_inst/u2_alu/add_36/U125/QN (NAND3X0)           0.18 &  2920.43 f
+  dat_path_inst/u2_alu/add_36/U50/QN (NAND2X2)            0.10 &  2920.53 r
+  dat_path_inst/u2_alu/add_36/U159/QN (NAND3X0)           0.18 &  2920.71 f
+  dat_path_inst/u2_alu/add_36/U57/QN (NAND2X2)            0.10 &  2920.81 r
+  dat_path_inst/u2_alu/add_36/U214/QN (NAND3X0)           0.16 &  2920.97 f
+  dat_path_inst/u2_alu/add_36/U53/QN (NAND2X2)            0.10 &  2921.07 r
+  dat_path_inst/u2_alu/add_36/U126/QN (NAND3X0)           0.16 &  2921.23 f
+  dat_path_inst/u2_alu/add_36/U1/QN (NAND2X1)             0.10 &  2921.33 r
+  dat_path_inst/u2_alu/add_36/U192/QN (NAND3X0)           0.18 &  2921.51 f
+  dat_path_inst/u2_alu/add_36/U1_9/CO (FADDX2)            0.43 &  2921.94 f
+  dat_path_inst/u2_alu/add_36/U107/QN (NAND2X2)           0.09 &  2922.03 r
+  dat_path_inst/u2_alu/add_36/U133/QN (NAND3X0)           0.17 &  2922.21 f
+  dat_path_inst/u2_alu/add_36/U108/QN (NAND2X2)           0.10 &  2922.31 r
+  dat_path_inst/u2_alu/add_36/U271/QN (NAND3X0)           0.17 &  2922.48 f
+  dat_path_inst/u2_alu/add_36/U96/QN (NAND2X2)            0.12 &  2922.60 r
+  dat_path_inst/u2_alu/add_36/U135/QN (NAND3X0)           0.16 &  2922.76 f
+  dat_path_inst/u2_alu/add_36/U131/QN (NAND2X2)           0.10 &  2922.86 r
+  dat_path_inst/u2_alu/add_36/U129/QN (NAND3X0)           0.18 &  2923.04 f
+  dat_path_inst/u2_alu/add_36/U29/QN (NAND2X2)            0.09 &  2923.13 r
+  dat_path_inst/u2_alu/add_36/U262/QN (NAND3X0)           0.18 &  2923.31 f
+  dat_path_inst/u2_alu/add_36/U1_15/CO (FADDX2)           0.43 &  2923.73 f
+  dat_path_inst/u2_alu/add_36/U244/QN (NAND2X2)           0.09 &  2923.83 r
+  dat_path_inst/u2_alu/add_36/U59/QN (NAND3X0)            0.17 &  2924.00 f
+  dat_path_inst/u2_alu/add_36/U92/QN (NAND2X2)            0.10 &  2924.10 r
+  dat_path_inst/u2_alu/add_36/U90/QN (NAND3X0)            0.18 &  2924.27 f
+  dat_path_inst/u2_alu/add_36/U93/QN (NAND2X2)            0.10 &  2924.37 r
+  dat_path_inst/u2_alu/add_36/U175/QN (NAND3X0)           0.18 &  2924.55 f
+  dat_path_inst/u2_alu/add_36/U173/QN (NAND2X2)           0.09 &  2924.63 r
+  dat_path_inst/u2_alu/add_36/U292/QN (NAND2X2)           0.10 &  2924.73 f
+  dat_path_inst/u2_alu/add_36/U294/ZN (INVX2)             0.07 &  2924.81 r
+  dat_path_inst/u2_alu/add_36/U293/QN (NAND2X4)           0.08 &  2924.89 f
+  dat_path_inst/u2_alu/add_36/U36/QN (NAND2X2)            0.08 &  2924.97 r
+  dat_path_inst/u2_alu/add_36/U246/QN (NAND3X0)           0.18 &  2925.15 f
+  dat_path_inst/u2_alu/add_36/U157/QN (NAND2X2)           0.10 &  2925.25 r
+  dat_path_inst/u2_alu/add_36/U42/QN (NAND3X1)            0.40 &  2925.65 f
+  dat_path_inst/u2_alu/add_36/U150/QN (NAND2X0)           0.14 &  2925.79 r
+  dat_path_inst/u2_alu/add_36/U151/QN (NAND2X1)           0.13 &  2925.92 f
+  dat_path_inst/u2_alu/add_36/SUM[22] (mips_alu_DW01_add_0)
+                                                          0.00 &  2925.92 f
+  dat_path_inst/u2_alu/U110/Q (AO221X1)                   0.68 &  2926.61 f
+  dat_path_inst/u2_alu/alu_out[22] (mips_alu)             0.00 &  2926.61 f
+  dat_path_inst/data_mem_addr[22] (mips_datapath)         0.00 &  2926.61 f
+  Addr[22] (out)                                          0.01 &  2926.61 f
+  data arrival time                                               2926.61
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2926.61
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2911.61
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[18][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[20] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1115/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1116/Q (MUX41X1)             0.53 &  2918.79 f
+  dat_path_inst/u1_reg_file/U1183/QN (NAND2X2)            0.11 &  2918.90 r
+  dat_path_inst/u1_reg_file/U1184/QN (NAND2X4)            0.12 &  2919.03 f
+  dat_path_inst/u1_reg_file/rd_data2[0] (reg_file)        0.00 &  2919.03 f
+  dat_path_inst/U233/QN (NAND2X4)                         0.08 &  2919.10 r
+  dat_path_inst/U244/QN (NAND2X4)                         0.11 &  2919.21 f
+  dat_path_inst/u2_alu/in2[0] (mips_alu)                  0.00 &  2919.21 f
+  dat_path_inst/u2_alu/add_36/B[0] (mips_alu_DW01_add_0)
+                                                          0.00 &  2919.21 f
+  dat_path_inst/u2_alu/add_36/U39/QN (NAND2X2)            0.08 &  2919.29 r
+  dat_path_inst/u2_alu/add_36/U40/ZN (INVX2)              0.09 &  2919.38 f
+  dat_path_inst/u2_alu/add_36/U56/QN (NAND2X2)            0.09 &  2919.47 r
+  dat_path_inst/u2_alu/add_36/U55/QN (NAND3X0)            0.17 &  2919.63 f
+  dat_path_inst/u2_alu/add_36/U77/QN (NAND2X2)            0.10 &  2919.73 r
+  dat_path_inst/u2_alu/add_36/U74/QN (NAND3X0)            0.17 &  2919.89 f
+  dat_path_inst/u2_alu/add_36/U23/QN (NAND2X2)            0.09 &  2919.99 r
+  dat_path_inst/u2_alu/add_36/U115/QN (NAND3X0)           0.17 &  2920.16 f
+  dat_path_inst/u2_alu/add_36/U104/QN (NAND2X2)           0.10 &  2920.25 r
+  dat_path_inst/u2_alu/add_36/U125/QN (NAND3X0)           0.18 &  2920.43 f
+  dat_path_inst/u2_alu/add_36/U50/QN (NAND2X2)            0.10 &  2920.53 r
+  dat_path_inst/u2_alu/add_36/U158/QN (NAND3X0)           0.17 &  2920.70 f
+  dat_path_inst/u2_alu/add_36/U58/QN (NAND2X2)            0.10 &  2920.80 r
+  dat_path_inst/u2_alu/add_36/U214/QN (NAND3X0)           0.17 &  2920.97 f
+  dat_path_inst/u2_alu/add_36/U53/QN (NAND2X2)            0.10 &  2921.07 r
+  dat_path_inst/u2_alu/add_36/U126/QN (NAND3X0)           0.16 &  2921.23 f
+  dat_path_inst/u2_alu/add_36/U1/QN (NAND2X1)             0.10 &  2921.33 r
+  dat_path_inst/u2_alu/add_36/U192/QN (NAND3X0)           0.18 &  2921.51 f
+  dat_path_inst/u2_alu/add_36/U1_9/CO (FADDX2)            0.43 &  2921.94 f
+  dat_path_inst/u2_alu/add_36/U107/QN (NAND2X2)           0.09 &  2922.03 r
+  dat_path_inst/u2_alu/add_36/U133/QN (NAND3X0)           0.17 &  2922.21 f
+  dat_path_inst/u2_alu/add_36/U108/QN (NAND2X2)           0.10 &  2922.31 r
+  dat_path_inst/u2_alu/add_36/U271/QN (NAND3X0)           0.17 &  2922.48 f
+  dat_path_inst/u2_alu/add_36/U96/QN (NAND2X2)            0.12 &  2922.60 r
+  dat_path_inst/u2_alu/add_36/U135/QN (NAND3X0)           0.16 &  2922.76 f
+  dat_path_inst/u2_alu/add_36/U131/QN (NAND2X2)           0.10 &  2922.86 r
+  dat_path_inst/u2_alu/add_36/U129/QN (NAND3X0)           0.18 &  2923.04 f
+  dat_path_inst/u2_alu/add_36/U29/QN (NAND2X2)            0.09 &  2923.13 r
+  dat_path_inst/u2_alu/add_36/U262/QN (NAND3X0)           0.18 &  2923.31 f
+  dat_path_inst/u2_alu/add_36/U1_15/CO (FADDX2)           0.43 &  2923.73 f
+  dat_path_inst/u2_alu/add_36/U244/QN (NAND2X2)           0.09 &  2923.83 r
+  dat_path_inst/u2_alu/add_36/U59/QN (NAND3X0)            0.17 &  2924.00 f
+  dat_path_inst/u2_alu/add_36/U92/QN (NAND2X2)            0.10 &  2924.10 r
+  dat_path_inst/u2_alu/add_36/U90/QN (NAND3X0)            0.18 &  2924.27 f
+  dat_path_inst/u2_alu/add_36/U93/QN (NAND2X2)            0.10 &  2924.37 r
+  dat_path_inst/u2_alu/add_36/U175/QN (NAND3X0)           0.18 &  2924.55 f
+  dat_path_inst/u2_alu/add_36/U173/QN (NAND2X2)           0.09 &  2924.63 r
+  dat_path_inst/u2_alu/add_36/U292/QN (NAND2X2)           0.10 &  2924.73 f
+  dat_path_inst/u2_alu/add_36/U294/ZN (INVX2)             0.07 &  2924.81 r
+  dat_path_inst/u2_alu/add_36/U293/QN (NAND2X4)           0.08 &  2924.89 f
+  dat_path_inst/u2_alu/add_36/U315/ZN (INVX0)             0.08 &  2924.97 r
+  dat_path_inst/u2_alu/add_36/U314/ZN (INVX0)             0.11 &  2925.08 f
+  dat_path_inst/u2_alu/add_36/U249/Q (XOR3X1)             0.66 &  2925.74 f
+  dat_path_inst/u2_alu/add_36/SUM[20] (mips_alu_DW01_add_0)
+                                                          0.00 &  2925.74 f
+  dat_path_inst/u2_alu/U116/Q (AO221X1)                   0.53 &  2926.27 f
+  dat_path_inst/u2_alu/alu_out[20] (mips_alu)             0.00 &  2926.27 f
+  dat_path_inst/data_mem_addr[20] (mips_datapath)         0.00 &  2926.27 f
+  Addr[20] (out)                                          0.00 &  2926.27 f
+  data arrival time                                               2926.27
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2926.27
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2911.27
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[6][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[19] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1156/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1135/Q (MUX41X1)             0.56 &  2918.82 f
+  dat_path_inst/u1_reg_file/U1180/QN (NAND2X4)            0.11 &  2918.93 r
+  dat_path_inst/u1_reg_file/U1186/QN (NAND2X4)            0.14 &  2919.07 f
+  dat_path_inst/u1_reg_file/rd_data1[0] (reg_file)        0.00 &  2919.07 f
+  dat_path_inst/u2_alu/in1[0] (mips_alu)                  0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/A[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/U1/ZN (INVX4)               0.08 &  2919.15 r
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.10 &  2919.24 f
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.09 &  2919.34 r
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.17 &  2919.51 f
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.10 &  2919.60 r
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.16 &  2919.77 f
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.10 &  2919.87 r
+  dat_path_inst/u2_alu/sub_38/U216/QN (NAND3X0)           0.17 &  2920.04 f
+  dat_path_inst/u2_alu/sub_38/U105/QN (NAND2X2)           0.10 &  2920.13 r
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.16 &  2920.30 f
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.10 &  2920.40 r
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.17 &  2920.57 f
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.07 &  2920.64 r
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.18 &  2920.83 f
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.42 &  2921.24 f
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.08 &  2921.32 r
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.10 &  2921.42 f
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.08 &  2921.50 r
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.08 &  2921.58 f
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.08 &  2921.66 r
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.18 &  2921.84 f
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.09 &  2921.93 r
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.10 &  2922.03 f
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.07 &  2922.10 r
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.08 &  2922.18 f
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.08 &  2922.26 r
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.17 &  2922.44 f
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.10 &  2922.53 r
+  dat_path_inst/u2_alu/sub_38/U140/QN (NAND3X0)           0.17 &  2922.70 f
+  dat_path_inst/u2_alu/sub_38/U114/QN (NAND2X2)           0.09 &  2922.79 r
+  dat_path_inst/u2_alu/sub_38/U211/QN (NAND3X0)           0.17 &  2922.96 f
+  dat_path_inst/u2_alu/sub_38/U199/QN (NAND2X2)           0.09 &  2923.04 r
+  dat_path_inst/u2_alu/sub_38/U196/QN (NAND2X2)           0.10 &  2923.14 f
+  dat_path_inst/u2_alu/sub_38/U198/ZN (INVX2)             0.07 &  2923.22 r
+  dat_path_inst/u2_alu/sub_38/U197/QN (NAND2X4)           0.07 &  2923.29 f
+  dat_path_inst/u2_alu/sub_38/U2_15/CO (FADDX2)           0.38 &  2923.68 f
+  dat_path_inst/u2_alu/sub_38/U238/QN (NAND2X2)           0.09 &  2923.77 r
+  dat_path_inst/u2_alu/sub_38/U134/QN (NAND3X0)           0.17 &  2923.94 f
+  dat_path_inst/u2_alu/sub_38/U107/QN (NAND2X2)           0.10 &  2924.03 r
+  dat_path_inst/u2_alu/sub_38/U106/QN (NAND3X0)           0.17 &  2924.21 f
+  dat_path_inst/u2_alu/sub_38/U109/QN (NAND2X2)           0.10 &  2924.30 r
+  dat_path_inst/u2_alu/sub_38/U278/Q (AND3X1)             0.31 &  2924.62 r
+  dat_path_inst/u2_alu/sub_38/U158/ZN (INVX0)             0.12 &  2924.74 f
+  dat_path_inst/u2_alu/sub_38/U212/Q (XOR3X1)             0.66 &  2925.39 f
+  dat_path_inst/u2_alu/sub_38/DIFF[19] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2925.39 f
+  dat_path_inst/u2_alu/U123/Q (AO222X1)                   0.28 &  2925.67 f
+  dat_path_inst/u2_alu/U122/Q (AO221X1)                   0.37 &  2926.04 f
+  dat_path_inst/u2_alu/alu_out[19] (mips_alu)             0.00 &  2926.04 f
+  dat_path_inst/data_mem_addr[19] (mips_datapath)         0.00 &  2926.04 f
+  Addr[19] (out)                                          0.00 &  2926.04 f
+  data arrival time                                               2926.04
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2926.04
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2911.04
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[6][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[17] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1156/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1135/Q (MUX41X1)             0.56 &  2918.82 f
+  dat_path_inst/u1_reg_file/U1180/QN (NAND2X4)            0.11 &  2918.93 r
+  dat_path_inst/u1_reg_file/U1186/QN (NAND2X4)            0.14 &  2919.07 f
+  dat_path_inst/u1_reg_file/rd_data1[0] (reg_file)        0.00 &  2919.07 f
+  dat_path_inst/u2_alu/in1[0] (mips_alu)                  0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/A[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/U1/ZN (INVX4)               0.08 &  2919.15 r
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.10 &  2919.24 f
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.09 &  2919.34 r
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.17 &  2919.51 f
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.10 &  2919.60 r
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.16 &  2919.77 f
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.10 &  2919.87 r
+  dat_path_inst/u2_alu/sub_38/U216/QN (NAND3X0)           0.17 &  2920.04 f
+  dat_path_inst/u2_alu/sub_38/U105/QN (NAND2X2)           0.10 &  2920.13 r
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.16 &  2920.30 f
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.10 &  2920.40 r
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.17 &  2920.57 f
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.07 &  2920.64 r
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.18 &  2920.83 f
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.42 &  2921.24 f
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.08 &  2921.32 r
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.10 &  2921.42 f
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.08 &  2921.50 r
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.08 &  2921.58 f
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.08 &  2921.66 r
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.18 &  2921.84 f
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.09 &  2921.93 r
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.10 &  2922.03 f
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.07 &  2922.10 r
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.08 &  2922.18 f
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.08 &  2922.26 r
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.17 &  2922.44 f
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.10 &  2922.53 r
+  dat_path_inst/u2_alu/sub_38/U140/QN (NAND3X0)           0.17 &  2922.70 f
+  dat_path_inst/u2_alu/sub_38/U114/QN (NAND2X2)           0.09 &  2922.79 r
+  dat_path_inst/u2_alu/sub_38/U211/QN (NAND3X0)           0.17 &  2922.96 f
+  dat_path_inst/u2_alu/sub_38/U199/QN (NAND2X2)           0.09 &  2923.04 r
+  dat_path_inst/u2_alu/sub_38/U196/QN (NAND2X2)           0.10 &  2923.14 f
+  dat_path_inst/u2_alu/sub_38/U198/ZN (INVX2)             0.07 &  2923.22 r
+  dat_path_inst/u2_alu/sub_38/U197/QN (NAND2X4)           0.07 &  2923.29 f
+  dat_path_inst/u2_alu/sub_38/U2_15/CO (FADDX2)           0.38 &  2923.68 f
+  dat_path_inst/u2_alu/sub_38/U239/QN (NAND2X2)           0.09 &  2923.77 r
+  dat_path_inst/u2_alu/sub_38/U47/QN (NAND3X1)            0.37 &  2924.15 f
+  dat_path_inst/u2_alu/sub_38/U234/Q (XOR3X1)             0.65 &  2924.80 f
+  dat_path_inst/u2_alu/sub_38/DIFF[17] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2924.80 f
+  dat_path_inst/u2_alu/U129/Q (AO222X1)                   0.27 &  2925.07 f
+  dat_path_inst/u2_alu/U128/Q (AO221X1)                   0.35 &  2925.42 f
+  dat_path_inst/u2_alu/alu_out[17] (mips_alu)             0.00 &  2925.42 f
+  dat_path_inst/data_mem_addr[17] (mips_datapath)         0.00 &  2925.42 f
+  Addr[17] (out)                                          0.00 &  2925.42 f
+  data arrival time                                               2925.42
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2925.42
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2910.42
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[6][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[18] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1156/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1135/Q (MUX41X1)             0.56 &  2918.82 f
+  dat_path_inst/u1_reg_file/U1180/QN (NAND2X4)            0.11 &  2918.93 r
+  dat_path_inst/u1_reg_file/U1186/QN (NAND2X4)            0.14 &  2919.07 f
+  dat_path_inst/u1_reg_file/rd_data1[0] (reg_file)        0.00 &  2919.07 f
+  dat_path_inst/u2_alu/in1[0] (mips_alu)                  0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/A[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/U1/ZN (INVX4)               0.08 &  2919.15 r
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.10 &  2919.24 f
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.09 &  2919.34 r
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.17 &  2919.51 f
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.10 &  2919.60 r
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.16 &  2919.77 f
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.10 &  2919.87 r
+  dat_path_inst/u2_alu/sub_38/U216/QN (NAND3X0)           0.17 &  2920.04 f
+  dat_path_inst/u2_alu/sub_38/U105/QN (NAND2X2)           0.10 &  2920.13 r
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.16 &  2920.30 f
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.10 &  2920.40 r
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.17 &  2920.57 f
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.07 &  2920.64 r
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.18 &  2920.83 f
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.42 &  2921.24 f
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.08 &  2921.32 r
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.10 &  2921.42 f
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.08 &  2921.50 r
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.08 &  2921.58 f
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.08 &  2921.66 r
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.18 &  2921.84 f
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.09 &  2921.93 r
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.10 &  2922.03 f
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.07 &  2922.10 r
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.08 &  2922.18 f
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.08 &  2922.26 r
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.17 &  2922.44 f
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.10 &  2922.53 r
+  dat_path_inst/u2_alu/sub_38/U140/QN (NAND3X0)           0.17 &  2922.70 f
+  dat_path_inst/u2_alu/sub_38/U114/QN (NAND2X2)           0.09 &  2922.79 r
+  dat_path_inst/u2_alu/sub_38/U211/QN (NAND3X0)           0.17 &  2922.96 f
+  dat_path_inst/u2_alu/sub_38/U199/QN (NAND2X2)           0.09 &  2923.04 r
+  dat_path_inst/u2_alu/sub_38/U196/QN (NAND2X2)           0.10 &  2923.14 f
+  dat_path_inst/u2_alu/sub_38/U198/ZN (INVX2)             0.07 &  2923.22 r
+  dat_path_inst/u2_alu/sub_38/U197/QN (NAND2X4)           0.07 &  2923.29 f
+  dat_path_inst/u2_alu/sub_38/U2_15/CO (FADDX2)           0.38 &  2923.68 f
+  dat_path_inst/u2_alu/sub_38/U238/QN (NAND2X2)           0.09 &  2923.77 r
+  dat_path_inst/u2_alu/sub_38/U135/QN (NAND3X0)           0.17 &  2923.94 f
+  dat_path_inst/u2_alu/sub_38/U121/QN (NAND2X2)           0.10 &  2924.03 r
+  dat_path_inst/u2_alu/sub_38/U38/QN (NAND3X1)            0.38 &  2924.42 f
+  dat_path_inst/u2_alu/sub_38/U163/QN (NAND2X0)           0.13 &  2924.55 r
+  dat_path_inst/u2_alu/sub_38/U164/QN (NAND2X1)           0.13 &  2924.68 f
+  dat_path_inst/u2_alu/sub_38/DIFF[18] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2924.68 f
+  dat_path_inst/u2_alu/U126/Q (AO222X1)                   0.26 &  2924.94 f
+  dat_path_inst/u2_alu/U125/Q (AO221X1)                   0.35 &  2925.29 f
+  dat_path_inst/u2_alu/alu_out[18] (mips_alu)             0.00 &  2925.29 f
+  dat_path_inst/data_mem_addr[18] (mips_datapath)         0.00 &  2925.29 f
+  Addr[18] (out)                                          0.00 &  2925.29 f
+  data arrival time                                               2925.29
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2925.29
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2910.29
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[6][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[16] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[6][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1156/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1135/Q (MUX41X1)             0.56 &  2918.82 f
+  dat_path_inst/u1_reg_file/U1180/QN (NAND2X4)            0.11 &  2918.93 r
+  dat_path_inst/u1_reg_file/U1186/QN (NAND2X4)            0.14 &  2919.07 f
+  dat_path_inst/u1_reg_file/rd_data1[0] (reg_file)        0.00 &  2919.07 f
+  dat_path_inst/u2_alu/in1[0] (mips_alu)                  0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/A[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.07 f
+  dat_path_inst/u2_alu/sub_38/U1/ZN (INVX4)               0.08 &  2919.15 r
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.10 &  2919.24 f
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.09 &  2919.34 r
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.17 &  2919.51 f
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.10 &  2919.60 r
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.16 &  2919.77 f
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.10 &  2919.87 r
+  dat_path_inst/u2_alu/sub_38/U216/QN (NAND3X0)           0.17 &  2920.04 f
+  dat_path_inst/u2_alu/sub_38/U105/QN (NAND2X2)           0.10 &  2920.13 r
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.16 &  2920.30 f
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.10 &  2920.40 r
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.17 &  2920.57 f
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.07 &  2920.64 r
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.18 &  2920.83 f
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.42 &  2921.24 f
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.08 &  2921.32 r
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.10 &  2921.42 f
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.08 &  2921.50 r
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.08 &  2921.58 f
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.08 &  2921.66 r
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.18 &  2921.84 f
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.09 &  2921.93 r
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.10 &  2922.03 f
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.07 &  2922.10 r
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.08 &  2922.18 f
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.08 &  2922.26 r
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.17 &  2922.44 f
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.10 &  2922.53 r
+  dat_path_inst/u2_alu/sub_38/U140/QN (NAND3X0)           0.17 &  2922.70 f
+  dat_path_inst/u2_alu/sub_38/U114/QN (NAND2X2)           0.09 &  2922.79 r
+  dat_path_inst/u2_alu/sub_38/U211/QN (NAND3X0)           0.17 &  2922.96 f
+  dat_path_inst/u2_alu/sub_38/U199/QN (NAND2X2)           0.09 &  2923.04 r
+  dat_path_inst/u2_alu/sub_38/U196/QN (NAND2X2)           0.10 &  2923.14 f
+  dat_path_inst/u2_alu/sub_38/U198/ZN (INVX2)             0.07 &  2923.22 r
+  dat_path_inst/u2_alu/sub_38/U197/QN (NAND2X4)           0.07 &  2923.29 f
+  dat_path_inst/u2_alu/sub_38/U2_15/CO (FADDX2)           0.38 &  2923.68 f
+  dat_path_inst/u2_alu/sub_38/U327/ZN (INVX0)             0.12 &  2923.80 r
+  dat_path_inst/u2_alu/sub_38/U326/ZN (INVX0)             0.10 &  2923.90 f
+  dat_path_inst/u2_alu/sub_38/U102/ZN (INVX0)             0.07 &  2923.97 r
+  dat_path_inst/u2_alu/sub_38/U101/ZN (INVX0)             0.09 &  2924.06 f
+  dat_path_inst/u2_alu/sub_38/U237/Q (XOR2X1)             0.31 &  2924.37 f
+  dat_path_inst/u2_alu/sub_38/DIFF[16] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2924.37 f
+  dat_path_inst/u2_alu/U132/Q (AO222X1)                   0.30 &  2924.67 f
+  dat_path_inst/u2_alu/U131/Q (AO221X1)                   0.37 &  2925.04 f
+  dat_path_inst/u2_alu/alu_out[16] (mips_alu)             0.00 &  2925.04 f
+  dat_path_inst/data_mem_addr[16] (mips_datapath)         0.00 &  2925.04 f
+  Addr[16] (out)                                          0.00 &  2925.04 f
+  data arrival time                                               2925.04
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2925.04
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2910.04
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[18][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[15] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1115/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1116/Q (MUX41X1)             0.53 &  2918.79 f
+  dat_path_inst/u1_reg_file/U1183/QN (NAND2X2)            0.11 &  2918.90 r
+  dat_path_inst/u1_reg_file/U1184/QN (NAND2X4)            0.12 &  2919.03 f
+  dat_path_inst/u1_reg_file/rd_data2[0] (reg_file)        0.00 &  2919.03 f
+  dat_path_inst/U233/QN (NAND2X4)                         0.08 &  2919.10 r
+  dat_path_inst/U244/QN (NAND2X4)                         0.11 &  2919.21 f
+  dat_path_inst/u2_alu/in2[0] (mips_alu)                  0.00 &  2919.21 f
+  dat_path_inst/u2_alu/sub_38/B[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.21 f
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.08 &  2919.29 r
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.11 &  2919.40 f
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.15 &  2919.54 r
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.12 &  2919.67 f
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.14 &  2919.81 r
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.12 &  2919.93 f
+  dat_path_inst/u2_alu/sub_38/U215/QN (NAND3X0)           0.15 &  2920.08 r
+  dat_path_inst/u2_alu/sub_38/U80/QN (NAND2X2)            0.13 &  2920.20 f
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.15 &  2920.35 r
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.13 &  2920.48 f
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.15 &  2920.62 r
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.10 &  2920.73 f
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.16 &  2920.88 r
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.39 &  2921.28 r
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.10 &  2921.37 f
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.08 &  2921.45 r
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.09 &  2921.54 f
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.07 &  2921.61 r
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.10 &  2921.71 f
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.15 &  2921.85 r
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.12 &  2921.98 f
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.08 &  2922.06 r
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.08 &  2922.14 f
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.07 &  2922.21 r
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.10 &  2922.31 f
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.14 &  2922.45 r
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.12 &  2922.57 f
+  dat_path_inst/u2_alu/sub_38/U140/QN (NAND3X0)           0.14 &  2922.72 r
+  dat_path_inst/u2_alu/sub_38/U114/QN (NAND2X2)           0.12 &  2922.84 f
+  dat_path_inst/u2_alu/sub_38/U211/QN (NAND3X0)           0.15 &  2922.98 r
+  dat_path_inst/u2_alu/sub_38/U199/QN (NAND2X2)           0.11 &  2923.09 f
+  dat_path_inst/u2_alu/sub_38/U196/QN (NAND2X2)           0.08 &  2923.18 r
+  dat_path_inst/u2_alu/sub_38/U198/ZN (INVX2)             0.08 &  2923.26 f
+  dat_path_inst/u2_alu/sub_38/U197/QN (NAND2X4)           0.06 &  2923.32 r
+  dat_path_inst/u2_alu/sub_38/U2_15/S (FADDX2)            0.45 &  2923.77 f
+  dat_path_inst/u2_alu/sub_38/DIFF[15] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2923.77 f
+  dat_path_inst/u2_alu/U135/Q (AO222X1)                   0.27 &  2924.04 f
+  dat_path_inst/u2_alu/U134/Q (AO221X1)                   0.35 &  2924.38 f
+  dat_path_inst/u2_alu/alu_out[15] (mips_alu)             0.00 &  2924.38 f
+  dat_path_inst/data_mem_addr[15] (mips_datapath)         0.00 &  2924.38 f
+  Addr[15] (out)                                          0.00 &  2924.39 f
+  data arrival time                                               2924.39
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2924.39
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2909.39
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[18][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[14] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1115/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1116/Q (MUX41X1)             0.53 &  2918.79 f
+  dat_path_inst/u1_reg_file/U1183/QN (NAND2X2)            0.11 &  2918.90 r
+  dat_path_inst/u1_reg_file/U1184/QN (NAND2X4)            0.12 &  2919.03 f
+  dat_path_inst/u1_reg_file/rd_data2[0] (reg_file)        0.00 &  2919.03 f
+  dat_path_inst/U233/QN (NAND2X4)                         0.08 &  2919.10 r
+  dat_path_inst/U244/QN (NAND2X4)                         0.11 &  2919.21 f
+  dat_path_inst/u2_alu/in2[0] (mips_alu)                  0.00 &  2919.21 f
+  dat_path_inst/u2_alu/sub_38/B[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.21 f
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.08 &  2919.29 r
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.11 &  2919.40 f
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.15 &  2919.54 r
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.12 &  2919.67 f
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.14 &  2919.81 r
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.12 &  2919.93 f
+  dat_path_inst/u2_alu/sub_38/U215/QN (NAND3X0)           0.15 &  2920.08 r
+  dat_path_inst/u2_alu/sub_38/U80/QN (NAND2X2)            0.13 &  2920.20 f
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.15 &  2920.35 r
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.13 &  2920.48 f
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.15 &  2920.62 r
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.10 &  2920.73 f
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.16 &  2920.88 r
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.39 &  2921.28 r
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.10 &  2921.37 f
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.08 &  2921.45 r
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.09 &  2921.54 f
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.07 &  2921.61 r
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.10 &  2921.71 f
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.15 &  2921.85 r
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.12 &  2921.98 f
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.08 &  2922.06 r
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.08 &  2922.14 f
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.07 &  2922.21 r
+  dat_path_inst/u2_alu/sub_38/U57/QN (NAND2X2)            0.10 &  2922.31 f
+  dat_path_inst/u2_alu/sub_38/U44/QN (NAND3X0)            0.14 &  2922.45 r
+  dat_path_inst/u2_alu/sub_38/U42/QN (NAND2X2)            0.12 &  2922.57 f
+  dat_path_inst/u2_alu/sub_38/U141/QN (NAND3X0)           0.15 &  2922.72 r
+  dat_path_inst/u2_alu/sub_38/U143/QN (NAND2X2)           0.12 &  2922.84 f
+  dat_path_inst/u2_alu/sub_38/U142/QN (NAND3X0)           0.18 &  2923.02 r
+  dat_path_inst/u2_alu/sub_38/U98/ZN (INVX0)              0.16 &  2923.18 f
+  dat_path_inst/u2_alu/sub_38/U78/ZN (INVX0)              0.11 &  2923.29 r
+  dat_path_inst/u2_alu/sub_38/U207/ZN (INVX0)             0.10 &  2923.39 f
+  dat_path_inst/u2_alu/sub_38/U203/QN (NAND2X1)           0.09 &  2923.48 r
+  dat_path_inst/u2_alu/sub_38/U205/QN (NAND2X1)           0.10 &  2923.58 f
+  dat_path_inst/u2_alu/sub_38/DIFF[14] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2923.58 f
+  dat_path_inst/u2_alu/U138/Q (AO222X1)                   0.26 &  2923.84 f
+  dat_path_inst/u2_alu/U137/Q (AO221X1)                   0.35 &  2924.19 f
+  dat_path_inst/u2_alu/alu_out[14] (mips_alu)             0.00 &  2924.19 f
+  dat_path_inst/data_mem_addr[14] (mips_datapath)         0.00 &  2924.19 f
+  Addr[14] (out)                                          0.00 &  2924.19 f
+  data arrival time                                               2924.19
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2924.19
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2909.19
+
+
+  Startpoint: dat_path_inst/u1_reg_file/reg_blk_reg[18][0]
+               (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: Addr[13] (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (propagated)                     2916.69    2916.69
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/CLK (DFFARX1)
+                                                          0.00    2916.69 r
+  dat_path_inst/u1_reg_file/reg_blk_reg[18][0]/Q (DFFARX1)
+                                                          1.05 &  2917.74 f
+  dat_path_inst/u1_reg_file/U1115/Q (MUX41X1)             0.52 &  2918.26 f
+  dat_path_inst/u1_reg_file/U1116/Q (MUX41X1)             0.53 &  2918.79 f
+  dat_path_inst/u1_reg_file/U1183/QN (NAND2X2)            0.11 &  2918.90 r
+  dat_path_inst/u1_reg_file/U1184/QN (NAND2X4)            0.12 &  2919.03 f
+  dat_path_inst/u1_reg_file/rd_data2[0] (reg_file)        0.00 &  2919.03 f
+  dat_path_inst/U233/QN (NAND2X4)                         0.08 &  2919.10 r
+  dat_path_inst/U244/QN (NAND2X4)                         0.11 &  2919.21 f
+  dat_path_inst/u2_alu/in2[0] (mips_alu)                  0.00 &  2919.21 f
+  dat_path_inst/u2_alu/sub_38/B[0] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2919.21 f
+  dat_path_inst/u2_alu/sub_38/U3/QN (NAND2X4)             0.08 &  2919.29 r
+  dat_path_inst/u2_alu/sub_38/U133/QN (NAND2X2)           0.11 &  2919.40 f
+  dat_path_inst/u2_alu/sub_38/U131/QN (NAND3X0)           0.15 &  2919.54 r
+  dat_path_inst/u2_alu/sub_38/U60/QN (NAND2X2)            0.12 &  2919.67 f
+  dat_path_inst/u2_alu/sub_38/U225/QN (NAND3X0)           0.14 &  2919.81 r
+  dat_path_inst/u2_alu/sub_38/U88/QN (NAND2X2)            0.12 &  2919.93 f
+  dat_path_inst/u2_alu/sub_38/U215/QN (NAND3X0)           0.15 &  2920.08 r
+  dat_path_inst/u2_alu/sub_38/U80/QN (NAND2X2)            0.13 &  2920.20 f
+  dat_path_inst/u2_alu/sub_38/U230/QN (NAND3X0)           0.15 &  2920.35 r
+  dat_path_inst/u2_alu/sub_38/U77/QN (NAND2X2)            0.13 &  2920.48 f
+  dat_path_inst/u2_alu/sub_38/U138/QN (NAND3X0)           0.15 &  2920.62 r
+  dat_path_inst/u2_alu/sub_38/U75/QN (NAND2X2)            0.10 &  2920.73 f
+  dat_path_inst/u2_alu/sub_38/U185/QN (NAND3X0)           0.16 &  2920.88 r
+  dat_path_inst/u2_alu/sub_38/U2_7/CO (FADDX2)            0.39 &  2921.28 r
+  dat_path_inst/u2_alu/sub_38/U302/QN (NAND2X2)           0.10 &  2921.37 f
+  dat_path_inst/u2_alu/sub_38/U298/QN (NAND2X2)           0.08 &  2921.45 r
+  dat_path_inst/u2_alu/sub_38/U319/ZN (INVX1)             0.09 &  2921.54 f
+  dat_path_inst/u2_alu/sub_38/U299/QN (NAND2X2)           0.07 &  2921.61 r
+  dat_path_inst/u2_alu/sub_38/U68/QN (NAND2X2)            0.10 &  2921.71 f
+  dat_path_inst/u2_alu/sub_38/U167/QN (NAND3X0)           0.15 &  2921.85 r
+  dat_path_inst/u2_alu/sub_38/U149/QN (NAND2X2)           0.12 &  2921.98 f
+  dat_path_inst/u2_alu/sub_38/U145/QN (NAND2X2)           0.08 &  2922.06 r
+  dat_path_inst/u2_alu/sub_38/U147/ZN (INVX2)             0.08 &  2922.14 f
+  dat_path_inst/u2_alu/sub_38/U146/QN (NAND2X4)           0.07 &  2922.21 r
+  dat_path_inst/u2_alu/sub_38/U56/QN (NAND2X2)            0.10 &  2922.31 f
+  dat_path_inst/u2_alu/sub_38/U45/QN (NAND3X0)            0.15 &  2922.45 r
+  dat_path_inst/u2_alu/sub_38/U41/QN (NAND2X2)            0.12 &  2922.58 f
+  dat_path_inst/u2_alu/sub_38/U37/QN (NAND3X1)            0.33 &  2922.91 r
+  dat_path_inst/u2_alu/sub_38/U209/Q (XOR2X1)             0.30 &  2923.21 f
+  dat_path_inst/u2_alu/sub_38/DIFF[13] (mips_alu_DW01_sub_0)
+                                                          0.00 &  2923.21 f
+  dat_path_inst/u2_alu/U141/Q (AO222X1)                   0.29 &  2923.50 f
+  dat_path_inst/u2_alu/U140/Q (AO221X1)                   0.35 &  2923.85 f
+  dat_path_inst/u2_alu/alu_out[13] (mips_alu)             0.00 &  2923.85 f
+  dat_path_inst/data_mem_addr[13] (mips_datapath)         0.00 &  2923.85 f
+  Addr[13] (out)                                          0.00 &  2923.86 f
+  data arrival time                                               2923.86
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (propagated)                        0.00      20.00
+  clock uncertainty                                      -1.00      19.00
+  output external delay                                  -4.00      15.00
+  data required time                                                15.00
+  ------------------------------------------------------------------------------
+  data required time                                                15.00
+  data arrival time                                              -2923.86
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -2908.86
+
+
+1

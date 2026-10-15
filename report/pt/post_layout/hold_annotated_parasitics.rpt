@@ -1,0 +1,26 @@
+****************************************
+Report : annotated_parasitics
+	-check
+	-internal_nets
+	-boundary_nets
+Design : mips_cpu_top
+Version: D-2010.06-SP2
+Date   : Sat May  2 16:28:00 2015
+****************************************
+
+                    |         |         |         |   RC    |   Not   |
+Net Type            |  Total  | Lumped  |  RC pi  | network |Annotated|
+--------------------+---------+---------+---------+---------+---------+
+Internal nets       |         |         |         |         |         |
+  - Pin to pin nets |    4677 |       0 |       0 |    4676 |       1 |
+  - Driverless nets |      22 |       0 |       0 |       0 |      22 |
+  - Loadless nets   |       5 |       0 |       0 |       0 |       5 |
+--------------------+---------+---------+---------+---------+---------+
+Boundary/port nets  |         |         |         |         |         |
+  - Pin to pin nets |     164 |       0 |       0 |     164 |       0 |
+  - Driverless nets |       0 |       0 |       0 |       0 |       0 |
+  - Loadless nets   |       0 |       0 |       0 |       0 |       0 |
+--------------------+---------+---------+---------+---------+---------+
+                    |    4868 |       0 |       0 |    4840 |      28 |
+
+1
