@@ -9,7 +9,7 @@ if {![info exists env(ASIC_LIB_PATH)]} {
 set LinkProject ".."
 set LinkLibrary_db $env(ASIC_LIB_PATH)
 set LinkSource "${LinkProject}/rtl"
-set LinkReport "${LinkProject}/dc/dc_report"
+set LinkReport "${LinkProject}/report/dc"
 set LinkNetlist "${LinkProject}/netlist"
 
 #create report folder

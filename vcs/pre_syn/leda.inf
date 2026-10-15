@@ -1,0 +1,146 @@
+-----------------------------------------------------------------
+Checker: LEDA v D-2010.03
+Date: Fri Jan  2 07:28:36 2015
+
+
+Command line: /home/eda/synopsys/leda/linux/bin/leda +v2k ../../rtl/alu_ctrl.v ../../rtl/mips_alu.v ../../rtl/mips_controller.v ../../rtl/mips_cpu_top.v ../../rtl/mips_datapath.v ../../rtl/reg_file.v ../../rtl/shifter.v -top mips_cpu_top 
+
+-----------------------------------------------------------------
+Environment variables:
+LEDA_PATH /home/eda/synopsys/leda
+LEDA_CONFIG Not defined
+LEDA_RESOURCES Not defined
+search_path Not defined
+link_library Not defined
+leda plibs files: /home/eda/synopsys/leda/resources/resource_93/plibs
+
+-----------------------------------------------------------------
+	Rule C_1005 deselected in file /home/ltk/workspace/MIPS/rtl/mips_cpu_top.v from line 28 to 33
+
+-----------------------------------------------------------------
+Checker Deselection Pragma summary:
+	Rule C_1005 deselected in file /home/ltk/workspace/MIPS/rtl/mips_cpu_top.v from line 28 to 33
+
+-----------------------------------------------------------------
+--                  Verilog violations                         --
+-----------------------------------------------------------------
+
+	Violations in library /home/ltk/workspace/MIPS/vcs/pre_syn/.leda_work 
+
+
+
+Violations per unit:
+Unit without violation:
+	0 violations in unit alu_ctrl (/home/ltk/workspace/MIPS/rtl/alu_ctrl.v)
+	0 violations in unit mips_alu (/home/ltk/workspace/MIPS/rtl/mips_alu.v)
+	0 violations in unit mips_controller (/home/ltk/workspace/MIPS/rtl/mips_controller.v)
+	0 violations in unit mips_cpu_top (/home/ltk/workspace/MIPS/rtl/mips_cpu_top.v)
+	0 violations in unit mips_datapath (/home/ltk/workspace/MIPS/rtl/mips_datapath.v)
+	0 violations in unit reg_file (/home/ltk/workspace/MIPS/rtl/reg_file.v)
+	0 violations in unit shifter (/home/ltk/workspace/MIPS/rtl/shifter.v)
+
+Violations per file:
+File without violation:
+
+Total number of violations: 0
+Total number of source code lines: 578
+
+Violations per rule:
+
+Policy "RMM_RTL_CODING_GUIDELINES", Ruleset "BASIC_CODING_PRACTICES":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/127 x R_521_10 [ERROR]: "Always use descending range for multi-bit signals and ports"
+
+Policy "RMM_RTL_CODING_GUIDELINES", Ruleset "CODING_FOR_SYNTHESIS":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/6 x G_551_1_B [WARNING]: "The always keyword must be followed by an event list @(...) in a sequential block"
+
+Policy "LEDA", Ruleset "DESIGN_STRUCTURE":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/30 x B_1001 [WARNING]: "Reading from output port <%item>"
+	0/6 x B_1011 [WARNING]: "Module instantiation is not fully bound. Port <%formal> is not completely connected"
+
+Policy "LEDA", Ruleset "EXPRESSIONS":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/207 x B_3208 [WARNING]: "Unequal length LHS and RHS in assignment LHS : <%size>, RHS : <%size>"
+	0/6 x B_3209 [WARNING]: "Unequal length port and connection in module instantiation Formal : <%size>, Actual : <%size>"
+
+Policy "LEDA", Ruleset "RTL_SYNTHESIS":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/16 x B_2001 [ERROR]: "Shift by a non constant value is not allowed"
+
+Policy "LEDA", Ruleset "STATEMENTS":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/6 x B_3419 [ERROR]: "Missing signal <%item> in sensitivity list"
+
+Policy "FORMALITY", Ruleset "SIMULATION_MISMATCH":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/22 x FM_2_10 [ERROR]: "Using X,Z values or ? in case items is not recommended (such items may be ignored by synthesis tools)"
+	0/3 x FM_2_12 [ERROR]: "Incomplete case_statement using full_case directive is not recommended (not supported by some imulation tools)"
+	0/3 x FM_2_18 [ERROR]: "Case choice after the default may be ignored by some simulation tools"
+	0/216 x FM_2_4 [ERROR]: "Assignment to X is not recommended (handled differently by simulation and synthesis tools)"
+	0/6 x FM_2_7 [WARNING]: "Use named association in port map"
+	0/35 x FM_2_9 [ERROR]: "Using X,Z values or ? for comparison is not recommended (differently handled by simulation/synthesis tools)"
+
+Policy "DFT", Ruleset "INFORMATIONAL":
+	<violated>/<checked> x <label> [<severity>]:<message>
+	--------------------   ------- ----------------------
+	0/3 x DFT_022 [ERROR]: "Incomplete case statement"
+
+
+-----------------------------------------------------------------
+--                    DESIGN violations                        --
+-----------------------------------------------------------------
+
+Violations per rule:
+
+Policy: LEDA  Ruleset: DESIGN_STRUCTURE
+	<violated>/<checked> x <label> [<severity>]:<message>
+	------- --------------------- ----------------------
+	0/1 x C_1000 [ERROR]: "Asynchronous feedback loop detected"
+	0/1 x C_1009 [ERROR]: "Multiple non-tristate drivers to signal <%item> detected"
+	0/1 x C_1005 [ERROR]: "Top-level output port is not registered: <%item>"
+	0/1 x C_1007 [WARNING]: "Pulse generator detected"
+	0/1 x C_1001 [ERROR]: "Flipflop with fixed value data input is detected"
+	0/1 x C_1201 [ERROR]: "Clocks must not be used as data"
+	0/1 x C_1203 [ERROR]: "Internally generated clock detected (chip level)"
+	0/1 x C_1204 [ERROR]: "No gated clock except in clock generator CKGEN."
+	0/1 x C_1406 [ERROR]: "Register with no reset/set is detected"
+
+Policy: RMM_RTL_CODING_GUIDELINES  Ruleset: CLOCKS_AND_RESETS
+	<violated>/<checked> x <label> [<severity>]:<message>
+	------- --------------------- ----------------------
+	0/1 x G_546_1 [WARNING]: "Avoid internally generated reset/set/load <%item>"
+	0/1 x G_546_1 [WARNING]: "Avoid internally generated reset/set/load <%item>"
+Total number of violations: 0
+
+-----------------------------------------------------------------
+--                    DESIGN REPORT                            --
+-----------------------------------------------------------------
+
+Name of the top:	mips_cpu_top
+
+Library containing the top unit:	/home/ltk/workspace/MIPS/vcs/pre_syn/.leda_work
+
+Number of design pins:	164
+
+Number of hierarchy levels in the design:	3
+
+Number of flipflops and latches that LEDA tools has inferred
+	Number of flipflops:	1056
+	Number of latches:	0
+
+Number of clock origins:	1
+Number of reset origins:	1
+List of clock origins:
+	mips_cpu_top.clock
+
+List of reset origins:
+	mips_cpu_top.reset

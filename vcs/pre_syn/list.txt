@@ -1,0 +1,8 @@
+../../tb/tb_mips.v
+../../rtl/mips_cpu_top.v
+../../rtl/mips_datapath.v
+../../rtl/mips_controller.v
+../../rtl/mips_alu.v
+../../rtl/alu_ctrl.v
+../../rtl/reg_file.v
+../../rtl/shifter.v
