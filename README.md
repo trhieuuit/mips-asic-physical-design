@@ -1,765 +1,189 @@
 # MIPS CPU ASIC Physical Design Flow
 
-This project implements a complete ASIC design flow for a MIPS CPU, from RTL design and functional simulation to logic synthesis, physical design, and static timing analysis.
-This project focus on Physical Design
-The project uses the Synopsys ASIC toolchain and the SAED 90 nm standard-cell technology library.
+Implementation and evaluation of a MIPS CPU using **Synopsys tools** and the **SAED 90 nm** standard-cell library. This project focuses on **physical design, post-layout timing analysis, manual ECO, and PPA evaluation**.
 
----
+## Key Results
 
-## 1. Project Overview
+| Metric | Result |
+|---|---:|
+| Standard-cell area | **80,090.73 µm²** |
+| Core utilization | **62.57%** |
+| Standard-cell count | **4,730** |
+| Target clock | **20 ns (50 MHz)** |
+| Post-layout setup WNS (PrimeTime) | **−0.05 ns — violated** |
+| Post-layout hold WNS (PrimeTime) | **+0.93 ns — met** |
+| Estimated total power (PrimeTime PX) | **0.5107 mW** (vector-free) |
 
-The overall ASIC implementation flow is:
+> **Timing/power note:** 50 MHz is the *target*, not a fully timing-closed operating frequency. Power is a vector-free estimate, not a workload-based measurement.
 
-```text
-RTL Design
-    │
-    ▼
-RTL Simulation
-   (VCS)
-    │
-    ▼
-Logic Synthesis
-(Design Compiler)
-    │
-    ├──────────────► Post-Synthesis Verification
-    │                       │
-    │                   Formality
-    │                   PrimeTime
-    │                       │
-    ▼                       │
-Physical Design             │
-(IC Compiler)               │
-    │                       │
-    ├── Import              │
-    ├── Floorplan           │
-    ├── Placement           │
-    ├── CTS                 │
-    └── Routing             │
-    │                       │
-    ▼                       │
-Post-Layout Netlist         │
-    │                       │
-    ├──────────────► Post-Layout Simulation
-    │
-    ├──────────────► Formal Verification
-    │
-    └──────────────► PrimeTime STA
-```
-
-The main objective of this project is to study and implement the complete RTL-to-layout ASIC flow and analyze timing, placement, clock distribution, congestion, and routing results.
-
----
-
-## 2. Repository Structure
+## 1. Implementation Flow
 
 ```text
-.
-├── dc/
-│   ├── dc_script.tcl
-│   └── dc_report/
-│
-├── fm/
-│   ├── post_syn/
-│   └── post_layout/
-│
-├── icc/
-│   ├── import_script/
-│   ├── floorplan_script/
-│   ├── placement_script/
-│   ├── cts_script/
-│   ├── routing_script/
-│   └── report/
-│
-├── image/
-│
-├── netlist/
-│   ├── mips_cpu_top_NL.v
-│   └── mips_cpu_top_post_layout.v
-│
-├── pt/
-│   ├── post_syn/
-│   └── post_layout/
-│
-├── report/
-│   ├── pt/
-│   └── pt_post_layout/
-│
-├── rtl/
-│
-├── sdc/
-│
-├── tb/
-│
-└── vcs/
-    ├── pre_syn/
-    ├── post_syn/
-    └── post_layout/
+RTL → VCS simulation → Design Compiler synthesis
+                           │
+                           ├── Post-synthesis verification (VCS / Formality)
+                           ▼
+                    IC Compiler (ICC)
+            Import → Floorplan → Placement → CTS
+                           → Routing → Manual ECO
+                           │
+                           ▼
+                Post-layout netlist + SPEF
+                           │
+                           ▼
+               PrimeTime STA / PrimeTime PX
 ```
 
----
-# 3. MIPS CPU ASIC Physical Design
+| Stage | Tool | Status |
+|---|---|---|
+| RTL simulation and coverage | VCS | Completed |
+| Logic synthesis | Design Compiler | Completed |
+| Post-synthesis verification | VCS / Formality | Reported completed |
+| Floorplan, placement, CTS, routing, ECO | IC Compiler | Completed |
+| Post-layout setup/hold STA | PrimeTime | Completed |
+| Post-layout power estimation | PrimeTime PX | Completed (vector-free) |
+| Post-layout simulation / formal equivalence | VCS / Formality | Not started |
 
-This project implements the physical design flow of a MIPS CPU using **Synopsys IC Compiler (ICC)** with the **SAED 90 nm** technology library.
-
-The main flow is:
+### Repository Layout
 
 ```text
-Gate-Level Netlist
-        │
-        ▼
-      Import
-        │
-        ▼
-    Floorplan
-        │
-        ▼
-     Placement
-        │
-        ▼
-Clock Tree Synthesis
-        │
-        ▼
-      Routing
-        │
-        ▼
- Post-Layout Design
+rtl/                  # MIPS RTL
+tb/                   # Testbench
+vcs/                  # pre_syn/, post_syn/, post_layout/
+dc/                   # Synthesis scripts
+fm/                   # Formality: post_syn/, post_layout/
+icc/                  # Import, floorplan, placement, CTS, routing scripts
+pt/                   # PrimeTime analysis scripts
+netlist/              # Synthesized and post-layout netlists
+sdc/                  # Timing constraints
+report/               # Timing, physical design, and PPA reports
+image/                # Layout screenshots and coverage figures
 ```
 
-## Project Structure
+## 2. RTL Verification and Synthesis
 
-```text
-icc/
-├── import_script/
-│   └── import.tcl
-├── floorplan_script/
-│   └── floorplan.tcl
-├── placement_script/
-│   └── placement.tcl
-├── cts_script/
-│   └── cts.tcl
-├── routing_script/
-│   └── route.tcl
-└── report/
-```
+**VCS:** Functional simulation exercises the MIPS CPU using clock/reset, instruction memory, and data memory. The coverage dashboard reports **74.13% overall coverage**, including **92.00% line**, **85.00% condition**, and **45.39% toggle** coverage.
 
-Input netlist:
+![VCS coverage](image/coverage_report.png)
 
-```text
-netlist/mips_cpu_top_NL.v
-```
+**Design Compiler:** RTL was mapped to the SAED90nm standard-cell library under SDC timing constraints. The synthesized netlist (`netlist/mips_cpu_top_NL.v`) is the input to ICC. Synthesis script: `dc/dc_script.tcl`.
 
-Timing constraint:
+**Formality:** Post-synthesis logical equivalence checking compares RTL (reference) with the synthesized netlist (implementation). Post-layout equivalence checking remains future work; detailed formal results are not included here.
 
-```text
-sdc/mips_cpu_top_SDC.sdc
-```
+## 3. Physical Design — Synopsys IC Compiler
 
----
+The main physical design stages and checkpoints are:
 
-## 1. Floorplanning
+| Stage | Main work | Checkpoint |
+|---|---|---|
+| Import | Load mapped netlist, SDC, physical/timing libraries | `mw_mips_imported` |
+| Floorplanning | Core, I/O pins, VDD/VSS rings, straps and rails | `mw_mips_floorplan_done` |
+| Placement | Place and optimize standard cells | `mw_mips_placed` |
+| CTS | Build and route clock network; optimize hold | `mw_mips_cts` |
+| Routing | Global routing, track assignment, detailed routing | `mw_mips_route_clean` |
+| ECO | Cell sizing and incremental physical updates | `mw_mips_setup_eco_best` |
 
-The floorplanning stage defines the core area, I/O pins, power rings, power straps, and standard-cell power rails.
+### 3.1. Floorplanning and Placement
 
-
+Floorplanning defines the core and power distribution, followed by timing-driven placement and legality checks.
 
 ![Floorplan](image/floorplan.png)
 
----
-
-## 2. Placement
-
-Standard cells are placed and optimized for timing, utilization, and routability.
-
-Main checks include:
-
-```tcl
-check_legality
-report_timing
-report_qor
-report_congestion
-```
-
-
 ![Placement](image/placement.png)
 
----
+### 3.2. Clock Tree Synthesis
 
-## 3. Clock Tree Synthesis
+CTS inserts and balances clock buffers to control insertion delay, skew, transition and fanout. The final design reports **210 clock-tree buffers/inverters**.
 
-CTS builds the clock distribution network and inserts clock buffers to control:
+![Clock tree synthesis](image/cts.png)
 
-- Clock skew
-- Clock latency
-- Clock transition
-- Clock fanout
+### 3.3. Routing and Congestion
 
-
-
-![Clock Tree Synthesis](image/cts.png)
-
----
-
-## 4. Routing
-
-Routing creates the physical metal connections between all placed cells.
-
-The routing flow includes:
-
-```text
-Global Routing
-      │
-      ▼
-Track Assignment
-      │
-      ▼
-Detailed Routing
-      │
-      ▼
-Routing Optimization
-```
-
-Main commands:
+The successful routing flow used separate ZRoute stages:
 
 ```tcl
-route_opt
-route_opt -incremental
+route_zrt_global
+route_zrt_track
+route_zrt_detail
 verify_zrt_route
 ```
 
-Final routed design:
+The routed design was checked for connectivity and physical violations.
 
-![Routing Result](image/routing_1.png)
+![Routed design](image/routing_1.png)
 
-![Routing Result](image/routing_2.png)
+![Routing detail](image/routing_2.png)
 
-Global routing congestion:
+<details>
+<summary>Congestion maps</summary>
 
-![Global Routing Congestion](image/global_routing_congestion.png)
+**Global routing congestion**
 
-Detailed routing congestion:
+![Global routing congestion](image/global_routing_congestion.png)
 
-![Detailed Routing Congestion](image/detailed_routing_congestion.png)
+**Detailed routing congestion**
 
+![Detailed routing congestion](image/detailed_routing_congestion.png)
 
+</details>
 
+## 4. Post-Layout Static Timing Analysis
 
+**PrimeTime D-2010.06-SP2** analyzed the routed netlist with SDC constraints, extracted SPEF parasitics and propagated clocks. Setup uses the maximum-delay (`saed90nm_max.db`) corner; hold uses the minimum-delay (`saed90nm_min.db`) corner.
 
----
-
-## Physical Design Checkpoints
-
-```text
-mw_mips_imported
-        │
-        ▼
-mw_mips_floorplan_done
-        │
-        ▼
-mw_mips_placed
-        │
-        ▼
-mw_mips_cts
-        │
-        ▼
-mw_mips_route
-```
-
-Reports for each stage are stored in:
-
-```text
-icc/report/
-├── import_report/
-├── floorplan_report/
-├── placement_report/
-├── cts_report/
-└── route_report/
-```
-
----
-
-# 4. Post-Layout Static Timing Analysis
-
-Post-layout Static Timing Analysis (STA) was performed using
-**Synopsys PrimeTime D-2010.06-SP2**.
-
-The analysis uses the final routed gate-level netlist, extracted
-interconnect parasitics (SPEF), timing constraints (SDC), and
-SAED90nm standard-cell timing libraries.
-
-Two timing analyses were performed:
-
-- Setup Analysis: Maximum delay analysis using `saed90nm_max.db`.
-- Hold Analysis: Minimum delay analysis using `saed90nm_min.db`.
-
-The extracted parasitic information was used to evaluate timing
-after placement, Clock Tree Synthesis (CTS), and routing.
-
-## 4.1. Timing Constraints
-
-The design was analyzed with the following constraints:
-
-| Parameter | Value |
-|---|---|
-| Clock Name | clock |
-| Target Clock Period | 20 ns |
-| Target Frequency | 50 MHz |
-| Clock Uncertainty (Setup) | 1.0 ns |
-| Input Delay (Max) | 4.0 ns |
-| Output Delay (Max) | 4.0 ns |
-| Technology | SAED90nm |
-
-The clock network was modeled using propagated clocks to account
-for the actual clock-tree insertion delays after CTS.
-
-## 4.2. Setup Timing Analysis
-
-Setup timing analysis checks whether data arrives at the
-destination before the required setup deadline.
-
-The post-layout setup timing results are:
-
-| Metric | Result |
-|---|---|
-| Clock Period | 20 ns |
-| ICC Setup WNS | -0.03 ns |
-| ICC Setup TNS | -0.03 ns |
-| ICC Setup Violating Paths | 1 |
-| PrimeTime Setup WNS | -0.05 ns |
-| Setup Status | VIOLATED |
-
-The worst setup slack reported by PrimeTime was:
-
-```text
-Worst Setup Slack = -0.05 ns
-```
-
-This indicates that the design has a remaining setup timing
-violation of approximately 50 ps under the specified timing
-constraints.
-
-Although the target clock frequency was 50 MHz, complete
-setup timing closure was not achieved.
-
-### Critical Path Analysis
-
-The critical path was identified as:
-
-```text
-Startpoint: Inst[22]
-       |
-       v
-Register File Read MUX
-       |
-       v
-ALU Subtractor
-       |
-       v
-Endpoint: Addr[31]
-```
-
-The path propagates through multiple combinational logic stages,
-including register-file selection logic and the 32-bit ALU
-subtractor.
-
-The long combinational path contributes significantly to the
-overall propagation delay.
-
-The ICC QoR report indicates:
-
-| Metric | Value |
+| Constraint / timing metric | Value |
 |---|---:|
-| Critical Path Length | 11.03 ns |
-| Levels of Logic | 78 |
-| Critical Path Slack | -0.03 ns |
+| Clock period / target frequency | 20 ns / 50 MHz |
+| Maximum input / output delay | 4 ns / 4 ns |
+| Setup WNS / TNS (ICC, after ECO) | −0.03 ns / −0.03 ns |
+| **Setup WNS (PrimeTime)** | **−0.05 ns — violated** |
+| **Hold WNS (PrimeTime)** | **+0.93 ns — met** |
 
-The large number of logic levels suggests that structural
-optimization of the arithmetic datapath could further improve
-timing performance.
-
-## 4.3. Hold Timing Analysis
-
-Hold timing analysis checks whether data remains stable for the
-required minimum interval after the active clock edge.
-
-The minimum-delay analysis was performed using the
-SAED90nm minimum-delay library and extracted minimum parasitics.
-
-The results are:
-
-| Metric | Result |
-|---|---|
-| PrimeTime Worst Hold Slack | +0.93 ns |
-| ICC Hold Violations | 0 |
-| Hold Status | MET |
-
-The worst hold slack was:
+The setup-critical path passes through combinational datapath logic:
 
 ```text
-Worst Hold Slack = +0.93 ns
+Inst[22] → Register-file read MUX → 32-bit ALU subtractor → Addr[31]
 ```
 
-The positive hold slack indicates that all reported hold timing
-requirements were satisfied.
+The remaining **50 ps setup violation** means timing closure was not fully achieved at the 20 ns target period. The reported hold checks passed.
 
-Therefore, no additional hold timing optimization was required
-for the analyzed design.
+## 5. Manual Setup ECO
 
----
+Five **cell-upsizing experiments** were evaluated after routing. ECO 1 was applied to the clean routed design; ECO 2–5 were each independently derived from ECO 1.
 
-# 5. Engineering Change Order (ECO) Optimization
+| Trial | Cell | Upsizing | ICC setup WNS |
+|---|---|---|---:|
+| Baseline | — | — | −0.06 ns |
+| **ECO 1** | `sub_38/U188` | NAND2X0 → NAND2X2 | **−0.03 ns** |
+| ECO 2 | `sub_38/U180` | NAND3X0 → NAND3X1 | −0.16 ns |
+| ECO 3 | `u2_alu/U6` | AOI222X1 → AOI222X2 | −0.05 ns |
+| ECO 4 | `sub_38/U169` | NAND3X0 → NAND3X1 | −0.17 ns |
+| ECO 5 | `u1_reg_file/U1128` | MUX41X1 → MUX41X2 | −0.04 ns |
 
-Engineering Change Order (ECO) optimization was performed
-after detailed routing to investigate timing improvements
-without redesigning the complete circuit.
+**ECO 1** gave the best ICC result: a **30 ps** improvement in setup WNS compared with the routed baseline. Other upsizing trials did not consistently improve timing. The selected implementation was saved as `mw_mips_setup_eco_best`.
 
-The main objective was to improve setup timing by increasing
-the drive strength of selected standard cells along the
-critical timing path.
-
-Cell upsizing was performed using the Synopsys IC Compiler
-`size_cell` command.
-
-After each ECO modification, placement legalization,
-incremental routing, parasitic extraction, and timing analysis
-were performed.
-
-## 5.1. ECO Experiments
-
-Five manual ECO experiments were evaluated.
-
-| Experiment | Modified Cell | Original Cell | New Cell | Setup WNS (ICC) |
-|---|---|---|---|---:|
-| Baseline | — | — | — | -0.06 ns |
-| ECO 1 | U188 | NAND2X0 | NAND2X2 | **-0.03 ns** |
-| ECO 2 | U180 | NAND3X0 | NAND3X1 | -0.16 ns |
-| ECO 3 | U6 | AOI222X1 | AOI222X2 | -0.05 ns |
-| ECO 4 | U169 | NAND3X0 | NAND3X1 | -0.17 ns |
-| ECO 5 | U1128 | MUX41X1 | MUX41X2 | -0.04 ns |
-
-ECO 1 was applied to the clean routing checkpoint.
-
-ECO 2 through ECO 5 were independently evaluated using
-ECO 1 as their common starting point.
-
-This approach enabled a controlled comparison of different
-cell-sizing modifications.
-
-## 5.2. ECO Results
-
-Among the evaluated configurations, ECO 1 achieved the
-best setup timing result.
-
-The worst setup slack improved from:
-
-```text
-Before ECO: -0.06 ns
-After ECO:  -0.03 ns
-```
-
-This corresponds to an improvement of approximately 30 ps
-in ICC setup timing.
-
-However, not all cell-upsizing operations improved timing.
-
-Some modifications increased the delay of the critical path,
-resulting in worse setup slack.
-
-This demonstrates that increasing cell drive strength does
-not always improve circuit performance.
-
-The final selected configuration was saved as:
-
-```text
-mw_mips_setup_eco_best
-```
-
-The final PrimeTime setup analysis reported a worst
-setup slack of -0.05 ns.
-
----
-
-# 6. Power, Performance, and Area (PPA) Evaluation
-
-Post-layout PPA evaluation was performed using
-Synopsys IC Compiler and Synopsys PrimeTime PX.
-
-The evaluation includes:
-
-- Area: Standard-cell area, core area, and utilization.
-- Performance: Setup timing, hold timing, and target clock frequency.
-- Power: Internal power, switching power, and leakage power.
-
-The results correspond to the selected post-layout ECO
-implementation.
-
-## 6.1. Area Analysis
-
-The physical implementation was evaluated using the ICC
-`report_area`, `report_placement_utilization`, and `report_qor`
-commands.
-
-### Standard Cell Area
-
-| Area Metric | Result |
-|---|---:|
-| Combinational Area | 46,028.39 µm² |
-| Noncombinational Area | 34,062.34 µm² |
-| **Total Cell Area** | **80,090.73 µm²** |
-| Reported Net Interconnect Area | 12,098.91 µm² |
-| Reported Design Area | 92,189.64 µm² |
-
-The total standard-cell area is:
-
-\[
-A_{cell} = A_{comb} + A_{noncomb}
-\]
-
-\[
-A_{cell} = 46028.39 + 34062.34
-\]
-
-\[
-\boxed{A_{cell} = 80090.73\ \mu m^2}
-\]
-
-### Placement Utilization
-
-The final placement utilization results are:
-
-| Parameter | Value |
-|---|---:|
-| Core Width | 358.40 µm |
-| Core Height | 357.12 µm |
-| Core Area | 127,991.81 µm² |
-| **Standard Cell Utilization** | **62.57%** |
-| Non-fixed Cell Utilization | 62.24% |
-| Macro Cell Count | 0 |
-
-Placement utilization is calculated as:
-
-\[
-Utilization = \frac{Cell\ Area}{Core\ Area}\times100\%
-\]
-
-\[
-Utilization =
-\frac{80090.73}{127991.81}\times100\%
-\]
-
-\[
-\boxed{Utilization \approx 62.57\%}
-\]
-
-The utilization indicates that approximately 62.57% of
-the placement region is occupied by standard cells.
-
-The remaining area provides placement whitespace and
-supports physical optimization and routing.
-
-### Cell Count
-
-The final design contains:
-
-| Cell Type | Count |
-|---|---:|
-| Total Leaf Cells | 4,730 |
-| Buffer/Inverter Cells | 678 |
-| Clock Tree Buffer/Inverter Cells | 210 |
-| Hierarchical Cells | 10 |
-| SRAM Macros | 0 |
-
-The register file was implemented using standard cells
-rather than a dedicated SRAM macro.
-
----
-
-## 6.2. Performance Analysis
-
-The timing performance was evaluated using extracted
-post-layout parasitics.
-
-| Performance Metric | Result |
-|---|---:|
-| Target Clock Period | 20 ns |
-| Target Frequency | 50 MHz |
-| Setup WNS (ICC) | -0.03 ns |
-| Setup TNS (ICC) | -0.03 ns |
-| Setup WNS (PrimeTime) | -0.05 ns |
-| Hold WNS (PrimeTime) | +0.93 ns |
-| Setup Timing Status | VIOLATED |
-| Hold Timing Status | MET |
-
-The manual ECO optimization reduced the setup violation,
-but the design did not fully satisfy the required setup
-timing at the target clock period.
-
-Hold timing requirements were successfully satisfied.
-
----
-
-## 6.3. Power Analysis
-
-Power estimation was performed using
-**Synopsys PrimeTime PX D-2010.06-SP2**.
-
-The analysis was configured in averaged power analysis mode.
-
-The SAED90nm maximum-delay library was used under the
-WORST operating condition.
-
-Because no simulation-based VCD or SAIF switching activity
-was provided, vector-free power estimation was used.
-
-PrimeTime PX propagated switching activity through the
-gate-level design to estimate dynamic power consumption.
-
-### Power Results
-
-| Power Component | Power (mW) | Percentage |
-|---|---:|---:|
-| Net Switching Power | 0.1290 | 25.26% |
-| Cell Internal Power | 0.1229 | 24.07% |
-| **Total Dynamic Power** | **0.2519** | **49.33%** |
-| Cell Leakage Power | 0.2588 | 50.67% |
-| **Total Power** | **0.5107** | **100%** |
-
-Dynamic power is calculated as:
-
-\[
-P_{dynamic} = P_{internal} + P_{switching}
-\]
-
-\[
-P_{dynamic} = 0.1229 + 0.1290
-\]
-
-\[
-\boxed{P_{dynamic} = 0.2519\ mW}
-\]
-
-Total power is calculated as:
-
-\[
-P_{total} = P_{dynamic} + P_{leakage}
-\]
-
-\[
-\boxed{P_{total} = 0.5107\ mW}
-\]
-
-### Power Distribution
-
-The power consumption was distributed across different
-standard-cell groups.
-
-| Power Group | Total Power (mW) | Percentage |
-|---|---:|---:|
-| Clock Network | 0.1646 | 32.23% |
-| Registers | 0.0937 | 18.34% |
-| Combinational Logic | 0.2525 | 49.43% |
-
-Combinational logic accounts for the largest portion
-of the estimated total power consumption.
-
-The clock distribution network also contributes
-significantly to the total power.
-
-### Power Analysis Limitations
-
-The reported power results are preliminary estimates.
-
-No workload-specific switching activity was provided
-through VCD or SAIF simulation files.
-
-Therefore, the estimated dynamic power does not necessarily
-represent the actual power consumption when executing
-a specific MIPS program.
-
-Additionally, the PrimeTime PX power checks identified
-some slew and load conditions outside the characterized
-library table ranges.
-
-More accurate power analysis would require simulation-based
-switching activity and further validation of the
-timing and power models.
-
----
-
-# 7. Final PPA Summary
-
-The following table summarizes the final post-layout
-implementation results.
+## 6. Post-Layout PPA
 
 | Category | Metric | Result |
 |---|---|---:|
-| Technology | Process Technology | SAED90nm |
-| Design | Top Module | mips_cpu_top |
-| Area | Total Cell Area | **80,090.73 µm²** |
-| Area | Core Area | 127,991.81 µm² |
-| Area | Core Utilization | **62.57%** |
-| Area | Standard Cell Count | 4,730 |
-| CTS | Clock Buffers/Inverters | 210 |
-| Performance | Target Frequency | 50 MHz |
-| Performance | Target Clock Period | 20 ns |
-| Performance | Setup WNS (PrimeTime) | **-0.05 ns** |
-| Performance | Hold WNS (PrimeTime) | **+0.93 ns** |
-| Power | Internal Power | 0.1229 mW |
-| Power | Switching Power | 0.1290 mW |
-| Power | Dynamic Power | 0.2519 mW |
-| Power | Leakage Power | 0.2588 mW |
-| Power | Total Power (Vector-Free) | **0.5107 mW** |
+| Area | Combinational / noncombinational cell area | 46,028.39 / 34,062.34 µm² |
+| Area | **Total standard-cell area** | **80,090.73 µm²** |
+| Area | Core area | 127,991.81 µm² |
+| Area | **Utilization** | **62.57%** |
+| Area | Leaf cells / SRAM macros | 4,730 / 0 |
+| Power | Cell internal | 0.1229 mW |
+| Power | Net switching | 0.1290 mW |
+| Power | **Dynamic (internal + switching)** | **0.2519 mW** |
+| Power | Leakage | 0.2588 mW |
+| Power | **Total estimated** | **0.5107 mW** |
 
-**Note:** The target frequency is 50 MHz, but setup timing closure
-was not fully achieved at the corresponding 20 ns clock period.
+Power was estimated in **PrimeTime PX averaged, vector-free mode** without VCD/SAIF activity annotation. It is a preliminary estimate for the configured library corner and default/propagated activity; it should **not** be interpreted as measured CPU power while executing a specific program.
 
----
+## 7. Limitations and Next Steps
 
-# 8. Conclusion
+- **Setup:** The worst setup slack remains negative (−0.05 ns in PrimeTime).
+- **Power:** Use workload-based VCD/SAIF activity for a more representative dynamic-power estimate.
+- **Verification:** Complete post-layout simulation and formal equivalence checks.
+- **Optimization:** Investigate the register-file read path and ALU subtractor to improve timing structurally.
 
-This project demonstrates the implementation of a MIPS CPU
-through the major stages of the ASIC physical design flow
-using Synopsys tools and the SAED90nm technology library.
-
-The physical design flow includes floorplanning, standard-cell
-placement, Clock Tree Synthesis, global routing, detailed
-routing, parasitic extraction, and post-layout static
-timing analysis.
-
-The final implementation contains 4,730 standard cells
-with a total cell area of 80,090.73 µm² and a core
-utilization of 62.57%.
-
-Post-layout timing analysis reported a worst setup slack
-of -0.05 ns and a worst hold slack of +0.93 ns.
-
-Manual ECO experiments demonstrated how standard-cell
-upsizing affects critical path timing.
-
-The best ECO configuration improved ICC setup slack
-by approximately 30 ps compared to the routing baseline.
-
-PrimeTime PX estimated a total power consumption of
-0.5107 mW using vector-free switching activity estimation.
-
-Although the complete setup timing requirements were not
-fully satisfied, the project provides practical experience
-with physical implementation, timing analysis, routing
-verification, and engineering change orders.
-
-Future improvements may include:
-
-- Optimizing the critical combinational datapath.
-- Evaluating alternative ALU architectures.
-- Improving setup timing closure.
-- Performing workload-based power analysis using VCD/SAIF.
-- Extending physical verification and signoff.
-
-
-
-## Tools
-
-- Synopsys IC Compiler
-- Synopsys Design Compiler
-- Synopsys PrimeTime
-- SAED 90 nm technology library
-
+This project demonstrates the practical **RTL-to-post-layout implementation workflow**, including physical-design debugging, clock-tree and routing analysis, post-layout STA, and manual ECO trade-offs.
